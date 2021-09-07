@@ -13,6 +13,7 @@
  * The 22(in C) bit means signs of the value measured, if it is 0 the value is negative or if it is 1 the
  * value is positive.
  */
+#include "DigitLedDisplay.h"
 
 unsigned int datapulse[24];
 unsigned int gate=0, gi;
@@ -23,7 +24,7 @@ int terminou = 0;
 int iniciou = 0;
 volatile unsigned int digit0, digit1, digit2, digit3, digit4, digit5; // Single digits
 int offset = 0;
-
+int offsetFixed = -3;
 
 #define PIN_CLOCK_INT0_ENABLE (EIMSK |= 0x01)
 #define PIN_CLOCK_DATA_INT1_ENABLE (EIMSK |= 0x02)
@@ -32,6 +33,7 @@ int offset = 0;
 #define PIN_CLOCK_DATA_INT1_DISABLE (EIMSK &= ~(0x02))
 
 #define INT0_gate_INT1_FALLING (EICRA = 0x0E) //0x0E)
+
 
 ISR(INT0_vect){
   cli();
@@ -87,15 +89,17 @@ ISR(INT1_vect){
     }  
 }
 
-void setup() {
-  DDRD &= 0x00; //0b00000000
-  PORTD = 0x1C; //0b00011100
+void setup1() {
+  DDRD &= 0xE0; //0b11100000
+  PORTD = 0xFC; //0b11111100
   
   //EICRA |= (0b10 << ISC10) | (0b10 << ISC00);
   INT0_gate_INT1_FALLING;
   
   //EIMSK = 0x03; //0b00000011
   PIN_CLOCK_INT0_ENABLE;
+  
+  
   sei();
   while(1){
     if( gate == 1 ){
@@ -111,10 +115,12 @@ void setup() {
   }
   Serial.begin(115200);
   Serial.println("DRO 2021SET");
- 
+  
 }
 
 void loop(){
+  int lixo;
+  //loopLcd01();
   if( gate == 1 ) {
     //Serial.println("gate");
     PIN_CLOCK_INT0_DISABLE;
@@ -128,7 +134,7 @@ void loop(){
         digit0 = digit_sign;
         
         offset = datavalue % 4;
-        datavalue = (datavalue / 4) + offset;
+        datavalue = (datavalue / 4) + offset + offsetFixed;
         digit1 = (datavalue/10000);   
         digit2 = ((datavalue%10000)/1000);
         digit3 = (((datavalue%10000)%1000)/100); //&led_pattern[10]; // & dp for 7-segment display (for uart: UDR=44)
@@ -148,6 +154,9 @@ void loop(){
         Serial.print(digit4);
         Serial.print(digit5);
         Serial.println(" mm ");
+
+
+        
         /*
         Serial.print(datavalue);Serial.print(" ");
         Serial.println(datavalue,HEX);Serial.print(" ");
@@ -159,9 +168,45 @@ void loop(){
         Serial.println();
         */
         
+       
         PIN_CLOCK_DATA_INT1_DISABLE;
         PIN_CLOCK_INT0_ENABLE;
+        
+        
+        cls();
+        lcdon();
+        if(digit1 != 0)
+          wr(digit1,4);
+        if( digit2 != 0 ){
+            wr(digit2,3);
+        }else{
+            if(digit1 != 0)
+              wr(digit2,3);
+        }
+        if( digit3 != 0 ){
+          wr(digit3,2);
+        }else{
+            if((digit1 != 0) || (digit2 != 0) )
+              wr(digit3,2);
+        }
+        if( digit4 != 0 ){
+          wr(digit4,1);
+        }else{
+            if((digit1 != 0) || (digit2 != 0) || (digit3 != 0) )
+              wr(digit4,1);
+        }
+        if( digit5 != 0 ){
+          wr(digit5,0);
+        }else{
+            if((digit1 != 0) || (digit2 != 0) || (digit3 != 0) || (digit4 != 0) )
+              wr(digit5,0);
+        }
+        if((digit1 == 0) && (digit2 == 0) && (digit3 == 0) && (digit4 == 0) && (digit5 == 0) ){
+          wr(digit5,0);
+        }
         delayMicroseconds(60000);
+        
         sei();
     }
 }
+
