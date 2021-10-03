@@ -39,13 +39,7 @@ void setup() {
   beep(500);
   //Setup for Y sensor
   pinMode(led, OUTPUT);
-  //Initializing axis X and Y  
-  vDrox  = new CDrox();
-  vDroy  = new CDroy(PB10, PB15, PA8);
-  vTachometer = new CTachometer();
   
-  //This give time to things happen
-  delay(2000);
   //Clearing displays.
   sprintf(str,"FF101010000000");
   Serial1.println(str);
@@ -53,6 +47,14 @@ void setup() {
   Serial1.println(str);
   sprintf(str,"FF103010000000");
   Serial1.println(str);  
+  //Initializing axis X and Y  
+  vDrox  = new CDrox();
+  vDroy  = new CDroy(PB10, PB15, PA8);
+  vTachometer = new CTachometer();
+  //This give time to things happen
+  delay(1000);
+
+  beep(50);delay(300);beep(50);
 }
 
 void loop(){

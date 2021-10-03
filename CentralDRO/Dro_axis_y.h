@@ -28,9 +28,11 @@ class CDroy
       pinMode(clk, INPUT_PULLUP);
       pinMode(Y_RESET_KEY, INPUT_PULLUP);
       pinMode(YSENSOR_PWR_ON, OUTPUT);
-      digitalWrite(YSENSOR_PWR_ON, LOW);
+      digitalWrite(YSENSOR_PWR_ON, HIGH);
+      delay(1000);
       attachInterrupt(digitalPinToInterrupt(gate), extGate_ISR, CHANGE );
       attachInterrupt(digitalPinToInterrupt(clk), extClock_ISR, RISING );
+      digitalWrite(YSENSOR_PWR_ON, LOW);
     }
     void yResetKey(){
       int key;
