@@ -36,8 +36,8 @@ void button_setup()
   pinMode(LED_START_BUTTON, OUTPUT);
   pinMode(LED_STOP_BUTTON, OUTPUT);
   pinMode(LED_REVERSE_BUTTON, OUTPUT);  
-  //pinMode(RELE_01, OUTPUT);  
-  //pinMode(RELE_02, OUTPUT);  
+  pinMode(RELE_01, OUTPUT);  
+  pinMode(RELE_02, OUTPUT);  
 
   pinMode( B_START_BUTTON, INPUT_PULLUP);  
   pinMode( B_STOP_BUTTON, INPUT_PULLUP);  

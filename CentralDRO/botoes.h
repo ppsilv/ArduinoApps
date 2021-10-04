@@ -1,16 +1,21 @@
 #ifndef __BOTOES_H__
 #define __BOTOES_H__
 
-#define VERSION 1.0.10
+#define VERSION 1.0.20
 
-#define DIAMES 2706
+#define DIAMES 0310
 #define ANO    2021 
 
 #define LED_START_BUTTON    PB12
 #define LED_STOP_BUTTON     PB5
 #define LED_REVERSE_BUTTON  PB4
-#define RELE_01             A2
-#define RELE_02             A3
+#define RELAYS              PA15
+#define RUN_BACKWARD        PB3
+#define RUN_FORWARD         PA12
+#define RELE_01             RUN_FORWARD
+#define RELE_02             RUN_BACKWARD
+
+
 //Port of buttons.
 #define B_START_BUTTON        PB9
 #define B_STOP_BUTTON         PB8

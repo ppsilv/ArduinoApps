@@ -1,0 +1,3891 @@
+
+C:\Users\ppsil\AppData\Local\Temp\arduino_build_324750/lcd_3_display.ino.elf:     file format elf32-avr
+
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+__vectors():
+       0:	51 c0       	rjmp	.+162    	; 0xa4 <__ctors_end>
+       2:	75 c0       	rjmp	.+234    	; 0xee <__bad_interrupt>
+       4:	74 c0       	rjmp	.+232    	; 0xee <__bad_interrupt>
+       6:	73 c0       	rjmp	.+230    	; 0xee <__bad_interrupt>
+       8:	72 c0       	rjmp	.+228    	; 0xee <__bad_interrupt>
+       a:	71 c0       	rjmp	.+226    	; 0xee <__bad_interrupt>
+       c:	70 c0       	rjmp	.+224    	; 0xee <__bad_interrupt>
+       e:	6f c0       	rjmp	.+222    	; 0xee <__bad_interrupt>
+      10:	6e c0       	rjmp	.+220    	; 0xee <__bad_interrupt>
+      12:	59 c5       	rjmp	.+2738   	; 0xac6 <__vector_9>
+      14:	6c c0       	rjmp	.+216    	; 0xee <__bad_interrupt>
+      16:	e6 c7       	rjmp	.+4044   	; 0xfe4 <__vector_11>
+      18:	17 c8       	rjmp	.-4050   	; 0xfffff048 <__eeprom_end+0xff7ef048>
+      1a:	69 c0       	rjmp	.+210    	; 0xee <__bad_interrupt>
+      1c:	68 c0       	rjmp	.+208    	; 0xee <__bad_interrupt>
+      1e:	67 c0       	rjmp	.+206    	; 0xee <__bad_interrupt>
+      20:	66 c0       	rjmp	.+204    	; 0xee <__bad_interrupt>
+      22:	65 c0       	rjmp	.+202    	; 0xee <__bad_interrupt>
+      24:	64 c0       	rjmp	.+200    	; 0xee <__bad_interrupt>
+
+00000026 <__trampolines_end>:
+__trampolines_start():
+      26:	7e 30       	cpi	r23, 0x0E	; 14
+      28:	6d 79       	andi	r22, 0x9D	; 157
+      2a:	33 5b       	subi	r19, 0xB3	; 179
+      2c:	5f 70       	andi	r21, 0x0F	; 15
+      2e:	7f 7b       	andi	r23, 0xBF	; 191
+      30:	77 1f       	adc	r23, r23
+      32:	0d 3d       	cpi	r16, 0xDD	; 221
+      34:	4f 47       	sbci	r20, 0x7F	; 127
+      36:	80 01       	movw	r16, r0
+      38:	67 08       	sbc	r6, r7
+      3a:	37 0e       	add	r3, r23
+      3c:	15 1d       	adc	r17, r5
+	...
+
+00000046 <digital_pin_to_timer_PGM>:
+	...
+      4e:	00 04 05 07 00 00 00 00 00 00 00 00 00 00 00        ...............
+
+0000005d <digital_pin_to_bit_mask_PGM>:
+      5d:	01 02 04 08 10 20 40 80 01 02 04 08 10 20 01 02     ..... @...... ..
+      6d:	04 08 10 20 40 80 40                                ... @.@
+
+00000074 <digital_pin_to_port_PGM>:
+      74:	04 04 04 04 04 04 04 04 02 02 02 02 02 02 03 03     ................
+      84:	03 03 03 03 02 02 03                                .......
+
+0000008b <port_to_output_PGM>:
+      8b:	00 00 00 00 38 00 35 00 32 00                       ....8.5.2.
+
+00000095 <port_to_mode_PGM>:
+      95:	00 00 00 00 37 00 34 00 31 00 00                    ....7.4.1..
+
+000000a0 <__ctors_start>:
+__ctors_start():
+      a0:	97 02       	muls	r25, r23
+      a2:	52 08       	sbc	r5, r2
+
+000000a4 <__ctors_end>:
+__dtors_end():
+      a4:	11 24       	eor	r1, r1
+      a6:	1f be       	out	0x3f, r1	; 63
+      a8:	cf e5       	ldi	r28, 0x5F	; 95
+      aa:	d4 e0       	ldi	r29, 0x04	; 4
+      ac:	de bf       	out	0x3e, r29	; 62
+      ae:	cd bf       	out	0x3d, r28	; 61
+
+000000b0 <__do_copy_data>:
+__do_copy_data():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2409
+      b0:	11 e0       	ldi	r17, 0x01	; 1
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2410
+      b2:	a0 e6       	ldi	r26, 0x60	; 96
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2411
+      b4:	b0 e0       	ldi	r27, 0x00	; 0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2412
+      b6:	e4 e7       	ldi	r30, 0x74	; 116
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2413
+      b8:	f3 e1       	ldi	r31, 0x13	; 19
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2414
+      ba:	02 c0       	rjmp	.+4      	; 0xc0 <__do_copy_data+0x10>
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2417
+      bc:	05 90       	lpm	r0, Z+
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2422
+      be:	0d 92       	st	X+, r0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2424
+      c0:	ac 30       	cpi	r26, 0x0C	; 12
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2425
+      c2:	b1 07       	cpc	r27, r17
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2426
+      c4:	d9 f7       	brne	.-10     	; 0xbc <__do_copy_data+0xc>
+
+000000c6 <__do_clear_bss>:
+__do_clear_bss():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2441
+      c6:	22 e0       	ldi	r18, 0x02	; 2
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2442
+      c8:	ac e0       	ldi	r26, 0x0C	; 12
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2443
+      ca:	b1 e0       	ldi	r27, 0x01	; 1
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2444
+      cc:	01 c0       	rjmp	.+2      	; 0xd0 <.do_clear_bss_start>
+
+000000ce <.do_clear_bss_loop>:
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2446
+      ce:	1d 92       	st	X+, r1
+
+000000d0 <.do_clear_bss_start>:
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2448
+      d0:	ae 3c       	cpi	r26, 0xCE	; 206
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2449
+      d2:	b2 07       	cpc	r27, r18
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2450
+      d4:	e1 f7       	brne	.-8      	; 0xce <.do_clear_bss_loop>
+
+000000d6 <__do_global_ctors>:
+__do_global_ctors():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2466
+      d6:	10 e0       	ldi	r17, 0x00	; 0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2467
+      d8:	c2 e5       	ldi	r28, 0x52	; 82
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2468
+      da:	d0 e0       	ldi	r29, 0x00	; 0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2472
+      dc:	03 c0       	rjmp	.+6      	; 0xe4 <__do_global_ctors+0xe>
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2474
+      de:	21 97       	sbiw	r28, 0x01	; 1
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2480
+      e0:	fe 01       	movw	r30, r28
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2481
+      e2:	40 d9       	rcall	.-3456   	; 0xfffff364 <__eeprom_end+0xff7ef364>
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2483
+      e4:	c0 35       	cpi	r28, 0x50	; 80
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2484
+      e6:	d1 07       	cpc	r29, r17
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2489
+      e8:	d1 f7       	brne	.-12     	; 0xde <__do_global_ctors+0x8>
+      ea:	0f d9       	rcall	.-3554   	; 0xfffff30a <__eeprom_end+0xff7ef30a>
+      ec:	41 c9       	rjmp	.-3454   	; 0xfffff370 <__eeprom_end+0xff7ef370>
+
+000000ee <__bad_interrupt>:
+__vector_1():
+      ee:	88 cf       	rjmp	.-240    	; 0x0 <__vectors>
+
+000000f0 <writeLcd1()>:
+_Z9writeLcd1v():
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:88
+
+#define CMD_IMPRIME 0
+#define CMD_CLEAR   1
+
+void writeLcd1()
+{
+      f0:	0f 93       	push	r16
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:90
+  //Display 1;
+  if( sign == 0 ){
+      f2:	80 91 1c 01 	lds	r24, 0x011C	; 0x80011c <sign>
+      f6:	90 91 1d 01 	lds	r25, 0x011D	; 0x80011d <sign+0x1>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:91
+    lc1.setDigit(0,5,17,false);
+      fa:	00 e0       	ldi	r16, 0x00	; 0
+      fc:	21 e1       	ldi	r18, 0x11	; 17
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:90
+#define CMD_CLEAR   1
+
+void writeLcd1()
+{
+  //Display 1;
+  if( sign == 0 ){
+      fe:	89 2b       	or	r24, r25
+     100:	09 f0       	breq	.+2      	; 0x104 <writeLcd1()+0x14>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:93
+    lc1.setDigit(0,5,17,false);
+  }else{
+      lc1.setDigit(0,5,32,false);
+     102:	20 e2       	ldi	r18, 0x20	; 32
+     104:	45 e0       	ldi	r20, 0x05	; 5
+     106:	50 e0       	ldi	r21, 0x00	; 0
+     108:	70 e0       	ldi	r23, 0x00	; 0
+     10a:	60 e0       	ldi	r22, 0x00	; 0
+     10c:	80 ed       	ldi	r24, 0xD0	; 208
+     10e:	91 e0       	ldi	r25, 0x01	; 1
+     110:	b1 d4       	rcall	.+2402   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+     112:	20 91 1a 01 	lds	r18, 0x011A	; 0x80011a <dig5>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:95
+  }
+  if( ponto == 4 ) lc1.setDigit(0,4,dig5,true); else lc1.setDigit(0,4,dig5,false);
+     116:	80 91 10 01 	lds	r24, 0x0110	; 0x800110 <ponto>
+     11a:	90 91 11 01 	lds	r25, 0x0111	; 0x800111 <ponto+0x1>
+     11e:	01 e0       	ldi	r16, 0x01	; 1
+     120:	04 97       	sbiw	r24, 0x04	; 4
+     122:	09 f0       	breq	.+2      	; 0x126 <writeLcd1()+0x36>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:95 (discriminator 2)
+     124:	00 e0       	ldi	r16, 0x00	; 0
+     126:	44 e0       	ldi	r20, 0x04	; 4
+     128:	50 e0       	ldi	r21, 0x00	; 0
+     12a:	70 e0       	ldi	r23, 0x00	; 0
+     12c:	60 e0       	ldi	r22, 0x00	; 0
+     12e:	80 ed       	ldi	r24, 0xD0	; 208
+     130:	91 e0       	ldi	r25, 0x01	; 1
+     132:	a0 d4       	rcall	.+2368   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+     134:	20 91 18 01 	lds	r18, 0x0118	; 0x800118 <dig4>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:96 (discriminator 2)
+  if( ponto == 3 ) lc1.setDigit(0,3,dig4,true); else lc1.setDigit(0,3,dig4,false);
+     138:	80 91 10 01 	lds	r24, 0x0110	; 0x800110 <ponto>
+     13c:	90 91 11 01 	lds	r25, 0x0111	; 0x800111 <ponto+0x1>
+     140:	01 e0       	ldi	r16, 0x01	; 1
+     142:	03 97       	sbiw	r24, 0x03	; 3
+     144:	09 f0       	breq	.+2      	; 0x148 <writeLcd1()+0x58>
+     146:	00 e0       	ldi	r16, 0x00	; 0
+     148:	43 e0       	ldi	r20, 0x03	; 3
+     14a:	50 e0       	ldi	r21, 0x00	; 0
+     14c:	70 e0       	ldi	r23, 0x00	; 0
+     14e:	60 e0       	ldi	r22, 0x00	; 0
+     150:	80 ed       	ldi	r24, 0xD0	; 208
+     152:	91 e0       	ldi	r25, 0x01	; 1
+     154:	8f d4       	rcall	.+2334   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+     156:	20 91 16 01 	lds	r18, 0x0116	; 0x800116 <dig3>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:97 (discriminator 2)
+  if( ponto == 2 ) lc1.setDigit(0,2,dig3,true); else lc1.setDigit(0,2,dig3,false);
+     15a:	80 91 10 01 	lds	r24, 0x0110	; 0x800110 <ponto>
+     15e:	90 91 11 01 	lds	r25, 0x0111	; 0x800111 <ponto+0x1>
+     162:	01 e0       	ldi	r16, 0x01	; 1
+     164:	02 97       	sbiw	r24, 0x02	; 2
+     166:	09 f0       	breq	.+2      	; 0x16a <writeLcd1()+0x7a>
+     168:	00 e0       	ldi	r16, 0x00	; 0
+     16a:	42 e0       	ldi	r20, 0x02	; 2
+     16c:	50 e0       	ldi	r21, 0x00	; 0
+     16e:	70 e0       	ldi	r23, 0x00	; 0
+     170:	60 e0       	ldi	r22, 0x00	; 0
+     172:	80 ed       	ldi	r24, 0xD0	; 208
+     174:	91 e0       	ldi	r25, 0x01	; 1
+     176:	7e d4       	rcall	.+2300   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+     178:	20 91 14 01 	lds	r18, 0x0114	; 0x800114 <dig2>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:98 (discriminator 2)
+  if( ponto == 1 ) lc1.setDigit(0,1,dig2,true); else lc1.setDigit(0,1,dig2,false);
+     17c:	80 91 10 01 	lds	r24, 0x0110	; 0x800110 <ponto>
+     180:	90 91 11 01 	lds	r25, 0x0111	; 0x800111 <ponto+0x1>
+     184:	01 e0       	ldi	r16, 0x01	; 1
+     186:	01 97       	sbiw	r24, 0x01	; 1
+     188:	09 f0       	breq	.+2      	; 0x18c <writeLcd1()+0x9c>
+     18a:	00 e0       	ldi	r16, 0x00	; 0
+     18c:	41 e0       	ldi	r20, 0x01	; 1
+     18e:	50 e0       	ldi	r21, 0x00	; 0
+     190:	70 e0       	ldi	r23, 0x00	; 0
+     192:	60 e0       	ldi	r22, 0x00	; 0
+     194:	80 ed       	ldi	r24, 0xD0	; 208
+     196:	91 e0       	ldi	r25, 0x01	; 1
+     198:	6d d4       	rcall	.+2266   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:99 (discriminator 2)
+  if( ponto == 0 ) lc1.setDigit(0,0,dig1,false); else lc1.setDigit(0,0,dig1,false);
+     19a:	00 e0       	ldi	r16, 0x00	; 0
+     19c:	20 91 12 01 	lds	r18, 0x0112	; 0x800112 <dig1>
+     1a0:	50 e0       	ldi	r21, 0x00	; 0
+     1a2:	40 e0       	ldi	r20, 0x00	; 0
+     1a4:	70 e0       	ldi	r23, 0x00	; 0
+     1a6:	60 e0       	ldi	r22, 0x00	; 0
+     1a8:	80 ed       	ldi	r24, 0xD0	; 208
+     1aa:	91 e0       	ldi	r25, 0x01	; 1
+     1ac:	63 d4       	rcall	.+2246   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:100 (discriminator 2)
+}
+     1ae:	0f 91       	pop	r16
+     1b0:	08 95       	ret
+
+000001b2 <writeLcd2()>:
+_Z9writeLcd2v():
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:102
+void writeLcd2()
+{
+     1b2:	0f 93       	push	r16
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:103
+  Serial.println("Escrevendo no lcd 2");
+     1b4:	62 e6       	ldi	r22, 0x62	; 98
+     1b6:	70 e0       	ldi	r23, 0x00	; 0
+     1b8:	81 e3       	ldi	r24, 0x31	; 49
+     1ba:	92 e0       	ldi	r25, 0x02	; 2
+     1bc:	eb d7       	rcall	.+4054   	; 0x1194 <Print::println(char const*)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:104
+  if( sign == 0 ){
+     1be:	80 91 1c 01 	lds	r24, 0x011C	; 0x80011c <sign>
+     1c2:	90 91 1d 01 	lds	r25, 0x011D	; 0x80011d <sign+0x1>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:105
+    lc2.setDigit(0,5,17,false);
+     1c6:	00 e0       	ldi	r16, 0x00	; 0
+     1c8:	21 e1       	ldi	r18, 0x11	; 17
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:104
+  if( ponto == 0 ) lc1.setDigit(0,0,dig1,false); else lc1.setDigit(0,0,dig1,false);
+}
+void writeLcd2()
+{
+  Serial.println("Escrevendo no lcd 2");
+  if( sign == 0 ){
+     1ca:	89 2b       	or	r24, r25
+     1cc:	09 f0       	breq	.+2      	; 0x1d0 <writeLcd2()+0x1e>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:107
+    lc2.setDigit(0,5,17,false);
+  }else{
+      lc2.setDigit(0,5,32,false);
+     1ce:	20 e2       	ldi	r18, 0x20	; 32
+     1d0:	45 e0       	ldi	r20, 0x05	; 5
+     1d2:	50 e0       	ldi	r21, 0x00	; 0
+     1d4:	70 e0       	ldi	r23, 0x00	; 0
+     1d6:	60 e0       	ldi	r22, 0x00	; 0
+     1d8:	88 e7       	ldi	r24, 0x78	; 120
+     1da:	91 e0       	ldi	r25, 0x01	; 1
+     1dc:	4b d4       	rcall	.+2198   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+     1de:	20 91 1a 01 	lds	r18, 0x011A	; 0x80011a <dig5>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:111
+  } 
+  //Display 2;
+  
+  if( ponto == 4 ) lc2.setDigit(0,4,dig5,true); else lc2.setDigit(0,4,dig5,false);
+     1e2:	80 91 10 01 	lds	r24, 0x0110	; 0x800110 <ponto>
+     1e6:	90 91 11 01 	lds	r25, 0x0111	; 0x800111 <ponto+0x1>
+     1ea:	01 e0       	ldi	r16, 0x01	; 1
+     1ec:	04 97       	sbiw	r24, 0x04	; 4
+     1ee:	09 f0       	breq	.+2      	; 0x1f2 <writeLcd2()+0x40>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:111 (discriminator 2)
+     1f0:	00 e0       	ldi	r16, 0x00	; 0
+     1f2:	44 e0       	ldi	r20, 0x04	; 4
+     1f4:	50 e0       	ldi	r21, 0x00	; 0
+     1f6:	70 e0       	ldi	r23, 0x00	; 0
+     1f8:	60 e0       	ldi	r22, 0x00	; 0
+     1fa:	88 e7       	ldi	r24, 0x78	; 120
+     1fc:	91 e0       	ldi	r25, 0x01	; 1
+     1fe:	3a d4       	rcall	.+2164   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+     200:	20 91 18 01 	lds	r18, 0x0118	; 0x800118 <dig4>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:112 (discriminator 2)
+  if( ponto == 3 ) lc2.setDigit(0,3,dig4,true); else lc2.setDigit(0,3,dig4,false);
+     204:	80 91 10 01 	lds	r24, 0x0110	; 0x800110 <ponto>
+     208:	90 91 11 01 	lds	r25, 0x0111	; 0x800111 <ponto+0x1>
+     20c:	01 e0       	ldi	r16, 0x01	; 1
+     20e:	03 97       	sbiw	r24, 0x03	; 3
+     210:	09 f0       	breq	.+2      	; 0x214 <writeLcd2()+0x62>
+     212:	00 e0       	ldi	r16, 0x00	; 0
+     214:	43 e0       	ldi	r20, 0x03	; 3
+     216:	50 e0       	ldi	r21, 0x00	; 0
+     218:	70 e0       	ldi	r23, 0x00	; 0
+     21a:	60 e0       	ldi	r22, 0x00	; 0
+     21c:	88 e7       	ldi	r24, 0x78	; 120
+     21e:	91 e0       	ldi	r25, 0x01	; 1
+     220:	29 d4       	rcall	.+2130   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+     222:	20 91 16 01 	lds	r18, 0x0116	; 0x800116 <dig3>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:113 (discriminator 2)
+  if( ponto == 2 ) lc2.setDigit(0,2,dig3,true); else lc2.setDigit(0,2,dig3,false);
+     226:	80 91 10 01 	lds	r24, 0x0110	; 0x800110 <ponto>
+     22a:	90 91 11 01 	lds	r25, 0x0111	; 0x800111 <ponto+0x1>
+     22e:	01 e0       	ldi	r16, 0x01	; 1
+     230:	02 97       	sbiw	r24, 0x02	; 2
+     232:	09 f0       	breq	.+2      	; 0x236 <writeLcd2()+0x84>
+     234:	00 e0       	ldi	r16, 0x00	; 0
+     236:	42 e0       	ldi	r20, 0x02	; 2
+     238:	50 e0       	ldi	r21, 0x00	; 0
+     23a:	70 e0       	ldi	r23, 0x00	; 0
+     23c:	60 e0       	ldi	r22, 0x00	; 0
+     23e:	88 e7       	ldi	r24, 0x78	; 120
+     240:	91 e0       	ldi	r25, 0x01	; 1
+     242:	18 d4       	rcall	.+2096   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+     244:	20 91 14 01 	lds	r18, 0x0114	; 0x800114 <dig2>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:114 (discriminator 2)
+  if( ponto == 1 ) lc2.setDigit(0,1,dig2,true); else lc2.setDigit(0,1,dig2,false);
+     248:	80 91 10 01 	lds	r24, 0x0110	; 0x800110 <ponto>
+     24c:	90 91 11 01 	lds	r25, 0x0111	; 0x800111 <ponto+0x1>
+     250:	01 e0       	ldi	r16, 0x01	; 1
+     252:	01 97       	sbiw	r24, 0x01	; 1
+     254:	09 f0       	breq	.+2      	; 0x258 <writeLcd2()+0xa6>
+     256:	00 e0       	ldi	r16, 0x00	; 0
+     258:	41 e0       	ldi	r20, 0x01	; 1
+     25a:	50 e0       	ldi	r21, 0x00	; 0
+     25c:	70 e0       	ldi	r23, 0x00	; 0
+     25e:	60 e0       	ldi	r22, 0x00	; 0
+     260:	88 e7       	ldi	r24, 0x78	; 120
+     262:	91 e0       	ldi	r25, 0x01	; 1
+     264:	07 d4       	rcall	.+2062   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:115 (discriminator 2)
+  if( ponto == 0 ) lc2.setDigit(0,0,dig1,false); else lc2.setDigit(0,0,dig1,false);
+     266:	00 e0       	ldi	r16, 0x00	; 0
+     268:	20 91 12 01 	lds	r18, 0x0112	; 0x800112 <dig1>
+     26c:	50 e0       	ldi	r21, 0x00	; 0
+     26e:	40 e0       	ldi	r20, 0x00	; 0
+     270:	70 e0       	ldi	r23, 0x00	; 0
+     272:	60 e0       	ldi	r22, 0x00	; 0
+     274:	88 e7       	ldi	r24, 0x78	; 120
+     276:	91 e0       	ldi	r25, 0x01	; 1
+     278:	fd d3       	rcall	.+2042   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:117 (discriminator 2)
+  
+}
+     27a:	0f 91       	pop	r16
+     27c:	08 95       	ret
+
+0000027e <writeLcd3()>:
+_Z9writeLcd3v():
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:119
+void writeLcd3()
+{  
+     27e:	0f 93       	push	r16
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:122
+  //Display 1;
+  
+  lc3.setDigit(0,4,dig5,false);
+     280:	00 e0       	ldi	r16, 0x00	; 0
+     282:	20 91 1a 01 	lds	r18, 0x011A	; 0x80011a <dig5>
+     286:	44 e0       	ldi	r20, 0x04	; 4
+     288:	50 e0       	ldi	r21, 0x00	; 0
+     28a:	70 e0       	ldi	r23, 0x00	; 0
+     28c:	60 e0       	ldi	r22, 0x00	; 0
+     28e:	80 e2       	ldi	r24, 0x20	; 32
+     290:	91 e0       	ldi	r25, 0x01	; 1
+     292:	f0 d3       	rcall	.+2016   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:123
+  lc3.setDigit(0,3,dig4,false);
+     294:	20 91 18 01 	lds	r18, 0x0118	; 0x800118 <dig4>
+     298:	43 e0       	ldi	r20, 0x03	; 3
+     29a:	50 e0       	ldi	r21, 0x00	; 0
+     29c:	70 e0       	ldi	r23, 0x00	; 0
+     29e:	60 e0       	ldi	r22, 0x00	; 0
+     2a0:	80 e2       	ldi	r24, 0x20	; 32
+     2a2:	91 e0       	ldi	r25, 0x01	; 1
+     2a4:	e7 d3       	rcall	.+1998   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:124
+  lc3.setDigit(0,2,dig3,false);
+     2a6:	20 91 16 01 	lds	r18, 0x0116	; 0x800116 <dig3>
+     2aa:	42 e0       	ldi	r20, 0x02	; 2
+     2ac:	50 e0       	ldi	r21, 0x00	; 0
+     2ae:	70 e0       	ldi	r23, 0x00	; 0
+     2b0:	60 e0       	ldi	r22, 0x00	; 0
+     2b2:	80 e2       	ldi	r24, 0x20	; 32
+     2b4:	91 e0       	ldi	r25, 0x01	; 1
+     2b6:	de d3       	rcall	.+1980   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:125
+  lc3.setDigit(0,1,dig2,false);
+     2b8:	20 91 14 01 	lds	r18, 0x0114	; 0x800114 <dig2>
+     2bc:	41 e0       	ldi	r20, 0x01	; 1
+     2be:	50 e0       	ldi	r21, 0x00	; 0
+     2c0:	70 e0       	ldi	r23, 0x00	; 0
+     2c2:	60 e0       	ldi	r22, 0x00	; 0
+     2c4:	80 e2       	ldi	r24, 0x20	; 32
+     2c6:	91 e0       	ldi	r25, 0x01	; 1
+     2c8:	d5 d3       	rcall	.+1962   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:126
+  lc3.setDigit(0,0,dig1,false);
+     2ca:	20 91 12 01 	lds	r18, 0x0112	; 0x800112 <dig1>
+     2ce:	50 e0       	ldi	r21, 0x00	; 0
+     2d0:	40 e0       	ldi	r20, 0x00	; 0
+     2d2:	70 e0       	ldi	r23, 0x00	; 0
+     2d4:	60 e0       	ldi	r22, 0x00	; 0
+     2d6:	80 e2       	ldi	r24, 0x20	; 32
+     2d8:	91 e0       	ldi	r25, 0x01	; 1
+     2da:	cc d3       	rcall	.+1944   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:128
+  
+}
+     2dc:	0f 91       	pop	r16
+     2de:	08 95       	ret
+
+000002e0 <setup>:
+setup():
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:136
+// FF09200043210 display = 2 cmd clear   00
+// FF09301043210 display = 3 cmd imprime 01
+int totalBytesRecebidos = 0;
+int lenght = 0;
+
+void setup() {
+     2e0:	0f 93       	push	r16
+_ZN14HardwareSerial5beginEm():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.h:121
+  public:
+    inline HardwareSerial(
+      volatile uint8_t *ubrrh, volatile uint8_t *ubrrl,
+      volatile uint8_t *ucsra, volatile uint8_t *ucsrb,
+      volatile uint8_t *ucsrc, volatile uint8_t *udr);
+    void begin(unsigned long baud) { begin(baud, SERIAL_8N1); }
+     2e2:	26 e0       	ldi	r18, 0x06	; 6
+     2e4:	40 e8       	ldi	r20, 0x80	; 128
+     2e6:	55 e2       	ldi	r21, 0x25	; 37
+     2e8:	60 e0       	ldi	r22, 0x00	; 0
+     2ea:	70 e0       	ldi	r23, 0x00	; 0
+     2ec:	81 e3       	ldi	r24, 0x31	; 49
+     2ee:	92 e0       	ldi	r25, 0x02	; 2
+     2f0:	28 d6       	rcall	.+3152   	; 0xf42 <HardwareSerial::begin(unsigned long, unsigned char)>
+setup():
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:142
+  /*
+   The MAX72XX is in power-saving mode on startup,
+   we have to do a wakeup call
+   */
+  Serial.begin(9600);
+  lc1.shutdown(0,false);
+     2f2:	40 e0       	ldi	r20, 0x00	; 0
+     2f4:	70 e0       	ldi	r23, 0x00	; 0
+     2f6:	60 e0       	ldi	r22, 0x00	; 0
+     2f8:	80 ed       	ldi	r24, 0xD0	; 208
+     2fa:	91 e0       	ldi	r25, 0x01	; 1
+     2fc:	da d2       	rcall	.+1460   	; 0x8b2 <LedControl::shutdown(int, bool)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:143
+  lc1.setIntensity(0,8);
+     2fe:	48 e0       	ldi	r20, 0x08	; 8
+     300:	50 e0       	ldi	r21, 0x00	; 0
+     302:	70 e0       	ldi	r23, 0x00	; 0
+     304:	60 e0       	ldi	r22, 0x00	; 0
+     306:	80 ed       	ldi	r24, 0xD0	; 208
+     308:	91 e0       	ldi	r25, 0x01	; 1
+     30a:	f5 d2       	rcall	.+1514   	; 0x8f6 <LedControl::setIntensity(int, int)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:144
+  lc1.clearDisplay(0);
+     30c:	70 e0       	ldi	r23, 0x00	; 0
+     30e:	60 e0       	ldi	r22, 0x00	; 0
+     310:	80 ed       	ldi	r24, 0xD0	; 208
+     312:	91 e0       	ldi	r25, 0x01	; 1
+     314:	01 d3       	rcall	.+1538   	; 0x918 <LedControl::clearDisplay(int)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:146
+
+  lc2.shutdown(0,false);
+     316:	40 e0       	ldi	r20, 0x00	; 0
+     318:	70 e0       	ldi	r23, 0x00	; 0
+     31a:	60 e0       	ldi	r22, 0x00	; 0
+     31c:	88 e7       	ldi	r24, 0x78	; 120
+     31e:	91 e0       	ldi	r25, 0x01	; 1
+     320:	c8 d2       	rcall	.+1424   	; 0x8b2 <LedControl::shutdown(int, bool)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:147
+  lc2.setIntensity(0,8);
+     322:	48 e0       	ldi	r20, 0x08	; 8
+     324:	50 e0       	ldi	r21, 0x00	; 0
+     326:	70 e0       	ldi	r23, 0x00	; 0
+     328:	60 e0       	ldi	r22, 0x00	; 0
+     32a:	88 e7       	ldi	r24, 0x78	; 120
+     32c:	91 e0       	ldi	r25, 0x01	; 1
+     32e:	e3 d2       	rcall	.+1478   	; 0x8f6 <LedControl::setIntensity(int, int)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:148
+  lc2.clearDisplay(0);
+     330:	70 e0       	ldi	r23, 0x00	; 0
+     332:	60 e0       	ldi	r22, 0x00	; 0
+     334:	88 e7       	ldi	r24, 0x78	; 120
+     336:	91 e0       	ldi	r25, 0x01	; 1
+     338:	ef d2       	rcall	.+1502   	; 0x918 <LedControl::clearDisplay(int)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:150
+
+  lc3.shutdown(0,false);
+     33a:	40 e0       	ldi	r20, 0x00	; 0
+     33c:	70 e0       	ldi	r23, 0x00	; 0
+     33e:	60 e0       	ldi	r22, 0x00	; 0
+     340:	80 e2       	ldi	r24, 0x20	; 32
+     342:	91 e0       	ldi	r25, 0x01	; 1
+     344:	b6 d2       	rcall	.+1388   	; 0x8b2 <LedControl::shutdown(int, bool)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:151
+  lc3.setIntensity(0,8);
+     346:	48 e0       	ldi	r20, 0x08	; 8
+     348:	50 e0       	ldi	r21, 0x00	; 0
+     34a:	70 e0       	ldi	r23, 0x00	; 0
+     34c:	60 e0       	ldi	r22, 0x00	; 0
+     34e:	80 e2       	ldi	r24, 0x20	; 32
+     350:	91 e0       	ldi	r25, 0x01	; 1
+     352:	d1 d2       	rcall	.+1442   	; 0x8f6 <LedControl::setIntensity(int, int)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:152
+  lc3.clearDisplay(0);
+     354:	70 e0       	ldi	r23, 0x00	; 0
+     356:	60 e0       	ldi	r22, 0x00	; 0
+     358:	80 e2       	ldi	r24, 0x20	; 32
+     35a:	91 e0       	ldi	r25, 0x01	; 1
+     35c:	dd d2       	rcall	.+1466   	; 0x918 <LedControl::clearDisplay(int)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:154
+
+  lc1.setDigit(0,7,2,false);lc1.setDigit(0,6,0,false);lc1.setDigit(0,5,2,false);lc1.setDigit(0,4,1,false);
+     35e:	00 e0       	ldi	r16, 0x00	; 0
+     360:	22 e0       	ldi	r18, 0x02	; 2
+     362:	47 e0       	ldi	r20, 0x07	; 7
+     364:	50 e0       	ldi	r21, 0x00	; 0
+     366:	70 e0       	ldi	r23, 0x00	; 0
+     368:	60 e0       	ldi	r22, 0x00	; 0
+     36a:	80 ed       	ldi	r24, 0xD0	; 208
+     36c:	91 e0       	ldi	r25, 0x01	; 1
+     36e:	82 d3       	rcall	.+1796   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+     370:	20 e0       	ldi	r18, 0x00	; 0
+     372:	46 e0       	ldi	r20, 0x06	; 6
+     374:	50 e0       	ldi	r21, 0x00	; 0
+     376:	70 e0       	ldi	r23, 0x00	; 0
+     378:	60 e0       	ldi	r22, 0x00	; 0
+     37a:	80 ed       	ldi	r24, 0xD0	; 208
+     37c:	91 e0       	ldi	r25, 0x01	; 1
+     37e:	7a d3       	rcall	.+1780   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+     380:	22 e0       	ldi	r18, 0x02	; 2
+     382:	45 e0       	ldi	r20, 0x05	; 5
+     384:	50 e0       	ldi	r21, 0x00	; 0
+     386:	70 e0       	ldi	r23, 0x00	; 0
+     388:	60 e0       	ldi	r22, 0x00	; 0
+     38a:	80 ed       	ldi	r24, 0xD0	; 208
+     38c:	91 e0       	ldi	r25, 0x01	; 1
+     38e:	72 d3       	rcall	.+1764   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+     390:	21 e0       	ldi	r18, 0x01	; 1
+     392:	44 e0       	ldi	r20, 0x04	; 4
+     394:	50 e0       	ldi	r21, 0x00	; 0
+     396:	70 e0       	ldi	r23, 0x00	; 0
+     398:	60 e0       	ldi	r22, 0x00	; 0
+     39a:	80 ed       	ldi	r24, 0xD0	; 208
+     39c:	91 e0       	ldi	r25, 0x01	; 1
+     39e:	6a d3       	rcall	.+1748   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:155
+  lc1.setDigit(0,3,0,false);lc1.setDigit(0,2,9,false);
+     3a0:	20 e0       	ldi	r18, 0x00	; 0
+     3a2:	43 e0       	ldi	r20, 0x03	; 3
+     3a4:	50 e0       	ldi	r21, 0x00	; 0
+     3a6:	70 e0       	ldi	r23, 0x00	; 0
+     3a8:	60 e0       	ldi	r22, 0x00	; 0
+     3aa:	80 ed       	ldi	r24, 0xD0	; 208
+     3ac:	91 e0       	ldi	r25, 0x01	; 1
+     3ae:	62 d3       	rcall	.+1732   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+     3b0:	29 e0       	ldi	r18, 0x09	; 9
+     3b2:	42 e0       	ldi	r20, 0x02	; 2
+     3b4:	50 e0       	ldi	r21, 0x00	; 0
+     3b6:	70 e0       	ldi	r23, 0x00	; 0
+     3b8:	60 e0       	ldi	r22, 0x00	; 0
+     3ba:	80 ed       	ldi	r24, 0xD0	; 208
+     3bc:	91 e0       	ldi	r25, 0x01	; 1
+     3be:	5a d3       	rcall	.+1716   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:156
+  lc1.setDigit(0,1,3,false);lc1.setDigit(0,0,0,false);
+     3c0:	23 e0       	ldi	r18, 0x03	; 3
+     3c2:	41 e0       	ldi	r20, 0x01	; 1
+     3c4:	50 e0       	ldi	r21, 0x00	; 0
+     3c6:	70 e0       	ldi	r23, 0x00	; 0
+     3c8:	60 e0       	ldi	r22, 0x00	; 0
+     3ca:	80 ed       	ldi	r24, 0xD0	; 208
+     3cc:	91 e0       	ldi	r25, 0x01	; 1
+     3ce:	52 d3       	rcall	.+1700   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+     3d0:	20 e0       	ldi	r18, 0x00	; 0
+     3d2:	50 e0       	ldi	r21, 0x00	; 0
+     3d4:	40 e0       	ldi	r20, 0x00	; 0
+     3d6:	70 e0       	ldi	r23, 0x00	; 0
+     3d8:	60 e0       	ldi	r22, 0x00	; 0
+     3da:	80 ed       	ldi	r24, 0xD0	; 208
+     3dc:	91 e0       	ldi	r25, 0x01	; 1
+     3de:	4a d3       	rcall	.+1684   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:158
+  //Version
+  lc2.setDigit(0,3,0,false);lc2.setDigit(0,2,1,true);
+     3e0:	20 e0       	ldi	r18, 0x00	; 0
+     3e2:	43 e0       	ldi	r20, 0x03	; 3
+     3e4:	50 e0       	ldi	r21, 0x00	; 0
+     3e6:	70 e0       	ldi	r23, 0x00	; 0
+     3e8:	60 e0       	ldi	r22, 0x00	; 0
+     3ea:	88 e7       	ldi	r24, 0x78	; 120
+     3ec:	91 e0       	ldi	r25, 0x01	; 1
+     3ee:	42 d3       	rcall	.+1668   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+     3f0:	01 e0       	ldi	r16, 0x01	; 1
+     3f2:	21 e0       	ldi	r18, 0x01	; 1
+     3f4:	42 e0       	ldi	r20, 0x02	; 2
+     3f6:	50 e0       	ldi	r21, 0x00	; 0
+     3f8:	70 e0       	ldi	r23, 0x00	; 0
+     3fa:	60 e0       	ldi	r22, 0x00	; 0
+     3fc:	88 e7       	ldi	r24, 0x78	; 120
+     3fe:	91 e0       	ldi	r25, 0x01	; 1
+     400:	39 d3       	rcall	.+1650   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:159
+  lc2.setDigit(0,1,2,false);lc2.setDigit(0,0,0,false);
+     402:	00 e0       	ldi	r16, 0x00	; 0
+     404:	22 e0       	ldi	r18, 0x02	; 2
+     406:	41 e0       	ldi	r20, 0x01	; 1
+     408:	50 e0       	ldi	r21, 0x00	; 0
+     40a:	70 e0       	ldi	r23, 0x00	; 0
+     40c:	60 e0       	ldi	r22, 0x00	; 0
+     40e:	88 e7       	ldi	r24, 0x78	; 120
+     410:	91 e0       	ldi	r25, 0x01	; 1
+     412:	30 d3       	rcall	.+1632   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+     414:	20 e0       	ldi	r18, 0x00	; 0
+     416:	50 e0       	ldi	r21, 0x00	; 0
+     418:	40 e0       	ldi	r20, 0x00	; 0
+     41a:	70 e0       	ldi	r23, 0x00	; 0
+     41c:	60 e0       	ldi	r22, 0x00	; 0
+     41e:	88 e7       	ldi	r24, 0x78	; 120
+     420:	91 e0       	ldi	r25, 0x01	; 1
+     422:	28 d3       	rcall	.+1616   	; 0xa74 <LedControl::setDigit(int, int, unsigned char, bool)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:160
+  delay(2000);
+     424:	60 ed       	ldi	r22, 0xD0	; 208
+     426:	77 e0       	ldi	r23, 0x07	; 7
+     428:	80 e0       	ldi	r24, 0x00	; 0
+     42a:	90 e0       	ldi	r25, 0x00	; 0
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:162
+  
+}
+     42c:	0f 91       	pop	r16
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:160
+  lc1.setDigit(0,3,0,false);lc1.setDigit(0,2,9,false);
+  lc1.setDigit(0,1,3,false);lc1.setDigit(0,0,0,false);
+  //Version
+  lc2.setDigit(0,3,0,false);lc2.setDigit(0,2,1,true);
+  lc2.setDigit(0,1,2,false);lc2.setDigit(0,0,0,false);
+  delay(2000);
+     42e:	bb c3       	rjmp	.+1910   	; 0xba6 <delay>
+
+00000430 <cmd_00()>:
+_Z6cmd_00v():
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:229
+   }  
+}
+
+void cmd_00(){
+        
+        Serial.print("totalBytesRecebidos ");
+     430:	66 e7       	ldi	r22, 0x76	; 118
+     432:	70 e0       	ldi	r23, 0x00	; 0
+     434:	81 e3       	ldi	r24, 0x31	; 49
+     436:	92 e0       	ldi	r25, 0x02	; 2
+     438:	9c d6       	rcall	.+3384   	; 0x1172 <Print::print(char const*)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:230
+        Serial.println(totalBytesRecebidos);
+     43a:	60 91 0e 01 	lds	r22, 0x010E	; 0x80010e <totalBytesRecebidos>
+     43e:	70 91 0f 01 	lds	r23, 0x010F	; 0x80010f <totalBytesRecebidos+0x1>
+     442:	4a e0       	ldi	r20, 0x0A	; 10
+     444:	50 e0       	ldi	r21, 0x00	; 0
+     446:	81 e3       	ldi	r24, 0x31	; 49
+     448:	92 e0       	ldi	r25, 0x02	; 2
+     44a:	4e d7       	rcall	.+3740   	; 0x12e8 <Print::println(int, int)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:233
+        
+        //Serial.println(" Todos os bytes foram recebidos");
+        Serial.print(sign);
+     44c:	60 91 1c 01 	lds	r22, 0x011C	; 0x80011c <sign>
+     450:	70 91 1d 01 	lds	r23, 0x011D	; 0x80011d <sign+0x1>
+     454:	4a e0       	ldi	r20, 0x0A	; 10
+     456:	50 e0       	ldi	r21, 0x00	; 0
+     458:	81 e3       	ldi	r24, 0x31	; 49
+     45a:	92 e0       	ldi	r25, 0x02	; 2
+     45c:	3f d7       	rcall	.+3710   	; 0x12dc <Print::print(int, int)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:234
+        Serial.print(dig5);
+     45e:	60 91 1a 01 	lds	r22, 0x011A	; 0x80011a <dig5>
+     462:	70 91 1b 01 	lds	r23, 0x011B	; 0x80011b <dig5+0x1>
+     466:	4a e0       	ldi	r20, 0x0A	; 10
+     468:	50 e0       	ldi	r21, 0x00	; 0
+     46a:	81 e3       	ldi	r24, 0x31	; 49
+     46c:	92 e0       	ldi	r25, 0x02	; 2
+     46e:	36 d7       	rcall	.+3692   	; 0x12dc <Print::print(int, int)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:235
+        Serial.print(dig4);
+     470:	60 91 18 01 	lds	r22, 0x0118	; 0x800118 <dig4>
+     474:	70 91 19 01 	lds	r23, 0x0119	; 0x800119 <dig4+0x1>
+     478:	4a e0       	ldi	r20, 0x0A	; 10
+     47a:	50 e0       	ldi	r21, 0x00	; 0
+     47c:	81 e3       	ldi	r24, 0x31	; 49
+     47e:	92 e0       	ldi	r25, 0x02	; 2
+     480:	2d d7       	rcall	.+3674   	; 0x12dc <Print::print(int, int)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:236
+        Serial.print(dig3);
+     482:	60 91 16 01 	lds	r22, 0x0116	; 0x800116 <dig3>
+     486:	70 91 17 01 	lds	r23, 0x0117	; 0x800117 <dig3+0x1>
+     48a:	4a e0       	ldi	r20, 0x0A	; 10
+     48c:	50 e0       	ldi	r21, 0x00	; 0
+     48e:	81 e3       	ldi	r24, 0x31	; 49
+     490:	92 e0       	ldi	r25, 0x02	; 2
+     492:	24 d7       	rcall	.+3656   	; 0x12dc <Print::print(int, int)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:237
+        Serial.print(dig2);
+     494:	60 91 14 01 	lds	r22, 0x0114	; 0x800114 <dig2>
+     498:	70 91 15 01 	lds	r23, 0x0115	; 0x800115 <dig2+0x1>
+     49c:	4a e0       	ldi	r20, 0x0A	; 10
+     49e:	50 e0       	ldi	r21, 0x00	; 0
+     4a0:	81 e3       	ldi	r24, 0x31	; 49
+     4a2:	92 e0       	ldi	r25, 0x02	; 2
+     4a4:	1b d7       	rcall	.+3638   	; 0x12dc <Print::print(int, int)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:238
+        Serial.println(dig1);
+     4a6:	60 91 12 01 	lds	r22, 0x0112	; 0x800112 <dig1>
+     4aa:	70 91 13 01 	lds	r23, 0x0113	; 0x800113 <dig1+0x1>
+     4ae:	4a e0       	ldi	r20, 0x0A	; 10
+     4b0:	50 e0       	ldi	r21, 0x00	; 0
+     4b2:	81 e3       	ldi	r24, 0x31	; 49
+     4b4:	92 e0       	ldi	r25, 0x02	; 2
+     4b6:	18 d7       	rcall	.+3632   	; 0x12e8 <Print::println(int, int)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:240
+        
+        if( numDisplay == 1 ){
+     4b8:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+     4bc:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+     4c0:	81 30       	cpi	r24, 0x01	; 1
+     4c2:	91 05       	cpc	r25, r1
+     4c4:	09 f4       	brne	.+2      	; 0x4c8 <__stack+0x69>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:241
+          writeLcd1();
+     4c6:	14 ce       	rjmp	.-984    	; 0xf0 <writeLcd1()>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:242
+        }else if( numDisplay == 2 ){
+     4c8:	82 30       	cpi	r24, 0x02	; 2
+     4ca:	91 05       	cpc	r25, r1
+     4cc:	09 f4       	brne	.+2      	; 0x4d0 <__stack+0x71>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:243
+          writeLcd2();
+     4ce:	71 ce       	rjmp	.-798    	; 0x1b2 <writeLcd2()>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:244
+        }else if( numDisplay == 3 ){
+     4d0:	03 97       	sbiw	r24, 0x03	; 3
+     4d2:	09 f4       	brne	.+2      	; 0x4d6 <__stack+0x77>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:245
+          writeLcd3();
+     4d4:	d4 ce       	rjmp	.-600    	; 0x27e <writeLcd3()>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:247
+        }      
+}
+     4d6:	08 95       	ret
+
+000004d8 <cmd_01()>:
+_Z6cmd_01v():
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:250
+
+void cmd_01(){
+        if( numDisplay == 1 ){
+     4d8:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+     4dc:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+     4e0:	81 30       	cpi	r24, 0x01	; 1
+     4e2:	91 05       	cpc	r25, r1
+     4e4:	51 f4       	brne	.+20     	; 0x4fa <cmd_01()+0x22>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:251
+          Serial.println("Limpando lcd 1");
+     4e6:	6b e8       	ldi	r22, 0x8B	; 139
+     4e8:	70 e0       	ldi	r23, 0x00	; 0
+     4ea:	81 e3       	ldi	r24, 0x31	; 49
+     4ec:	92 e0       	ldi	r25, 0x02	; 2
+     4ee:	52 d6       	rcall	.+3236   	; 0x1194 <Print::println(char const*)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:252
+          lc1.clearDisplay(0);
+     4f0:	70 e0       	ldi	r23, 0x00	; 0
+     4f2:	60 e0       	ldi	r22, 0x00	; 0
+     4f4:	80 ed       	ldi	r24, 0xD0	; 208
+     4f6:	91 e0       	ldi	r25, 0x01	; 1
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:278
+          lc2.setDigit(0,1,32,false);
+          lc2.setDigit(0,0,32,false);          
+          */
+        }else if( numDisplay == 3 ){
+          Serial.println("Limpando lcd 3");
+          lc3.clearDisplay(0);
+     4f8:	0f c2       	rjmp	.+1054   	; 0x918 <LedControl::clearDisplay(int)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:263
+          lc1.setDigit(0,3,32,false);
+          lc1.setDigit(0,2,32,false);
+          lc1.setDigit(0,1,32,false);
+          lc1.setDigit(0,0,32,false);      
+          */    
+        }else if( numDisplay == 2 ){
+     4fa:	82 30       	cpi	r24, 0x02	; 2
+     4fc:	91 05       	cpc	r25, r1
+     4fe:	51 f4       	brne	.+20     	; 0x514 <cmd_01()+0x3c>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:264
+          Serial.println("Limpando lcd 2");
+     500:	6a e9       	ldi	r22, 0x9A	; 154
+     502:	70 e0       	ldi	r23, 0x00	; 0
+     504:	81 e3       	ldi	r24, 0x31	; 49
+     506:	92 e0       	ldi	r25, 0x02	; 2
+     508:	45 d6       	rcall	.+3210   	; 0x1194 <Print::println(char const*)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:265
+          lc2.clearDisplay(0);
+     50a:	70 e0       	ldi	r23, 0x00	; 0
+     50c:	60 e0       	ldi	r22, 0x00	; 0
+     50e:	88 e7       	ldi	r24, 0x78	; 120
+     510:	91 e0       	ldi	r25, 0x01	; 1
+     512:	f2 cf       	rjmp	.-28     	; 0x4f8 <cmd_01()+0x20>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:276
+          lc2.setDigit(0,3,32,false);
+          lc2.setDigit(0,2,32,false);
+          lc2.setDigit(0,1,32,false);
+          lc2.setDigit(0,0,32,false);          
+          */
+        }else if( numDisplay == 3 ){
+     514:	03 97       	sbiw	r24, 0x03	; 3
+     516:	51 f4       	brne	.+20     	; 0x52c <cmd_01()+0x54>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:277
+          Serial.println("Limpando lcd 3");
+     518:	69 ea       	ldi	r22, 0xA9	; 169
+     51a:	70 e0       	ldi	r23, 0x00	; 0
+     51c:	81 e3       	ldi	r24, 0x31	; 49
+     51e:	92 e0       	ldi	r25, 0x02	; 2
+     520:	39 d6       	rcall	.+3186   	; 0x1194 <Print::println(char const*)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:278
+          lc3.clearDisplay(0);
+     522:	70 e0       	ldi	r23, 0x00	; 0
+     524:	60 e0       	ldi	r22, 0x00	; 0
+     526:	80 e2       	ldi	r24, 0x20	; 32
+     528:	91 e0       	ldi	r25, 0x01	; 1
+     52a:	e6 cf       	rjmp	.-52     	; 0x4f8 <cmd_01()+0x20>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:290
+          lc3.setDigit(0,2,32,false);
+          lc3.setDigit(0,1,32,false);
+          lc3.setDigit(0,0,32,false);  
+          */        
+        }      
+}
+     52c:	08 95       	ret
+
+0000052e <_GLOBAL__sub_I_lc1>:
+_GLOBAL__sub_I_lc1():
+     52e:	0f 93       	push	r16
+     530:	1f 93       	push	r17
+__static_initialization_and_destruction_0():
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:56
+ * 
+LedControl lc1=LedControl(5,3,4,1);
+LedControl lc2=LedControl(8,6,7,1);
+LedControl lc3=LedControl(12,10,11,1);
+*/
+LedControl lc1=LedControl(5,4,3,1);
+     532:	01 e0       	ldi	r16, 0x01	; 1
+     534:	10 e0       	ldi	r17, 0x00	; 0
+     536:	23 e0       	ldi	r18, 0x03	; 3
+     538:	30 e0       	ldi	r19, 0x00	; 0
+     53a:	44 e0       	ldi	r20, 0x04	; 4
+     53c:	50 e0       	ldi	r21, 0x00	; 0
+     53e:	65 e0       	ldi	r22, 0x05	; 5
+     540:	70 e0       	ldi	r23, 0x00	; 0
+     542:	80 ed       	ldi	r24, 0xD0	; 208
+     544:	91 e0       	ldi	r25, 0x01	; 1
+     546:	1b d2       	rcall	.+1078   	; 0x97e <LedControl::LedControl(int, int, int, int)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:57
+LedControl lc2=LedControl(5,4,6,1);
+     548:	26 e0       	ldi	r18, 0x06	; 6
+     54a:	30 e0       	ldi	r19, 0x00	; 0
+     54c:	44 e0       	ldi	r20, 0x04	; 4
+     54e:	50 e0       	ldi	r21, 0x00	; 0
+     550:	65 e0       	ldi	r22, 0x05	; 5
+     552:	70 e0       	ldi	r23, 0x00	; 0
+     554:	88 e7       	ldi	r24, 0x78	; 120
+     556:	91 e0       	ldi	r25, 0x01	; 1
+     558:	12 d2       	rcall	.+1060   	; 0x97e <LedControl::LedControl(int, int, int, int)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:58
+LedControl lc3=LedControl(5,4,7,1);
+     55a:	27 e0       	ldi	r18, 0x07	; 7
+     55c:	30 e0       	ldi	r19, 0x00	; 0
+     55e:	44 e0       	ldi	r20, 0x04	; 4
+     560:	50 e0       	ldi	r21, 0x00	; 0
+     562:	65 e0       	ldi	r22, 0x05	; 5
+     564:	70 e0       	ldi	r23, 0x00	; 0
+     566:	80 e2       	ldi	r24, 0x20	; 32
+     568:	91 e0       	ldi	r25, 0x01	; 1
+     56a:	09 d2       	rcall	.+1042   	; 0x97e <LedControl::LedControl(int, int, int, int)>
+_GLOBAL__sub_I_lc1():
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:290
+          lc3.setDigit(0,2,32,false);
+          lc3.setDigit(0,1,32,false);
+          lc3.setDigit(0,0,32,false);  
+          */        
+        }      
+}
+     56c:	1f 91       	pop	r17
+     56e:	0f 91       	pop	r16
+     570:	08 95       	ret
+
+00000572 <loop>:
+loop():
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:164
+  lc2.setDigit(0,1,2,false);lc2.setDigit(0,0,0,false);
+  delay(2000);
+  
+}
+void loop(){
+   if (Serial.available() > 0) {
+     572:	81 e3       	ldi	r24, 0x31	; 49
+     574:	92 e0       	ldi	r25, 0x02	; 2
+     576:	16 d4       	rcall	.+2092   	; 0xda4 <HardwareSerial::available()>
+     578:	18 16       	cp	r1, r24
+     57a:	19 06       	cpc	r1, r25
+     57c:	0c f0       	brlt	.+2      	; 0x580 <loop+0xe>
+     57e:	30 c1       	rjmp	.+608    	; 0x7e0 <loop+0x26e>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:165
+    char incomingByte = Serial.read();
+     580:	81 e3       	ldi	r24, 0x31	; 49
+     582:	92 e0       	ldi	r25, 0x02	; 2
+     584:	29 d4       	rcall	.+2130   	; 0xdd8 <HardwareSerial::read()>
+     586:	20 91 0e 01 	lds	r18, 0x010E	; 0x80010e <totalBytesRecebidos>
+     58a:	30 91 0f 01 	lds	r19, 0x010F	; 0x80010f <totalBytesRecebidos+0x1>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:166
+    if( incomingByte == 'F' && totalBytesRecebidos == 0 ){
+     58e:	86 34       	cpi	r24, 0x46	; 70
+     590:	81 f4       	brne	.+32     	; 0x5b2 <loop+0x40>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:166 (discriminator 1)
+     592:	21 15       	cp	r18, r1
+     594:	31 05       	cpc	r19, r1
+     596:	39 f4       	brne	.+14     	; 0x5a6 <loop+0x34>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:167
+      totalBytesRecebidos = 1;
+     598:	81 e0       	ldi	r24, 0x01	; 1
+     59a:	90 e0       	ldi	r25, 0x00	; 0
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:169
+    }else    if( incomingByte == 'F' && totalBytesRecebidos == 1 ){
+      totalBytesRecebidos = 2;
+     59c:	90 93 0f 01 	sts	0x010F, r25	; 0x80010f <totalBytesRecebidos+0x1>
+     5a0:	80 93 0e 01 	sts	0x010E, r24	; 0x80010e <totalBytesRecebidos>
+     5a4:	08 95       	ret
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:168 (discriminator 1)
+void loop(){
+   if (Serial.available() > 0) {
+    char incomingByte = Serial.read();
+    if( incomingByte == 'F' && totalBytesRecebidos == 0 ){
+      totalBytesRecebidos = 1;
+    }else    if( incomingByte == 'F' && totalBytesRecebidos == 1 ){
+     5a6:	21 30       	cpi	r18, 0x01	; 1
+     5a8:	31 05       	cpc	r19, r1
+     5aa:	19 f4       	brne	.+6      	; 0x5b2 <loop+0x40>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:169
+      totalBytesRecebidos = 2;
+     5ac:	82 e0       	ldi	r24, 0x02	; 2
+     5ae:	90 e0       	ldi	r25, 0x00	; 0
+     5b0:	f5 cf       	rjmp	.-22     	; 0x59c <loop+0x2a>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:170
+    }else if( totalBytesRecebidos == 2 ){
+     5b2:	22 30       	cpi	r18, 0x02	; 2
+     5b4:	31 05       	cpc	r19, r1
+     5b6:	89 f4       	brne	.+34     	; 0x5da <loop+0x68>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:171
+      lenght = (incomingByte - 48) * 10;
+     5b8:	08 2e       	mov	r0, r24
+     5ba:	00 0c       	add	r0, r0
+     5bc:	99 0b       	sbc	r25, r25
+     5be:	c0 97       	sbiw	r24, 0x30	; 48
+     5c0:	4a e0       	ldi	r20, 0x0A	; 10
+     5c2:	48 9f       	mul	r20, r24
+     5c4:	90 01       	movw	r18, r0
+     5c6:	49 9f       	mul	r20, r25
+     5c8:	30 0d       	add	r19, r0
+     5ca:	11 24       	eor	r1, r1
+     5cc:	30 93 0d 01 	sts	0x010D, r19	; 0x80010d <__data_end+0x1>
+     5d0:	20 93 0c 01 	sts	0x010C, r18	; 0x80010c <__data_end>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:172
+      totalBytesRecebidos = 3;
+     5d4:	83 e0       	ldi	r24, 0x03	; 3
+     5d6:	90 e0       	ldi	r25, 0x00	; 0
+     5d8:	e1 cf       	rjmp	.-62     	; 0x59c <loop+0x2a>
+     5da:	40 91 0c 01 	lds	r20, 0x010C	; 0x80010c <__data_end>
+     5de:	50 91 0d 01 	lds	r21, 0x010D	; 0x80010d <__data_end+0x1>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:173
+    }else if( totalBytesRecebidos == 3 ){
+     5e2:	23 30       	cpi	r18, 0x03	; 3
+     5e4:	31 05       	cpc	r19, r1
+     5e6:	f1 f4       	brne	.+60     	; 0x624 <loop+0xb2>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:174
+      lenght += (incomingByte - 48);    
+     5e8:	08 2e       	mov	r0, r24
+     5ea:	00 0c       	add	r0, r0
+     5ec:	99 0b       	sbc	r25, r25
+     5ee:	c0 97       	sbiw	r24, 0x30	; 48
+     5f0:	84 0f       	add	r24, r20
+     5f2:	95 1f       	adc	r25, r21
+     5f4:	90 93 0d 01 	sts	0x010D, r25	; 0x80010d <__data_end+0x1>
+     5f8:	80 93 0c 01 	sts	0x010C, r24	; 0x80010c <__data_end>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:175
+      totalBytesRecebidos = 4;
+     5fc:	84 e0       	ldi	r24, 0x04	; 4
+     5fe:	90 e0       	ldi	r25, 0x00	; 0
+     600:	90 93 0f 01 	sts	0x010F, r25	; 0x80010f <totalBytesRecebidos+0x1>
+     604:	80 93 0e 01 	sts	0x010E, r24	; 0x80010e <totalBytesRecebidos>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:176
+      Serial.print("lenght ");
+     608:	68 eb       	ldi	r22, 0xB8	; 184
+     60a:	70 e0       	ldi	r23, 0x00	; 0
+     60c:	81 e3       	ldi	r24, 0x31	; 49
+     60e:	92 e0       	ldi	r25, 0x02	; 2
+     610:	b0 d5       	rcall	.+2912   	; 0x1172 <Print::print(char const*)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:177
+      Serial.println(lenght);      
+     612:	60 91 0c 01 	lds	r22, 0x010C	; 0x80010c <__data_end>
+     616:	70 91 0d 01 	lds	r23, 0x010D	; 0x80010d <__data_end+0x1>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:190
+      cmd = (incomingByte - 48) * 10;
+    }else if( lenght > 0 && (totalBytesRecebidos == 6)){
+      totalBytesRecebidos=7;
+      cmd += (incomingByte - 48);
+      Serial.print("cmd ");
+      Serial.println(cmd);
+     61a:	4a e0       	ldi	r20, 0x0A	; 10
+     61c:	50 e0       	ldi	r21, 0x00	; 0
+     61e:	81 e3       	ldi	r24, 0x31	; 49
+     620:	92 e0       	ldi	r25, 0x02	; 2
+     622:	62 c6       	rjmp	.+3268   	; 0x12e8 <Print::println(int, int)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:178
+    }else if( totalBytesRecebidos == 3 ){
+      lenght += (incomingByte - 48);    
+      totalBytesRecebidos = 4;
+      Serial.print("lenght ");
+      Serial.println(lenght);      
+    }else if( lenght > 0 && totalBytesRecebidos == 4){
+     624:	14 16       	cp	r1, r20
+     626:	15 06       	cpc	r1, r21
+     628:	0c f0       	brlt	.+2      	; 0x62c <loop+0xba>
+     62a:	da c0       	rjmp	.+436    	; 0x7e0 <loop+0x26e>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:178 (discriminator 1)
+     62c:	24 30       	cpi	r18, 0x04	; 4
+     62e:	31 05       	cpc	r19, r1
+     630:	c1 f4       	brne	.+48     	; 0x662 <loop+0xf0>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:179
+      totalBytesRecebidos=5;
+     632:	25 e0       	ldi	r18, 0x05	; 5
+     634:	30 e0       	ldi	r19, 0x00	; 0
+     636:	30 93 0f 01 	sts	0x010F, r19	; 0x80010f <totalBytesRecebidos+0x1>
+     63a:	20 93 0e 01 	sts	0x010E, r18	; 0x80010e <totalBytesRecebidos>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:180
+      numDisplay = incomingByte - 48;
+     63e:	08 2e       	mov	r0, r24
+     640:	00 0c       	add	r0, r0
+     642:	99 0b       	sbc	r25, r25
+     644:	c0 97       	sbiw	r24, 0x30	; 48
+     646:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+     64a:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:181
+      Serial.print("numDisplay ");
+     64e:	60 ec       	ldi	r22, 0xC0	; 192
+     650:	70 e0       	ldi	r23, 0x00	; 0
+     652:	81 e3       	ldi	r24, 0x31	; 49
+     654:	92 e0       	ldi	r25, 0x02	; 2
+     656:	8d d5       	rcall	.+2842   	; 0x1172 <Print::print(char const*)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:182
+      Serial.println(numDisplay);      
+     658:	60 91 60 00 	lds	r22, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+     65c:	70 91 61 00 	lds	r23, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+     660:	dc cf       	rjmp	.-72     	; 0x61a <loop+0xa8>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:183 (discriminator 1)
+    }else if( lenght > 0 && (totalBytesRecebidos == 5)){
+     662:	25 30       	cpi	r18, 0x05	; 5
+     664:	31 05       	cpc	r19, r1
+     666:	a9 f4       	brne	.+42     	; 0x692 <loop+0x120>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:184
+      totalBytesRecebidos=6;
+     668:	26 e0       	ldi	r18, 0x06	; 6
+     66a:	30 e0       	ldi	r19, 0x00	; 0
+     66c:	30 93 0f 01 	sts	0x010F, r19	; 0x80010f <totalBytesRecebidos+0x1>
+     670:	20 93 0e 01 	sts	0x010E, r18	; 0x80010e <totalBytesRecebidos>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:185
+      cmd = (incomingByte - 48) * 10;
+     674:	08 2e       	mov	r0, r24
+     676:	00 0c       	add	r0, r0
+     678:	99 0b       	sbc	r25, r25
+     67a:	c0 97       	sbiw	r24, 0x30	; 48
+     67c:	4a e0       	ldi	r20, 0x0A	; 10
+     67e:	48 9f       	mul	r20, r24
+     680:	90 01       	movw	r18, r0
+     682:	49 9f       	mul	r20, r25
+     684:	30 0d       	add	r19, r0
+     686:	11 24       	eor	r1, r1
+     688:	30 93 1f 01 	sts	0x011F, r19	; 0x80011f <cmd+0x1>
+     68c:	20 93 1e 01 	sts	0x011E, r18	; 0x80011e <cmd>
+     690:	08 95       	ret
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:186 (discriminator 1)
+    }else if( lenght > 0 && (totalBytesRecebidos == 6)){
+     692:	26 30       	cpi	r18, 0x06	; 6
+     694:	31 05       	cpc	r19, r1
+     696:	f1 f4       	brne	.+60     	; 0x6d4 <loop+0x162>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:187
+      totalBytesRecebidos=7;
+     698:	27 e0       	ldi	r18, 0x07	; 7
+     69a:	30 e0       	ldi	r19, 0x00	; 0
+     69c:	30 93 0f 01 	sts	0x010F, r19	; 0x80010f <totalBytesRecebidos+0x1>
+     6a0:	20 93 0e 01 	sts	0x010E, r18	; 0x80010e <totalBytesRecebidos>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:188
+      cmd += (incomingByte - 48);
+     6a4:	08 2e       	mov	r0, r24
+     6a6:	00 0c       	add	r0, r0
+     6a8:	99 0b       	sbc	r25, r25
+     6aa:	c0 97       	sbiw	r24, 0x30	; 48
+     6ac:	20 91 1e 01 	lds	r18, 0x011E	; 0x80011e <cmd>
+     6b0:	30 91 1f 01 	lds	r19, 0x011F	; 0x80011f <cmd+0x1>
+     6b4:	82 0f       	add	r24, r18
+     6b6:	93 1f       	adc	r25, r19
+     6b8:	90 93 1f 01 	sts	0x011F, r25	; 0x80011f <cmd+0x1>
+     6bc:	80 93 1e 01 	sts	0x011E, r24	; 0x80011e <cmd>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:189
+      Serial.print("cmd ");
+     6c0:	6c ec       	ldi	r22, 0xCC	; 204
+     6c2:	70 e0       	ldi	r23, 0x00	; 0
+     6c4:	81 e3       	ldi	r24, 0x31	; 49
+     6c6:	92 e0       	ldi	r25, 0x02	; 2
+     6c8:	54 d5       	rcall	.+2728   	; 0x1172 <Print::print(char const*)>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:190
+      Serial.println(cmd);
+     6ca:	60 91 1e 01 	lds	r22, 0x011E	; 0x80011e <cmd>
+     6ce:	70 91 1f 01 	lds	r23, 0x011F	; 0x80011f <cmd+0x1>
+     6d2:	a3 cf       	rjmp	.-186    	; 0x61a <loop+0xa8>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:192 (discriminator 1)
+      
+    }else if( lenght > 0 && (totalBytesRecebidos == 7)){
+     6d4:	27 30       	cpi	r18, 0x07	; 7
+     6d6:	31 05       	cpc	r19, r1
+     6d8:	79 f4       	brne	.+30     	; 0x6f8 <loop+0x186>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:193
+      totalBytesRecebidos=8;
+     6da:	28 e0       	ldi	r18, 0x08	; 8
+     6dc:	30 e0       	ldi	r19, 0x00	; 0
+     6de:	30 93 0f 01 	sts	0x010F, r19	; 0x80010f <totalBytesRecebidos+0x1>
+     6e2:	20 93 0e 01 	sts	0x010E, r18	; 0x80010e <totalBytesRecebidos>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:194
+      dig5 = (incomingByte - 48); 
+     6e6:	08 2e       	mov	r0, r24
+     6e8:	00 0c       	add	r0, r0
+     6ea:	99 0b       	sbc	r25, r25
+     6ec:	c0 97       	sbiw	r24, 0x30	; 48
+     6ee:	90 93 1b 01 	sts	0x011B, r25	; 0x80011b <dig5+0x1>
+     6f2:	80 93 1a 01 	sts	0x011A, r24	; 0x80011a <dig5>
+     6f6:	08 95       	ret
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:195 (discriminator 1)
+    }else if( lenght > 0 && (totalBytesRecebidos == 8)){
+     6f8:	28 30       	cpi	r18, 0x08	; 8
+     6fa:	31 05       	cpc	r19, r1
+     6fc:	79 f4       	brne	.+30     	; 0x71c <loop+0x1aa>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:196
+      totalBytesRecebidos=9;
+     6fe:	29 e0       	ldi	r18, 0x09	; 9
+     700:	30 e0       	ldi	r19, 0x00	; 0
+     702:	30 93 0f 01 	sts	0x010F, r19	; 0x80010f <totalBytesRecebidos+0x1>
+     706:	20 93 0e 01 	sts	0x010E, r18	; 0x80010e <totalBytesRecebidos>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:197
+      dig4 = (incomingByte - 48); 
+     70a:	08 2e       	mov	r0, r24
+     70c:	00 0c       	add	r0, r0
+     70e:	99 0b       	sbc	r25, r25
+     710:	c0 97       	sbiw	r24, 0x30	; 48
+     712:	90 93 19 01 	sts	0x0119, r25	; 0x800119 <dig4+0x1>
+     716:	80 93 18 01 	sts	0x0118, r24	; 0x800118 <dig4>
+     71a:	08 95       	ret
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:198 (discriminator 1)
+    }else if( lenght > 0 && (totalBytesRecebidos == 9)){
+     71c:	29 30       	cpi	r18, 0x09	; 9
+     71e:	31 05       	cpc	r19, r1
+     720:	79 f4       	brne	.+30     	; 0x740 <loop+0x1ce>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:199
+      totalBytesRecebidos=10;
+     722:	2a e0       	ldi	r18, 0x0A	; 10
+     724:	30 e0       	ldi	r19, 0x00	; 0
+     726:	30 93 0f 01 	sts	0x010F, r19	; 0x80010f <totalBytesRecebidos+0x1>
+     72a:	20 93 0e 01 	sts	0x010E, r18	; 0x80010e <totalBytesRecebidos>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:200
+      dig3 = (incomingByte - 48); 
+     72e:	08 2e       	mov	r0, r24
+     730:	00 0c       	add	r0, r0
+     732:	99 0b       	sbc	r25, r25
+     734:	c0 97       	sbiw	r24, 0x30	; 48
+     736:	90 93 17 01 	sts	0x0117, r25	; 0x800117 <dig3+0x1>
+     73a:	80 93 16 01 	sts	0x0116, r24	; 0x800116 <dig3>
+     73e:	08 95       	ret
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:201 (discriminator 1)
+    }else if( lenght > 0 && (totalBytesRecebidos == 10)){
+     740:	2a 30       	cpi	r18, 0x0A	; 10
+     742:	31 05       	cpc	r19, r1
+     744:	79 f4       	brne	.+30     	; 0x764 <loop+0x1f2>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:202
+      totalBytesRecebidos=11;
+     746:	2b e0       	ldi	r18, 0x0B	; 11
+     748:	30 e0       	ldi	r19, 0x00	; 0
+     74a:	30 93 0f 01 	sts	0x010F, r19	; 0x80010f <totalBytesRecebidos+0x1>
+     74e:	20 93 0e 01 	sts	0x010E, r18	; 0x80010e <totalBytesRecebidos>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:203
+      dig2 = (incomingByte - 48); 
+     752:	08 2e       	mov	r0, r24
+     754:	00 0c       	add	r0, r0
+     756:	99 0b       	sbc	r25, r25
+     758:	c0 97       	sbiw	r24, 0x30	; 48
+     75a:	90 93 15 01 	sts	0x0115, r25	; 0x800115 <dig2+0x1>
+     75e:	80 93 14 01 	sts	0x0114, r24	; 0x800114 <dig2>
+     762:	08 95       	ret
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:204 (discriminator 1)
+    }else if( lenght > 0 && (totalBytesRecebidos == 11)){
+     764:	2b 30       	cpi	r18, 0x0B	; 11
+     766:	31 05       	cpc	r19, r1
+     768:	79 f4       	brne	.+30     	; 0x788 <loop+0x216>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:205
+      totalBytesRecebidos=12;
+     76a:	2c e0       	ldi	r18, 0x0C	; 12
+     76c:	30 e0       	ldi	r19, 0x00	; 0
+     76e:	30 93 0f 01 	sts	0x010F, r19	; 0x80010f <totalBytesRecebidos+0x1>
+     772:	20 93 0e 01 	sts	0x010E, r18	; 0x80010e <totalBytesRecebidos>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:206
+      dig1 = (incomingByte - 48); 
+     776:	08 2e       	mov	r0, r24
+     778:	00 0c       	add	r0, r0
+     77a:	99 0b       	sbc	r25, r25
+     77c:	c0 97       	sbiw	r24, 0x30	; 48
+     77e:	90 93 13 01 	sts	0x0113, r25	; 0x800113 <dig1+0x1>
+     782:	80 93 12 01 	sts	0x0112, r24	; 0x800112 <dig1>
+     786:	08 95       	ret
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:207 (discriminator 1)
+    }else if( lenght > 0 && (totalBytesRecebidos == 12)){
+     788:	2c 30       	cpi	r18, 0x0C	; 12
+     78a:	31 05       	cpc	r19, r1
+     78c:	79 f4       	brne	.+30     	; 0x7ac <loop+0x23a>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:208
+      totalBytesRecebidos=13;
+     78e:	2d e0       	ldi	r18, 0x0D	; 13
+     790:	30 e0       	ldi	r19, 0x00	; 0
+     792:	30 93 0f 01 	sts	0x010F, r19	; 0x80010f <totalBytesRecebidos+0x1>
+     796:	20 93 0e 01 	sts	0x010E, r18	; 0x80010e <totalBytesRecebidos>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:209
+      sign = (incomingByte - 48); 
+     79a:	08 2e       	mov	r0, r24
+     79c:	00 0c       	add	r0, r0
+     79e:	99 0b       	sbc	r25, r25
+     7a0:	c0 97       	sbiw	r24, 0x30	; 48
+     7a2:	90 93 1d 01 	sts	0x011D, r25	; 0x80011d <sign+0x1>
+     7a6:	80 93 1c 01 	sts	0x011C, r24	; 0x80011c <sign>
+     7aa:	08 95       	ret
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:210 (discriminator 1)
+    }else if( lenght > 0 && (totalBytesRecebidos == 13)){
+     7ac:	2d 30       	cpi	r18, 0x0D	; 13
+     7ae:	31 05       	cpc	r19, r1
+     7b0:	b9 f4       	brne	.+46     	; 0x7e0 <loop+0x26e>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:211
+      if ( (totalBytesRecebidos - 3 ) == lenght){
+     7b2:	4a 30       	cpi	r20, 0x0A	; 10
+     7b4:	51 05       	cpc	r21, r1
+     7b6:	c9 f4       	brne	.+50     	; 0x7ea <loop+0x278>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:212
+        ponto = (incomingByte - 48); 
+     7b8:	08 2e       	mov	r0, r24
+     7ba:	00 0c       	add	r0, r0
+     7bc:	99 0b       	sbc	r25, r25
+     7be:	c0 97       	sbiw	r24, 0x30	; 48
+     7c0:	90 93 11 01 	sts	0x0111, r25	; 0x800111 <ponto+0x1>
+     7c4:	80 93 10 01 	sts	0x0110, r24	; 0x800110 <ponto>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:213
+        switch(cmd){
+     7c8:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <cmd>
+     7cc:	90 91 1f 01 	lds	r25, 0x011F	; 0x80011f <cmd+0x1>
+     7d0:	00 97       	sbiw	r24, 0x00	; 0
+     7d2:	39 f0       	breq	.+14     	; 0x7e2 <loop+0x270>
+     7d4:	01 97       	sbiw	r24, 0x01	; 1
+     7d6:	39 f0       	breq	.+14     	; 0x7e6 <loop+0x274>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:222
+              cmd_01(); break;    
+        }
+      }else{
+        Serial.println("Not all bytes were being received...");
+      }
+      totalBytesRecebidos = 0;
+     7d8:	10 92 0f 01 	sts	0x010F, r1	; 0x80010f <totalBytesRecebidos+0x1>
+     7dc:	10 92 0e 01 	sts	0x010E, r1	; 0x80010e <totalBytesRecebidos>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:225
+    }
+   }  
+}
+     7e0:	08 95       	ret
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:215
+    }else if( lenght > 0 && (totalBytesRecebidos == 13)){
+      if ( (totalBytesRecebidos - 3 ) == lenght){
+        ponto = (incomingByte - 48); 
+        switch(cmd){
+          case CMD_IMPRIME:
+              cmd_00(); break;
+     7e2:	26 de       	rcall	.-948    	; 0x430 <cmd_00()>
+     7e4:	f9 cf       	rjmp	.-14     	; 0x7d8 <loop+0x266>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:217
+          case CMD_CLEAR:
+              cmd_01(); break;    
+     7e6:	78 de       	rcall	.-784    	; 0x4d8 <cmd_01()>
+     7e8:	f7 cf       	rjmp	.-18     	; 0x7d8 <loop+0x266>
+D:\Documentos\0000_Projetos\0000_projetosTorno\RDO_x\lcd_3_display/lcd_3_display.ino:220
+        }
+      }else{
+        Serial.println("Not all bytes were being received...");
+     7ea:	61 ed       	ldi	r22, 0xD1	; 209
+     7ec:	70 e0       	ldi	r23, 0x00	; 0
+     7ee:	81 e3       	ldi	r24, 0x31	; 49
+     7f0:	92 e0       	ldi	r25, 0x02	; 2
+     7f2:	d0 d4       	rcall	.+2464   	; 0x1194 <Print::println(char const*)>
+     7f4:	f1 cf       	rjmp	.-30     	; 0x7d8 <loop+0x266>
+
+000007f6 <LedControl::spiTransfer(int, unsigned char, unsigned char)>:
+_ZN10LedControl11spiTransferEihh():
+C:\Users\ppsil\sketchbook\libraries\LedControl\src/LedControl.cpp:139
+    if(row<0 || row>7)
+        return;
+    offset=addr*8;
+    status[offset+row]=value;
+    spiTransfer(addr, row+1,status[offset+row]);
+}
+     7f6:	8f 92       	push	r8
+     7f8:	9f 92       	push	r9
+     7fa:	af 92       	push	r10
+     7fc:	bf 92       	push	r11
+     7fe:	cf 92       	push	r12
+     800:	df 92       	push	r13
+     802:	ef 92       	push	r14
+     804:	ff 92       	push	r15
+     806:	0f 93       	push	r16
+     808:	1f 93       	push	r17
+     80a:	cf 93       	push	r28
+     80c:	df 93       	push	r29
+     80e:	00 d0       	rcall	.+0      	; 0x810 <LedControl::spiTransfer(int, unsigned char, unsigned char)+0x1a>
+     810:	cd b7       	in	r28, 0x3d	; 61
+     812:	de b7       	in	r29, 0x3e	; 62
+     814:	8c 01       	movw	r16, r24
+     816:	49 83       	std	Y+1, r20	; 0x01
+     818:	2a 83       	std	Y+2, r18	; 0x02
+     81a:	66 0f       	add	r22, r22
+     81c:	77 1f       	adc	r23, r23
+     81e:	f8 01       	movw	r30, r16
+     820:	ea 5a       	subi	r30, 0xAA	; 170
+     822:	ff 4f       	sbci	r31, 0xFF	; 255
+     824:	e0 80       	ld	r14, Z
+     826:	f1 80       	ldd	r15, Z+1	; 0x01
+     828:	ee 0c       	add	r14, r14
+     82a:	ff 1c       	adc	r15, r15
+     82c:	f8 01       	movw	r30, r16
+     82e:	cf 01       	movw	r24, r30
+     830:	80 1b       	sub	r24, r16
+     832:	91 0b       	sbc	r25, r17
+     834:	8e 15       	cp	r24, r14
+     836:	9f 05       	cpc	r25, r15
+     838:	14 f4       	brge	.+4      	; 0x83e <LedControl::spiTransfer(int, unsigned char, unsigned char)+0x48>
+     83a:	11 92       	st	Z+, r1
+     83c:	f8 cf       	rjmp	.-16     	; 0x82e <LedControl::spiTransfer(int, unsigned char, unsigned char)+0x38>
+     83e:	89 81       	ldd	r24, Y+1	; 0x01
+     840:	f8 01       	movw	r30, r16
+     842:	e6 0f       	add	r30, r22
+     844:	f7 1f       	adc	r31, r23
+     846:	81 83       	std	Z+1, r24	; 0x01
+     848:	8a 81       	ldd	r24, Y+2	; 0x02
+     84a:	80 83       	st	Z, r24
+     84c:	68 01       	movw	r12, r16
+     84e:	84 e5       	ldi	r24, 0x54	; 84
+     850:	c8 0e       	add	r12, r24
+     852:	d1 1c       	adc	r13, r1
+     854:	60 e0       	ldi	r22, 0x00	; 0
+     856:	f6 01       	movw	r30, r12
+     858:	80 81       	ld	r24, Z
+     85a:	41 d2       	rcall	.+1154   	; 0xcde <digitalWrite>
+     85c:	48 01       	movw	r8, r16
+     85e:	f2 e5       	ldi	r31, 0x52	; 82
+     860:	8f 0e       	add	r8, r31
+     862:	91 1c       	adc	r9, r1
+     864:	58 01       	movw	r10, r16
+     866:	80 e5       	ldi	r24, 0x50	; 80
+     868:	a8 0e       	add	r10, r24
+     86a:	b1 1c       	adc	r11, r1
+     86c:	1e 14       	cp	r1, r14
+     86e:	1f 04       	cpc	r1, r15
+     870:	74 f4       	brge	.+28     	; 0x88e <LedControl::spiTransfer(int, unsigned char, unsigned char)+0x98>
+     872:	e1 e0       	ldi	r30, 0x01	; 1
+     874:	ee 1a       	sub	r14, r30
+     876:	f1 08       	sbc	r15, r1
+     878:	f8 01       	movw	r30, r16
+     87a:	ee 0d       	add	r30, r14
+     87c:	ff 1d       	adc	r31, r15
+     87e:	20 81       	ld	r18, Z
+     880:	41 e0       	ldi	r20, 0x01	; 1
+     882:	f4 01       	movw	r30, r8
+     884:	60 81       	ld	r22, Z
+     886:	f5 01       	movw	r30, r10
+     888:	80 81       	ld	r24, Z
+     88a:	56 d2       	rcall	.+1196   	; 0xd38 <shiftOut>
+     88c:	ef cf       	rjmp	.-34     	; 0x86c <LedControl::spiTransfer(int, unsigned char, unsigned char)+0x76>
+     88e:	61 e0       	ldi	r22, 0x01	; 1
+     890:	f6 01       	movw	r30, r12
+     892:	80 81       	ld	r24, Z
+     894:	0f 90       	pop	r0
+     896:	0f 90       	pop	r0
+     898:	df 91       	pop	r29
+     89a:	cf 91       	pop	r28
+     89c:	1f 91       	pop	r17
+     89e:	0f 91       	pop	r16
+     8a0:	ff 90       	pop	r15
+     8a2:	ef 90       	pop	r14
+     8a4:	df 90       	pop	r13
+     8a6:	cf 90       	pop	r12
+     8a8:	bf 90       	pop	r11
+     8aa:	af 90       	pop	r10
+     8ac:	9f 90       	pop	r9
+     8ae:	8f 90       	pop	r8
+     8b0:	16 c2       	rjmp	.+1068   	; 0xcde <digitalWrite>
+
+000008b2 <LedControl::shutdown(int, bool)>:
+_ZN10LedControl8shutdownEib():
+     8b2:	77 fd       	sbrc	r23, 7
+     8b4:	0e c0       	rjmp	.+28     	; 0x8d2 <LedControl::shutdown(int, bool)+0x20>
+     8b6:	fc 01       	movw	r30, r24
+     8b8:	ea 5a       	subi	r30, 0xAA	; 170
+     8ba:	ff 4f       	sbci	r31, 0xFF	; 255
+     8bc:	20 81       	ld	r18, Z
+     8be:	31 81       	ldd	r19, Z+1	; 0x01
+     8c0:	62 17       	cp	r22, r18
+     8c2:	73 07       	cpc	r23, r19
+     8c4:	34 f4       	brge	.+12     	; 0x8d2 <LedControl::shutdown(int, bool)+0x20>
+     8c6:	20 e0       	ldi	r18, 0x00	; 0
+     8c8:	41 11       	cpse	r20, r1
+     8ca:	01 c0       	rjmp	.+2      	; 0x8ce <LedControl::shutdown(int, bool)+0x1c>
+     8cc:	21 e0       	ldi	r18, 0x01	; 1
+     8ce:	4c e0       	ldi	r20, 0x0C	; 12
+     8d0:	92 cf       	rjmp	.-220    	; 0x7f6 <LedControl::spiTransfer(int, unsigned char, unsigned char)>
+     8d2:	08 95       	ret
+
+000008d4 <LedControl::setScanLimit(int, int)>:
+_ZN10LedControl12setScanLimitEii():
+     8d4:	77 fd       	sbrc	r23, 7
+     8d6:	0e c0       	rjmp	.+28     	; 0x8f4 <LedControl::setScanLimit(int, int)+0x20>
+     8d8:	fc 01       	movw	r30, r24
+     8da:	ea 5a       	subi	r30, 0xAA	; 170
+     8dc:	ff 4f       	sbci	r31, 0xFF	; 255
+     8de:	20 81       	ld	r18, Z
+     8e0:	31 81       	ldd	r19, Z+1	; 0x01
+     8e2:	62 17       	cp	r22, r18
+     8e4:	73 07       	cpc	r23, r19
+     8e6:	34 f4       	brge	.+12     	; 0x8f4 <LedControl::setScanLimit(int, int)+0x20>
+     8e8:	48 30       	cpi	r20, 0x08	; 8
+     8ea:	51 05       	cpc	r21, r1
+     8ec:	18 f4       	brcc	.+6      	; 0x8f4 <LedControl::setScanLimit(int, int)+0x20>
+     8ee:	24 2f       	mov	r18, r20
+     8f0:	4b e0       	ldi	r20, 0x0B	; 11
+     8f2:	81 cf       	rjmp	.-254    	; 0x7f6 <LedControl::spiTransfer(int, unsigned char, unsigned char)>
+     8f4:	08 95       	ret
+
+000008f6 <LedControl::setIntensity(int, int)>:
+_ZN10LedControl12setIntensityEii():
+     8f6:	77 fd       	sbrc	r23, 7
+     8f8:	0e c0       	rjmp	.+28     	; 0x916 <LedControl::setIntensity(int, int)+0x20>
+     8fa:	fc 01       	movw	r30, r24
+     8fc:	ea 5a       	subi	r30, 0xAA	; 170
+     8fe:	ff 4f       	sbci	r31, 0xFF	; 255
+     900:	20 81       	ld	r18, Z
+     902:	31 81       	ldd	r19, Z+1	; 0x01
+     904:	62 17       	cp	r22, r18
+     906:	73 07       	cpc	r23, r19
+     908:	34 f4       	brge	.+12     	; 0x916 <LedControl::setIntensity(int, int)+0x20>
+     90a:	40 31       	cpi	r20, 0x10	; 16
+     90c:	51 05       	cpc	r21, r1
+     90e:	18 f4       	brcc	.+6      	; 0x916 <LedControl::setIntensity(int, int)+0x20>
+     910:	24 2f       	mov	r18, r20
+     912:	4a e0       	ldi	r20, 0x0A	; 10
+     914:	70 cf       	rjmp	.-288    	; 0x7f6 <LedControl::spiTransfer(int, unsigned char, unsigned char)>
+     916:	08 95       	ret
+
+00000918 <LedControl::clearDisplay(int)>:
+_ZN10LedControl12clearDisplayEi():
+     918:	df 92       	push	r13
+     91a:	ef 92       	push	r14
+     91c:	ff 92       	push	r15
+     91e:	0f 93       	push	r16
+     920:	1f 93       	push	r17
+     922:	cf 93       	push	r28
+     924:	df 93       	push	r29
+     926:	77 fd       	sbrc	r23, 7
+     928:	22 c0       	rjmp	.+68     	; 0x96e <LedControl::clearDisplay(int)+0x56>
+     92a:	fc 01       	movw	r30, r24
+     92c:	ea 5a       	subi	r30, 0xAA	; 170
+     92e:	ff 4f       	sbci	r31, 0xFF	; 255
+     930:	20 81       	ld	r18, Z
+     932:	31 81       	ldd	r19, Z+1	; 0x01
+     934:	62 17       	cp	r22, r18
+     936:	73 07       	cpc	r23, r19
+     938:	d4 f4       	brge	.+52     	; 0x96e <LedControl::clearDisplay(int)+0x56>
+     93a:	eb 01       	movw	r28, r22
+     93c:	7c 01       	movw	r14, r24
+     93e:	8b 01       	movw	r16, r22
+     940:	83 e0       	ldi	r24, 0x03	; 3
+     942:	00 0f       	add	r16, r16
+     944:	11 1f       	adc	r17, r17
+     946:	8a 95       	dec	r24
+     948:	e1 f7       	brne	.-8      	; 0x942 <LedControl::clearDisplay(int)+0x2a>
+     94a:	00 5f       	subi	r16, 0xF0	; 240
+     94c:	1f 4f       	sbci	r17, 0xFF	; 255
+     94e:	0e 0d       	add	r16, r14
+     950:	1f 1d       	adc	r17, r15
+     952:	dd 24       	eor	r13, r13
+     954:	d3 94       	inc	r13
+     956:	f8 01       	movw	r30, r16
+     958:	11 92       	st	Z+, r1
+     95a:	8f 01       	movw	r16, r30
+     95c:	20 e0       	ldi	r18, 0x00	; 0
+     95e:	4d 2d       	mov	r20, r13
+     960:	be 01       	movw	r22, r28
+     962:	c7 01       	movw	r24, r14
+     964:	48 df       	rcall	.-368    	; 0x7f6 <LedControl::spiTransfer(int, unsigned char, unsigned char)>
+     966:	d3 94       	inc	r13
+     968:	f9 e0       	ldi	r31, 0x09	; 9
+     96a:	df 12       	cpse	r13, r31
+     96c:	f4 cf       	rjmp	.-24     	; 0x956 <LedControl::clearDisplay(int)+0x3e>
+     96e:	df 91       	pop	r29
+     970:	cf 91       	pop	r28
+     972:	1f 91       	pop	r17
+     974:	0f 91       	pop	r16
+     976:	ff 90       	pop	r15
+     978:	ef 90       	pop	r14
+     97a:	df 90       	pop	r13
+     97c:	08 95       	ret
+
+0000097e <LedControl::LedControl(int, int, int, int)>:
+_ZN10LedControlC2Eiiii():
+     97e:	6f 92       	push	r6
+     980:	7f 92       	push	r7
+     982:	8f 92       	push	r8
+     984:	9f 92       	push	r9
+     986:	af 92       	push	r10
+     988:	bf 92       	push	r11
+     98a:	cf 92       	push	r12
+     98c:	df 92       	push	r13
+     98e:	ef 92       	push	r14
+     990:	ff 92       	push	r15
+     992:	0f 93       	push	r16
+     994:	1f 93       	push	r17
+     996:	cf 93       	push	r28
+     998:	df 93       	push	r29
+     99a:	ec 01       	movw	r28, r24
+     99c:	d6 2e       	mov	r13, r22
+     99e:	c7 2e       	mov	r12, r23
+     9a0:	7c 01       	movw	r14, r24
+     9a2:	80 e5       	ldi	r24, 0x50	; 80
+     9a4:	e8 0e       	add	r14, r24
+     9a6:	f1 1c       	adc	r15, r1
+     9a8:	f7 01       	movw	r30, r14
+     9aa:	60 83       	st	Z, r22
+     9ac:	71 83       	std	Z+1, r23	; 0x01
+     9ae:	3e 01       	movw	r6, r28
+     9b0:	f2 e5       	ldi	r31, 0x52	; 82
+     9b2:	6f 0e       	add	r6, r31
+     9b4:	71 1c       	adc	r7, r1
+     9b6:	f3 01       	movw	r30, r6
+     9b8:	51 83       	std	Z+1, r21	; 0x01
+     9ba:	40 83       	st	Z, r20
+     9bc:	4e 01       	movw	r8, r28
+     9be:	f4 e5       	ldi	r31, 0x54	; 84
+     9c0:	8f 0e       	add	r8, r31
+     9c2:	91 1c       	adc	r9, r1
+     9c4:	f4 01       	movw	r30, r8
+     9c6:	31 83       	std	Z+1, r19	; 0x01
+     9c8:	20 83       	st	Z, r18
+     9ca:	c8 01       	movw	r24, r16
+     9cc:	01 97       	sbiw	r24, 0x01	; 1
+     9ce:	08 97       	sbiw	r24, 0x08	; 8
+     9d0:	10 f0       	brcs	.+4      	; 0x9d6 <LedControl::LedControl(int, int, int, int)+0x58>
+     9d2:	08 e0       	ldi	r16, 0x08	; 8
+     9d4:	10 e0       	ldi	r17, 0x00	; 0
+     9d6:	5e 01       	movw	r10, r28
+     9d8:	f6 e5       	ldi	r31, 0x56	; 86
+     9da:	af 0e       	add	r10, r31
+     9dc:	b1 1c       	adc	r11, r1
+     9de:	f5 01       	movw	r30, r10
+     9e0:	11 83       	std	Z+1, r17	; 0x01
+     9e2:	00 83       	st	Z, r16
+     9e4:	61 e0       	ldi	r22, 0x01	; 1
+     9e6:	8d 2d       	mov	r24, r13
+     9e8:	3e d1       	rcall	.+636    	; 0xc66 <pinMode>
+     9ea:	61 e0       	ldi	r22, 0x01	; 1
+     9ec:	f3 01       	movw	r30, r6
+     9ee:	80 81       	ld	r24, Z
+     9f0:	3a d1       	rcall	.+628    	; 0xc66 <pinMode>
+     9f2:	61 e0       	ldi	r22, 0x01	; 1
+     9f4:	f4 01       	movw	r30, r8
+     9f6:	80 81       	ld	r24, Z
+     9f8:	36 d1       	rcall	.+620    	; 0xc66 <pinMode>
+     9fa:	61 e0       	ldi	r22, 0x01	; 1
+     9fc:	f4 01       	movw	r30, r8
+     9fe:	80 81       	ld	r24, Z
+     a00:	6e d1       	rcall	.+732    	; 0xcde <digitalWrite>
+     a02:	f7 01       	movw	r30, r14
+     a04:	d0 82       	st	Z, r13
+     a06:	c1 82       	std	Z+1, r12	; 0x01
+     a08:	fe 01       	movw	r30, r28
+     a0a:	70 96       	adiw	r30, 0x10	; 16
+     a0c:	11 92       	st	Z+, r1
+     a0e:	ee 15       	cp	r30, r14
+     a10:	ff 05       	cpc	r31, r15
+     a12:	e1 f7       	brne	.-8      	; 0xa0c <LedControl::LedControl(int, int, int, int)+0x8e>
+     a14:	10 e0       	ldi	r17, 0x00	; 0
+     a16:	00 e0       	ldi	r16, 0x00	; 0
+     a18:	f5 01       	movw	r30, r10
+     a1a:	80 81       	ld	r24, Z
+     a1c:	91 81       	ldd	r25, Z+1	; 0x01
+     a1e:	08 17       	cp	r16, r24
+     a20:	19 07       	cpc	r17, r25
+     a22:	cc f4       	brge	.+50     	; 0xa56 <LedControl::LedControl(int, int, int, int)+0xd8>
+     a24:	20 e0       	ldi	r18, 0x00	; 0
+     a26:	4f e0       	ldi	r20, 0x0F	; 15
+     a28:	b8 01       	movw	r22, r16
+     a2a:	ce 01       	movw	r24, r28
+     a2c:	e4 de       	rcall	.-568    	; 0x7f6 <LedControl::spiTransfer(int, unsigned char, unsigned char)>
+     a2e:	47 e0       	ldi	r20, 0x07	; 7
+     a30:	50 e0       	ldi	r21, 0x00	; 0
+     a32:	b8 01       	movw	r22, r16
+     a34:	ce 01       	movw	r24, r28
+     a36:	4e df       	rcall	.-356    	; 0x8d4 <LedControl::setScanLimit(int, int)>
+     a38:	20 e0       	ldi	r18, 0x00	; 0
+     a3a:	49 e0       	ldi	r20, 0x09	; 9
+     a3c:	b8 01       	movw	r22, r16
+     a3e:	ce 01       	movw	r24, r28
+     a40:	da de       	rcall	.-588    	; 0x7f6 <LedControl::spiTransfer(int, unsigned char, unsigned char)>
+     a42:	b8 01       	movw	r22, r16
+     a44:	ce 01       	movw	r24, r28
+     a46:	68 df       	rcall	.-304    	; 0x918 <LedControl::clearDisplay(int)>
+     a48:	41 e0       	ldi	r20, 0x01	; 1
+     a4a:	b8 01       	movw	r22, r16
+     a4c:	ce 01       	movw	r24, r28
+     a4e:	31 df       	rcall	.-414    	; 0x8b2 <LedControl::shutdown(int, bool)>
+     a50:	0f 5f       	subi	r16, 0xFF	; 255
+     a52:	1f 4f       	sbci	r17, 0xFF	; 255
+     a54:	e1 cf       	rjmp	.-62     	; 0xa18 <LedControl::LedControl(int, int, int, int)+0x9a>
+     a56:	df 91       	pop	r29
+     a58:	cf 91       	pop	r28
+     a5a:	1f 91       	pop	r17
+     a5c:	0f 91       	pop	r16
+     a5e:	ff 90       	pop	r15
+     a60:	ef 90       	pop	r14
+     a62:	df 90       	pop	r13
+     a64:	cf 90       	pop	r12
+     a66:	bf 90       	pop	r11
+     a68:	af 90       	pop	r10
+     a6a:	9f 90       	pop	r9
+     a6c:	8f 90       	pop	r8
+     a6e:	7f 90       	pop	r7
+     a70:	6f 90       	pop	r6
+     a72:	08 95       	ret
+
+00000a74 <LedControl::setDigit(int, int, unsigned char, bool)>:
+_ZN10LedControl8setDigitEiihb():
+C:\Users\ppsil\sketchbook\libraries\LedControl\src/LedControl.cpp:155
+        val=val & 0x01;
+        setLed(addr,row,col,val);
+    }
+}
+
+void LedControl::setDigit(int addr, int digit, byte value, boolean dp) {
+     a74:	0f 93       	push	r16
+C:\Users\ppsil\sketchbook\libraries\LedControl\src/LedControl.cpp:159
+    int offset;
+    byte v;
+
+    if(addr<0 || addr>=maxDevices)
+     a76:	77 fd       	sbrc	r23, 7
+     a78:	24 c0       	rjmp	.+72     	; 0xac2 <LedControl::setDigit(int, int, unsigned char, bool)+0x4e>
+C:\Users\ppsil\sketchbook\libraries\LedControl\src/LedControl.cpp:159 (discriminator 1)
+     a7a:	fc 01       	movw	r30, r24
+     a7c:	ea 5a       	subi	r30, 0xAA	; 170
+     a7e:	ff 4f       	sbci	r31, 0xFF	; 255
+     a80:	01 90       	ld	r0, Z+
+     a82:	f0 81       	ld	r31, Z
+     a84:	e0 2d       	mov	r30, r0
+     a86:	6e 17       	cp	r22, r30
+     a88:	7f 07       	cpc	r23, r31
+     a8a:	dc f4       	brge	.+54     	; 0xac2 <LedControl::setDigit(int, int, unsigned char, bool)+0x4e>
+C:\Users\ppsil\sketchbook\libraries\LedControl\src/LedControl.cpp:161
+        return;
+    if(digit<0 || digit>7 || value>56)
+     a8c:	48 30       	cpi	r20, 0x08	; 8
+     a8e:	51 05       	cpc	r21, r1
+     a90:	c0 f4       	brcc	.+48     	; 0xac2 <LedControl::setDigit(int, int, unsigned char, bool)+0x4e>
+C:\Users\ppsil\sketchbook\libraries\LedControl\src/LedControl.cpp:161 (discriminator 1)
+     a92:	29 33       	cpi	r18, 0x39	; 57
+     a94:	b0 f4       	brcc	.+44     	; 0xac2 <LedControl::setDigit(int, int, unsigned char, bool)+0x4e>
+C:\Users\ppsil\sketchbook\libraries\LedControl\src/LedControl.cpp:163
+        return;
+    offset=addr*8;
+     a96:	db 01       	movw	r26, r22
+     a98:	33 e0       	ldi	r19, 0x03	; 3
+     a9a:	aa 0f       	add	r26, r26
+     a9c:	bb 1f       	adc	r27, r27
+     a9e:	3a 95       	dec	r19
+     aa0:	e1 f7       	brne	.-8      	; 0xa9a <LedControl::setDigit(int, int, unsigned char, bool)+0x26>
+C:\Users\ppsil\sketchbook\libraries\LedControl\src/LedControl.cpp:164
+    v=pgm_read_byte_near(charTable + value); 
+     aa2:	e2 2f       	mov	r30, r18
+     aa4:	f0 e0       	ldi	r31, 0x00	; 0
+     aa6:	ea 5d       	subi	r30, 0xDA	; 218
+     aa8:	ff 4f       	sbci	r31, 0xFF	; 255
+     aaa:	24 91       	lpm	r18, Z
+C:\Users\ppsil\sketchbook\libraries\LedControl\src/LedControl.cpp:165
+    if(dp)
+     aac:	01 11       	cpse	r16, r1
+C:\Users\ppsil\sketchbook\libraries\LedControl\src/LedControl.cpp:166
+        v|=B10000000;
+     aae:	20 68       	ori	r18, 0x80	; 128
+C:\Users\ppsil\sketchbook\libraries\LedControl\src/LedControl.cpp:167
+    status[offset+digit]=v;
+     ab0:	a8 0f       	add	r26, r24
+     ab2:	b9 1f       	adc	r27, r25
+     ab4:	a4 0f       	add	r26, r20
+     ab6:	b5 1f       	adc	r27, r21
+     ab8:	50 96       	adiw	r26, 0x10	; 16
+     aba:	2c 93       	st	X, r18
+C:\Users\ppsil\sketchbook\libraries\LedControl\src/LedControl.cpp:168
+    spiTransfer(addr, digit+1,v);
+     abc:	4f 5f       	subi	r20, 0xFF	; 255
+C:\Users\ppsil\sketchbook\libraries\LedControl\src/LedControl.cpp:169
+}
+     abe:	0f 91       	pop	r16
+C:\Users\ppsil\sketchbook\libraries\LedControl\src/LedControl.cpp:168
+    offset=addr*8;
+    v=pgm_read_byte_near(charTable + value); 
+    if(dp)
+        v|=B10000000;
+    status[offset+digit]=v;
+    spiTransfer(addr, digit+1,v);
+     ac0:	9a ce       	rjmp	.-716    	; 0x7f6 <LedControl::spiTransfer(int, unsigned char, unsigned char)>
+C:\Users\ppsil\sketchbook\libraries\LedControl\src/LedControl.cpp:169
+}
+     ac2:	0f 91       	pop	r16
+     ac4:	08 95       	ret
+
+00000ac6 <__vector_9>:
+__vector_9():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:939
+    "   brne 1b"                     // 2 cycles
+    : /* no outputs */
+    : "w" (us)
+  );
+  // return = 4 cycles
+}
+     ac6:	1f 92       	push	r1
+     ac8:	0f 92       	push	r0
+     aca:	0f b6       	in	r0, 0x3f	; 63
+     acc:	0f 92       	push	r0
+     ace:	11 24       	eor	r1, r1
+     ad0:	2f 93       	push	r18
+     ad2:	3f 93       	push	r19
+     ad4:	8f 93       	push	r24
+     ad6:	9f 93       	push	r25
+     ad8:	af 93       	push	r26
+     ada:	bf 93       	push	r27
+     adc:	80 91 2d 02 	lds	r24, 0x022D	; 0x80022d <timer0_millis>
+     ae0:	90 91 2e 02 	lds	r25, 0x022E	; 0x80022e <timer0_millis+0x1>
+     ae4:	a0 91 2f 02 	lds	r26, 0x022F	; 0x80022f <timer0_millis+0x2>
+     ae8:	b0 91 30 02 	lds	r27, 0x0230	; 0x800230 <timer0_millis+0x3>
+     aec:	30 91 2c 02 	lds	r19, 0x022C	; 0x80022c <timer0_fract>
+     af0:	26 e0       	ldi	r18, 0x06	; 6
+     af2:	23 0f       	add	r18, r19
+     af4:	2d 37       	cpi	r18, 0x7D	; 125
+     af6:	68 f1       	brcs	.+90     	; 0xb52 <__vector_9+0x8c>
+     af8:	29 e8       	ldi	r18, 0x89	; 137
+     afa:	23 0f       	add	r18, r19
+     afc:	03 96       	adiw	r24, 0x03	; 3
+     afe:	a1 1d       	adc	r26, r1
+     b00:	b1 1d       	adc	r27, r1
+     b02:	20 93 2c 02 	sts	0x022C, r18	; 0x80022c <timer0_fract>
+     b06:	80 93 2d 02 	sts	0x022D, r24	; 0x80022d <timer0_millis>
+     b0a:	90 93 2e 02 	sts	0x022E, r25	; 0x80022e <timer0_millis+0x1>
+     b0e:	a0 93 2f 02 	sts	0x022F, r26	; 0x80022f <timer0_millis+0x2>
+     b12:	b0 93 30 02 	sts	0x0230, r27	; 0x800230 <timer0_millis+0x3>
+     b16:	80 91 28 02 	lds	r24, 0x0228	; 0x800228 <timer0_overflow_count>
+     b1a:	90 91 29 02 	lds	r25, 0x0229	; 0x800229 <timer0_overflow_count+0x1>
+     b1e:	a0 91 2a 02 	lds	r26, 0x022A	; 0x80022a <timer0_overflow_count+0x2>
+     b22:	b0 91 2b 02 	lds	r27, 0x022B	; 0x80022b <timer0_overflow_count+0x3>
+     b26:	01 96       	adiw	r24, 0x01	; 1
+     b28:	a1 1d       	adc	r26, r1
+     b2a:	b1 1d       	adc	r27, r1
+     b2c:	80 93 28 02 	sts	0x0228, r24	; 0x800228 <timer0_overflow_count>
+     b30:	90 93 29 02 	sts	0x0229, r25	; 0x800229 <timer0_overflow_count+0x1>
+     b34:	a0 93 2a 02 	sts	0x022A, r26	; 0x80022a <timer0_overflow_count+0x2>
+     b38:	b0 93 2b 02 	sts	0x022B, r27	; 0x80022b <timer0_overflow_count+0x3>
+     b3c:	bf 91       	pop	r27
+     b3e:	af 91       	pop	r26
+     b40:	9f 91       	pop	r25
+     b42:	8f 91       	pop	r24
+     b44:	3f 91       	pop	r19
+     b46:	2f 91       	pop	r18
+     b48:	0f 90       	pop	r0
+     b4a:	0f be       	out	0x3f, r0	; 63
+     b4c:	0f 90       	pop	r0
+     b4e:	1f 90       	pop	r1
+     b50:	18 95       	reti
+     b52:	02 96       	adiw	r24, 0x02	; 2
+     b54:	a1 1d       	adc	r26, r1
+     b56:	b1 1d       	adc	r27, r1
+     b58:	d4 cf       	rjmp	.-88     	; 0xb02 <__vector_9+0x3c>
+
+00000b5a <micros>:
+micros():
+     b5a:	3f b7       	in	r19, 0x3f	; 63
+     b5c:	f8 94       	cli
+     b5e:	80 91 28 02 	lds	r24, 0x0228	; 0x800228 <timer0_overflow_count>
+     b62:	90 91 29 02 	lds	r25, 0x0229	; 0x800229 <timer0_overflow_count+0x1>
+     b66:	a0 91 2a 02 	lds	r26, 0x022A	; 0x80022a <timer0_overflow_count+0x2>
+     b6a:	b0 91 2b 02 	lds	r27, 0x022B	; 0x80022b <timer0_overflow_count+0x3>
+     b6e:	22 b7       	in	r18, 0x32	; 50
+     b70:	08 b6       	in	r0, 0x38	; 56
+     b72:	00 fe       	sbrs	r0, 0
+     b74:	05 c0       	rjmp	.+10     	; 0xb80 <micros+0x26>
+     b76:	2f 3f       	cpi	r18, 0xFF	; 255
+     b78:	19 f0       	breq	.+6      	; 0xb80 <micros+0x26>
+     b7a:	01 96       	adiw	r24, 0x01	; 1
+     b7c:	a1 1d       	adc	r26, r1
+     b7e:	b1 1d       	adc	r27, r1
+     b80:	3f bf       	out	0x3f, r19	; 63
+     b82:	ba 2f       	mov	r27, r26
+     b84:	a9 2f       	mov	r26, r25
+     b86:	98 2f       	mov	r25, r24
+     b88:	88 27       	eor	r24, r24
+     b8a:	bc 01       	movw	r22, r24
+     b8c:	cd 01       	movw	r24, r26
+     b8e:	62 0f       	add	r22, r18
+     b90:	71 1d       	adc	r23, r1
+     b92:	81 1d       	adc	r24, r1
+     b94:	91 1d       	adc	r25, r1
+     b96:	43 e0       	ldi	r20, 0x03	; 3
+     b98:	66 0f       	add	r22, r22
+     b9a:	77 1f       	adc	r23, r23
+     b9c:	88 1f       	adc	r24, r24
+     b9e:	99 1f       	adc	r25, r25
+     ba0:	4a 95       	dec	r20
+     ba2:	d1 f7       	brne	.-12     	; 0xb98 <micros+0x3e>
+     ba4:	08 95       	ret
+
+00000ba6 <delay>:
+delay():
+     ba6:	8f 92       	push	r8
+     ba8:	9f 92       	push	r9
+     baa:	af 92       	push	r10
+     bac:	bf 92       	push	r11
+     bae:	cf 92       	push	r12
+     bb0:	df 92       	push	r13
+     bb2:	ef 92       	push	r14
+     bb4:	ff 92       	push	r15
+     bb6:	6b 01       	movw	r12, r22
+     bb8:	7c 01       	movw	r14, r24
+     bba:	cf df       	rcall	.-98     	; 0xb5a <micros>
+     bbc:	4b 01       	movw	r8, r22
+     bbe:	5c 01       	movw	r10, r24
+     bc0:	c1 14       	cp	r12, r1
+     bc2:	d1 04       	cpc	r13, r1
+     bc4:	e1 04       	cpc	r14, r1
+     bc6:	f1 04       	cpc	r15, r1
+     bc8:	d9 f0       	breq	.+54     	; 0xc00 <delay+0x5a>
+     bca:	a9 d3       	rcall	.+1874   	; 0x131e <yield>
+     bcc:	c6 df       	rcall	.-116    	; 0xb5a <micros>
+     bce:	68 19       	sub	r22, r8
+     bd0:	79 09       	sbc	r23, r9
+     bd2:	8a 09       	sbc	r24, r10
+     bd4:	9b 09       	sbc	r25, r11
+     bd6:	68 3e       	cpi	r22, 0xE8	; 232
+     bd8:	73 40       	sbci	r23, 0x03	; 3
+     bda:	81 05       	cpc	r24, r1
+     bdc:	91 05       	cpc	r25, r1
+     bde:	80 f3       	brcs	.-32     	; 0xbc0 <delay+0x1a>
+     be0:	21 e0       	ldi	r18, 0x01	; 1
+     be2:	c2 1a       	sub	r12, r18
+     be4:	d1 08       	sbc	r13, r1
+     be6:	e1 08       	sbc	r14, r1
+     be8:	f1 08       	sbc	r15, r1
+     bea:	88 ee       	ldi	r24, 0xE8	; 232
+     bec:	88 0e       	add	r8, r24
+     bee:	83 e0       	ldi	r24, 0x03	; 3
+     bf0:	98 1e       	adc	r9, r24
+     bf2:	a1 1c       	adc	r10, r1
+     bf4:	b1 1c       	adc	r11, r1
+     bf6:	c1 14       	cp	r12, r1
+     bf8:	d1 04       	cpc	r13, r1
+     bfa:	e1 04       	cpc	r14, r1
+     bfc:	f1 04       	cpc	r15, r1
+     bfe:	31 f7       	brne	.-52     	; 0xbcc <delay+0x26>
+     c00:	ff 90       	pop	r15
+     c02:	ef 90       	pop	r14
+     c04:	df 90       	pop	r13
+     c06:	cf 90       	pop	r12
+     c08:	bf 90       	pop	r11
+     c0a:	af 90       	pop	r10
+     c0c:	9f 90       	pop	r9
+     c0e:	8f 90       	pop	r8
+     c10:	08 95       	ret
+
+00000c12 <init>:
+init():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:945
+
+void init()
+{
+  // this needs to be called before setup() or some functions won't
+  // work there
+  sei();
+     c12:	78 94       	sei
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:966
+#if defined(__AVR_ATmega64__) || defined(__AVR_ATmega128__)
+  // CPU specific: different values for the ATmega64/128
+  TCCR0 |= _BV(WGM01) | _BV(WGM00) | _BV(CS02);
+#elif defined(TCCR0) && defined(CS01) && defined(CS00)
+  // This combination is for the ATmega8535, ATmega8, ATmega16, ATmega32, ATmega8515, ATmega162
+  TCCR0 |= _BV(CS01) | _BV(CS00);
+     c14:	83 b7       	in	r24, 0x33	; 51
+     c16:	83 60       	ori	r24, 0x03	; 3
+     c18:	83 bf       	out	0x33, r24	; 51
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:982
+  #error Timer 0 prescale factor 64 not set correctly
+#endif
+
+// Enable timer 0 overflow interrupt
+#if defined(TIMSK) && defined(TOIE0)
+  TIMSK |= _BV(TOIE0);
+     c1a:	89 b7       	in	r24, 0x39	; 57
+     c1c:	81 60       	ori	r24, 0x01	; 1
+     c1e:	89 bf       	out	0x39, r24	; 57
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:995
+// this is better for motors as it ensures an even waveform
+// note, however, that fast pwm mode can achieve a frequency of up
+// 8 MHz (with a 16 MHz clock) at 50% duty cycle
+
+#if defined(TCCR1B) && defined(CS11) && defined(CS10)
+  TCCR1B = _BV(CS11); // Set timer 1 prescale factor to 64
+     c20:	82 e0       	ldi	r24, 0x02	; 2
+     c22:	8e bd       	out	0x2e, r24	; 46
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:997
+#if F_CPU >= 8000000L
+  TCCR1B |= _BV(CS10);
+     c24:	8e b5       	in	r24, 0x2e	; 46
+     c26:	81 60       	ori	r24, 0x01	; 1
+     c28:	8e bd       	out	0x2e, r24	; 46
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:1006
+#if F_CPU >= 8000000L
+  TCCR1 |= _BV(CS10);
+#endif
+#endif
+#if defined(TCCR1A) && defined(WGM10)
+  TCCR1A |= _BV(WGM10); // Put timer 1 in 8-bit phase correct pwm mode
+     c2a:	8f b5       	in	r24, 0x2f	; 47
+     c2c:	81 60       	ori	r24, 0x01	; 1
+     c2e:	8f bd       	out	0x2f, r24	; 47
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:1011
+#endif
+
+// Set timer 2 prescale factor to 64
+#if defined(TCCR2) && defined(CS22)
+  TCCR2 |= _BV(CS22);
+     c30:	85 b5       	in	r24, 0x25	; 37
+     c32:	84 60       	ori	r24, 0x04	; 4
+     c34:	85 bd       	out	0x25, r24	; 37
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:1020
+  TCCR2A |= _BV(CS22);
+#endif
+
+// Configure timer 2 for phase correct pwm (8-bit)
+#if defined(TCCR2) && defined(WGM20)
+  TCCR2 |= _BV(WGM20);
+     c36:	85 b5       	in	r24, 0x25	; 37
+     c38:	80 64       	ori	r24, 0x40	; 64
+     c3a:	85 bd       	out	0x25, r24	; 37
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:1052
+#if defined(ADCSRA)
+  // set a2d prescaler so we are inside the desired 50-200 KHz range.
+  #if F_CPU >= 16000000 // 16 MHz / 128 = 125 KHz
+    ADCSRA = _BV(ADPS2) | _BV(ADPS1) | _BV(ADPS0) | _BV(ADEN);
+  #elif F_CPU >= 8000000 // 8 MHz / 64 = 125 KHz
+    ADCSRA = _BV(ADPS2) | _BV(ADPS1) | _BV(ADEN);
+     c3c:	86 e8       	ldi	r24, 0x86	; 134
+     c3e:	86 b9       	out	0x06, r24	; 6
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:1068
+
+  // The bootloader connects pins 0 and 1 to the USART; disconnect them
+  // here so they can be used as normal digital i/o; they will be
+  // reconnected in Serial.begin()
+#if defined(UCSRB)
+  UCSRB = 0;
+     c40:	1a b8       	out	0x0a, r1	; 10
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring.c:1072
+#elif defined(UCSR0B)
+  UCSR0B = 0;
+#endif
+}
+     c42:	08 95       	ret
+
+00000c44 <turnOffPWM>:
+turnOffPWM():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:77
+//
+//static inline void turnOffPWM(uint8_t timer) __attribute__ ((always_inline));
+//static inline void turnOffPWM(uint8_t timer)
+static void turnOffPWM(uint8_t timer)
+{
+  switch (timer)
+     c44:	85 30       	cpi	r24, 0x05	; 5
+     c46:	41 f0       	breq	.+16     	; 0xc58 <turnOffPWM+0x14>
+     c48:	87 30       	cpi	r24, 0x07	; 7
+     c4a:	49 f0       	breq	.+18     	; 0xc5e <turnOffPWM+0x1a>
+     c4c:	84 30       	cpi	r24, 0x04	; 4
+     c4e:	51 f4       	brne	.+20     	; 0xc64 <turnOffPWM+0x20>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:82
+  {
+    // Timer1
+    #if defined(TCCR1A) && defined(COM1A1)
+      case TIMER1A:
+        TCCR1A &= ~_BV(COM1A1);
+     c50:	8f b5       	in	r24, 0x2f	; 47
+     c52:	8f 77       	andi	r24, 0x7F	; 127
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:87
+        break;
+    #endif
+    #if defined(TCCR1A) && defined(COM1B1)
+      case TIMER1B:
+        TCCR1A &= ~_BV(COM1B1);
+     c54:	8f bd       	out	0x2f, r24	; 47
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:88
+        break;
+     c56:	08 95       	ret
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:87
+        TCCR1A &= ~_BV(COM1A1);
+        break;
+    #endif
+    #if defined(TCCR1A) && defined(COM1B1)
+      case TIMER1B:
+        TCCR1A &= ~_BV(COM1B1);
+     c58:	8f b5       	in	r24, 0x2f	; 47
+     c5a:	8f 7d       	andi	r24, 0xDF	; 223
+     c5c:	fb cf       	rjmp	.-10     	; 0xc54 <turnOffPWM+0x10>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:99
+    #endif
+    
+    // Timer2
+    #if defined(TCCR2) && defined(COM21)
+      case TIMER2:
+        TCCR2 &= ~_BV(COM21);
+     c5e:	85 b5       	in	r24, 0x25	; 37
+     c60:	8f 7d       	andi	r24, 0xDF	; 223
+     c62:	85 bd       	out	0x25, r24	; 37
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:185
+      case TIMER0B:
+        TCCR0A &= ~_BV(COM0B1);
+        break;
+    #endif
+  }
+}
+     c64:	08 95       	ret
+
+00000c66 <pinMode>:
+pinMode():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:30
+#define ARDUINO_MAIN
+#include "wiring_private.h"
+#include "pins_arduino.h"
+
+void pinMode(uint8_t pin, uint8_t mode)
+{
+     c66:	cf 93       	push	r28
+     c68:	df 93       	push	r29
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:31
+  uint8_t bit = digitalPinToBitMask(pin);
+     c6a:	90 e0       	ldi	r25, 0x00	; 0
+     c6c:	fc 01       	movw	r30, r24
+     c6e:	e3 5a       	subi	r30, 0xA3	; 163
+     c70:	ff 4f       	sbci	r31, 0xFF	; 255
+     c72:	24 91       	lpm	r18, Z
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:32
+  uint8_t port = digitalPinToPort(pin);
+     c74:	8c 58       	subi	r24, 0x8C	; 140
+     c76:	9f 4f       	sbci	r25, 0xFF	; 255
+     c78:	fc 01       	movw	r30, r24
+     c7a:	84 91       	lpm	r24, Z
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:35
+  volatile uint8_t *reg, *out;
+
+  if (port == NOT_A_PIN) return;
+     c7c:	88 23       	and	r24, r24
+     c7e:	c9 f0       	breq	.+50     	; 0xcb2 <pinMode+0x4c>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:38
+
+  // JWS: can I let the optimizer do this?
+  reg = portModeRegister(port);
+     c80:	90 e0       	ldi	r25, 0x00	; 0
+     c82:	88 0f       	add	r24, r24
+     c84:	99 1f       	adc	r25, r25
+     c86:	fc 01       	movw	r30, r24
+     c88:	eb 56       	subi	r30, 0x6B	; 107
+     c8a:	ff 4f       	sbci	r31, 0xFF	; 255
+     c8c:	a5 91       	lpm	r26, Z+
+     c8e:	b4 91       	lpm	r27, Z
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:39
+  out = portOutputRegister(port);
+     c90:	fc 01       	movw	r30, r24
+     c92:	e5 57       	subi	r30, 0x75	; 117
+     c94:	ff 4f       	sbci	r31, 0xFF	; 255
+     c96:	c5 91       	lpm	r28, Z+
+     c98:	d4 91       	lpm	r29, Z
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:41
+
+  if (mode == INPUT) { 
+     c9a:	61 11       	cpse	r22, r1
+     c9c:	0d c0       	rjmp	.+26     	; 0xcb8 <pinMode+0x52>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:42
+    uint8_t oldSREG = SREG;
+     c9e:	9f b7       	in	r25, 0x3f	; 63
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:43
+    cli();
+     ca0:	f8 94       	cli
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:44
+    *reg &= ~bit;
+     ca2:	8c 91       	ld	r24, X
+     ca4:	20 95       	com	r18
+     ca6:	82 23       	and	r24, r18
+     ca8:	8c 93       	st	X, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:45
+    *out &= ~bit;
+     caa:	88 81       	ld	r24, Y
+     cac:	28 23       	and	r18, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:51
+    SREG = oldSREG;
+  } else if (mode == INPUT_PULLUP) {
+    uint8_t oldSREG = SREG;
+    cli();
+    *reg &= ~bit;
+    *out |= bit;
+     cae:	28 83       	st	Y, r18
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:52
+    SREG = oldSREG;
+     cb0:	9f bf       	out	0x3f, r25	; 63
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:59
+    uint8_t oldSREG = SREG;
+    cli();
+    *reg |= bit;
+    SREG = oldSREG;
+  }
+}
+     cb2:	df 91       	pop	r29
+     cb4:	cf 91       	pop	r28
+     cb6:	08 95       	ret
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:47
+    uint8_t oldSREG = SREG;
+    cli();
+    *reg &= ~bit;
+    *out &= ~bit;
+    SREG = oldSREG;
+  } else if (mode == INPUT_PULLUP) {
+     cb8:	62 30       	cpi	r22, 0x02	; 2
+     cba:	51 f4       	brne	.+20     	; 0xcd0 <pinMode+0x6a>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:48
+    uint8_t oldSREG = SREG;
+     cbc:	9f b7       	in	r25, 0x3f	; 63
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:49
+    cli();
+     cbe:	f8 94       	cli
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:50
+    *reg &= ~bit;
+     cc0:	3c 91       	ld	r19, X
+     cc2:	82 2f       	mov	r24, r18
+     cc4:	80 95       	com	r24
+     cc6:	83 23       	and	r24, r19
+     cc8:	8c 93       	st	X, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:51
+    *out |= bit;
+     cca:	e8 81       	ld	r30, Y
+     ccc:	2e 2b       	or	r18, r30
+     cce:	ef cf       	rjmp	.-34     	; 0xcae <pinMode+0x48>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:54
+    SREG = oldSREG;
+  } else {
+    uint8_t oldSREG = SREG;
+     cd0:	8f b7       	in	r24, 0x3f	; 63
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:55
+    cli();
+     cd2:	f8 94       	cli
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:56
+    *reg |= bit;
+     cd4:	ec 91       	ld	r30, X
+     cd6:	2e 2b       	or	r18, r30
+     cd8:	2c 93       	st	X, r18
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:57
+    SREG = oldSREG;
+     cda:	8f bf       	out	0x3f, r24	; 63
+     cdc:	ea cf       	rjmp	.-44     	; 0xcb2 <pinMode+0x4c>
+
+00000cde <digitalWrite>:
+digitalWrite():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:188
+    #endif
+  }
+}
+
+void digitalWrite(uint8_t pin, uint8_t val)
+{
+     cde:	1f 93       	push	r17
+     ce0:	cf 93       	push	r28
+     ce2:	df 93       	push	r29
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:189
+  uint8_t timer = digitalPinToTimer(pin);
+     ce4:	28 2f       	mov	r18, r24
+     ce6:	30 e0       	ldi	r19, 0x00	; 0
+     ce8:	f9 01       	movw	r30, r18
+     cea:	ea 5b       	subi	r30, 0xBA	; 186
+     cec:	ff 4f       	sbci	r31, 0xFF	; 255
+     cee:	84 91       	lpm	r24, Z
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:190
+  uint8_t bit = digitalPinToBitMask(pin);
+     cf0:	f9 01       	movw	r30, r18
+     cf2:	e3 5a       	subi	r30, 0xA3	; 163
+     cf4:	ff 4f       	sbci	r31, 0xFF	; 255
+     cf6:	d4 91       	lpm	r29, Z
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:191
+  uint8_t port = digitalPinToPort(pin);
+     cf8:	f9 01       	movw	r30, r18
+     cfa:	ec 58       	subi	r30, 0x8C	; 140
+     cfc:	ff 4f       	sbci	r31, 0xFF	; 255
+     cfe:	c4 91       	lpm	r28, Z
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:194
+  volatile uint8_t *out;
+
+  if (port == NOT_A_PIN) return;
+     d00:	cc 23       	and	r28, r28
+     d02:	a1 f0       	breq	.+40     	; 0xd2c <digitalWrite+0x4e>
+     d04:	16 2f       	mov	r17, r22
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:198
+
+  // If the pin that support PWM output, we need to turn it off
+  // before doing a digital write.
+  if (timer != NOT_ON_TIMER) turnOffPWM(timer);
+     d06:	81 11       	cpse	r24, r1
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:198 (discriminator 1)
+     d08:	9d df       	rcall	.-198    	; 0xc44 <turnOffPWM>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:200
+
+  out = portOutputRegister(port);
+     d0a:	ec 2f       	mov	r30, r28
+     d0c:	f0 e0       	ldi	r31, 0x00	; 0
+     d0e:	ee 0f       	add	r30, r30
+     d10:	ff 1f       	adc	r31, r31
+     d12:	e5 57       	subi	r30, 0x75	; 117
+     d14:	ff 4f       	sbci	r31, 0xFF	; 255
+     d16:	a5 91       	lpm	r26, Z+
+     d18:	b4 91       	lpm	r27, Z
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:202
+
+  uint8_t oldSREG = SREG;
+     d1a:	8f b7       	in	r24, 0x3f	; 63
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:203
+  cli();
+     d1c:	f8 94       	cli
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:206
+
+  if (val == LOW) {
+    *out &= ~bit;
+     d1e:	ec 91       	ld	r30, X
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:205
+  out = portOutputRegister(port);
+
+  uint8_t oldSREG = SREG;
+  cli();
+
+  if (val == LOW) {
+     d20:	11 11       	cpse	r17, r1
+     d22:	08 c0       	rjmp	.+16     	; 0xd34 <digitalWrite+0x56>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:206
+    *out &= ~bit;
+     d24:	d0 95       	com	r29
+     d26:	de 23       	and	r29, r30
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:208
+  } else {
+    *out |= bit;
+     d28:	dc 93       	st	X, r29
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:211
+  }
+
+  SREG = oldSREG;
+     d2a:	8f bf       	out	0x3f, r24	; 63
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:212
+}
+     d2c:	df 91       	pop	r29
+     d2e:	cf 91       	pop	r28
+     d30:	1f 91       	pop	r17
+     d32:	08 95       	ret
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_digital.c:208
+  cli();
+
+  if (val == LOW) {
+    *out &= ~bit;
+  } else {
+    *out |= bit;
+     d34:	de 2b       	or	r29, r30
+     d36:	f8 cf       	rjmp	.-16     	; 0xd28 <digitalWrite+0x4a>
+
+00000d38 <shiftOut>:
+shiftOut():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_shift.c:41
+  }
+  return value;
+}
+
+void shiftOut(uint8_t dataPin, uint8_t clockPin, uint8_t bitOrder, uint8_t val)
+{
+     d38:	bf 92       	push	r11
+     d3a:	cf 92       	push	r12
+     d3c:	df 92       	push	r13
+     d3e:	ef 92       	push	r14
+     d40:	ff 92       	push	r15
+     d42:	0f 93       	push	r16
+     d44:	1f 93       	push	r17
+     d46:	cf 93       	push	r28
+     d48:	df 93       	push	r29
+     d4a:	c8 2e       	mov	r12, r24
+     d4c:	d6 2e       	mov	r13, r22
+     d4e:	b4 2e       	mov	r11, r20
+     d50:	d0 e0       	ldi	r29, 0x00	; 0
+     d52:	c0 e0       	ldi	r28, 0x00	; 0
+     d54:	02 2f       	mov	r16, r18
+     d56:	10 e0       	ldi	r17, 0x00	; 0
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_shift.c:48
+
+  for (i = 0; i < 8; i++)  {
+    if (bitOrder == LSBFIRST)
+      digitalWrite(dataPin, !!(val & (1 << i)));
+    else  
+      digitalWrite(dataPin, !!(val & (1 << (7 - i))));
+     d58:	87 e0       	ldi	r24, 0x07	; 7
+     d5a:	e8 2e       	mov	r14, r24
+     d5c:	f1 2c       	mov	r15, r1
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_shift.c:46
+{
+  uint8_t i;
+
+  for (i = 0; i < 8; i++)  {
+    if (bitOrder == LSBFIRST)
+      digitalWrite(dataPin, !!(val & (1 << i)));
+     d5e:	b8 01       	movw	r22, r16
+     d60:	8c 2f       	mov	r24, r28
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_shift.c:45
+void shiftOut(uint8_t dataPin, uint8_t clockPin, uint8_t bitOrder, uint8_t val)
+{
+  uint8_t i;
+
+  for (i = 0; i < 8; i++)  {
+    if (bitOrder == LSBFIRST)
+     d62:	bb 20       	and	r11, r11
+     d64:	19 f0       	breq	.+6      	; 0xd6c <shiftOut+0x34>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_shift.c:48
+      digitalWrite(dataPin, !!(val & (1 << i)));
+    else  
+      digitalWrite(dataPin, !!(val & (1 << (7 - i))));
+     d66:	c7 01       	movw	r24, r14
+     d68:	8c 1b       	sub	r24, r28
+     d6a:	9d 0b       	sbc	r25, r29
+     d6c:	02 c0       	rjmp	.+4      	; 0xd72 <shiftOut+0x3a>
+     d6e:	75 95       	asr	r23
+     d70:	67 95       	ror	r22
+     d72:	8a 95       	dec	r24
+     d74:	e2 f7       	brpl	.-8      	; 0xd6e <shiftOut+0x36>
+     d76:	61 70       	andi	r22, 0x01	; 1
+     d78:	8c 2d       	mov	r24, r12
+     d7a:	b1 df       	rcall	.-158    	; 0xcde <digitalWrite>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_shift.c:50
+      
+    digitalWrite(clockPin, HIGH);
+     d7c:	61 e0       	ldi	r22, 0x01	; 1
+     d7e:	8d 2d       	mov	r24, r13
+     d80:	ae df       	rcall	.-164    	; 0xcde <digitalWrite>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_shift.c:51
+    digitalWrite(clockPin, LOW);    
+     d82:	60 e0       	ldi	r22, 0x00	; 0
+     d84:	8d 2d       	mov	r24, r13
+     d86:	ab df       	rcall	.-170    	; 0xcde <digitalWrite>
+     d88:	21 96       	adiw	r28, 0x01	; 1
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_shift.c:44
+
+void shiftOut(uint8_t dataPin, uint8_t clockPin, uint8_t bitOrder, uint8_t val)
+{
+  uint8_t i;
+
+  for (i = 0; i < 8; i++)  {
+     d8a:	c8 30       	cpi	r28, 0x08	; 8
+     d8c:	d1 05       	cpc	r29, r1
+     d8e:	39 f7       	brne	.-50     	; 0xd5e <shiftOut+0x26>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/wiring_shift.c:53
+      digitalWrite(dataPin, !!(val & (1 << (7 - i))));
+      
+    digitalWrite(clockPin, HIGH);
+    digitalWrite(clockPin, LOW);    
+  }
+}
+     d90:	df 91       	pop	r29
+     d92:	cf 91       	pop	r28
+     d94:	1f 91       	pop	r17
+     d96:	0f 91       	pop	r16
+     d98:	ff 90       	pop	r15
+     d9a:	ef 90       	pop	r14
+     d9c:	df 90       	pop	r13
+     d9e:	cf 90       	pop	r12
+     da0:	bf 90       	pop	r11
+     da2:	08 95       	ret
+
+00000da4 <HardwareSerial::available()>:
+_ZN14HardwareSerial9availableEv():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:150
+  // clear any received data
+  _rx_buffer_head = _rx_buffer_tail;
+}
+
+int HardwareSerial::available(void)
+{
+     da4:	fc 01       	movw	r30, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:151
+  return ((unsigned int)(SERIAL_RX_BUFFER_SIZE + _rx_buffer_head - _rx_buffer_tail)) % SERIAL_RX_BUFFER_SIZE;
+     da6:	91 8d       	ldd	r25, Z+25	; 0x19
+     da8:	22 8d       	ldd	r18, Z+26	; 0x1a
+     daa:	89 2f       	mov	r24, r25
+     dac:	90 e0       	ldi	r25, 0x00	; 0
+     dae:	80 5c       	subi	r24, 0xC0	; 192
+     db0:	9f 4f       	sbci	r25, 0xFF	; 255
+     db2:	82 1b       	sub	r24, r18
+     db4:	91 09       	sbc	r25, r1
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:152
+}
+     db6:	8f 73       	andi	r24, 0x3F	; 63
+     db8:	99 27       	eor	r25, r25
+     dba:	08 95       	ret
+
+00000dbc <HardwareSerial::peek()>:
+_ZN14HardwareSerial4peekEv():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:155
+
+int HardwareSerial::peek(void)
+{
+     dbc:	fc 01       	movw	r30, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:156
+  if (_rx_buffer_head == _rx_buffer_tail) {
+     dbe:	91 8d       	ldd	r25, Z+25	; 0x19
+     dc0:	82 8d       	ldd	r24, Z+26	; 0x1a
+     dc2:	98 17       	cp	r25, r24
+     dc4:	31 f0       	breq	.+12     	; 0xdd2 <HardwareSerial::peek()+0x16>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:159
+    return -1;
+  } else {
+    return _rx_buffer[_rx_buffer_tail];
+     dc6:	82 8d       	ldd	r24, Z+26	; 0x1a
+     dc8:	e8 0f       	add	r30, r24
+     dca:	f1 1d       	adc	r31, r1
+     dcc:	85 8d       	ldd	r24, Z+29	; 0x1d
+     dce:	90 e0       	ldi	r25, 0x00	; 0
+     dd0:	08 95       	ret
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:157
+}
+
+int HardwareSerial::peek(void)
+{
+  if (_rx_buffer_head == _rx_buffer_tail) {
+    return -1;
+     dd2:	8f ef       	ldi	r24, 0xFF	; 255
+     dd4:	9f ef       	ldi	r25, 0xFF	; 255
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:161
+  } else {
+    return _rx_buffer[_rx_buffer_tail];
+  }
+}
+     dd6:	08 95       	ret
+
+00000dd8 <HardwareSerial::read()>:
+_ZN14HardwareSerial4readEv():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:164
+
+int HardwareSerial::read(void)
+{
+     dd8:	fc 01       	movw	r30, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:166
+  // if the head isn't ahead of the tail, we don't have any characters
+  if (_rx_buffer_head == _rx_buffer_tail) {
+     dda:	91 8d       	ldd	r25, Z+25	; 0x19
+     ddc:	82 8d       	ldd	r24, Z+26	; 0x1a
+     dde:	98 17       	cp	r25, r24
+     de0:	61 f0       	breq	.+24     	; 0xdfa <HardwareSerial::read()+0x22>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:169
+    return -1;
+  } else {
+    unsigned char c = _rx_buffer[_rx_buffer_tail];
+     de2:	a2 8d       	ldd	r26, Z+26	; 0x1a
+     de4:	ae 0f       	add	r26, r30
+     de6:	bf 2f       	mov	r27, r31
+     de8:	b1 1d       	adc	r27, r1
+     dea:	5d 96       	adiw	r26, 0x1d	; 29
+     dec:	8c 91       	ld	r24, X
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:170
+    _rx_buffer_tail = (rx_buffer_index_t)(_rx_buffer_tail + 1) % SERIAL_RX_BUFFER_SIZE;
+     dee:	92 8d       	ldd	r25, Z+26	; 0x1a
+     df0:	9f 5f       	subi	r25, 0xFF	; 255
+     df2:	9f 73       	andi	r25, 0x3F	; 63
+     df4:	92 8f       	std	Z+26, r25	; 0x1a
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:171
+    return c;
+     df6:	90 e0       	ldi	r25, 0x00	; 0
+     df8:	08 95       	ret
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:167
+
+int HardwareSerial::read(void)
+{
+  // if the head isn't ahead of the tail, we don't have any characters
+  if (_rx_buffer_head == _rx_buffer_tail) {
+    return -1;
+     dfa:	8f ef       	ldi	r24, 0xFF	; 255
+     dfc:	9f ef       	ldi	r25, 0xFF	; 255
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:173
+  } else {
+    unsigned char c = _rx_buffer[_rx_buffer_tail];
+    _rx_buffer_tail = (rx_buffer_index_t)(_rx_buffer_tail + 1) % SERIAL_RX_BUFFER_SIZE;
+    return c;
+  }
+}
+     dfe:	08 95       	ret
+
+00000e00 <HardwareSerial::availableForWrite()>:
+_ZN14HardwareSerial17availableForWriteEv():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:181
+{
+#if (SERIAL_TX_BUFFER_SIZE>256)
+  uint8_t oldSREG = SREG;
+  cli();
+#endif
+  tx_buffer_index_t head = _tx_buffer_head;
+     e00:	fc 01       	movw	r30, r24
+     e02:	53 8d       	ldd	r21, Z+27	; 0x1b
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:182
+  tx_buffer_index_t tail = _tx_buffer_tail;
+     e04:	44 8d       	ldd	r20, Z+28	; 0x1c
+     e06:	25 2f       	mov	r18, r21
+     e08:	30 e0       	ldi	r19, 0x00	; 0
+     e0a:	84 2f       	mov	r24, r20
+     e0c:	90 e0       	ldi	r25, 0x00	; 0
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:186
+#if (SERIAL_TX_BUFFER_SIZE>256)
+  SREG = oldSREG;
+#endif
+  if (head >= tail) return SERIAL_TX_BUFFER_SIZE - 1 - head + tail;
+     e0e:	82 1b       	sub	r24, r18
+     e10:	93 0b       	sbc	r25, r19
+     e12:	54 17       	cp	r21, r20
+     e14:	10 f0       	brcs	.+4      	; 0xe1a <HardwareSerial::availableForWrite()+0x1a>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:186 (discriminator 1)
+     e16:	cf 96       	adiw	r24, 0x3f	; 63
+     e18:	08 95       	ret
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:187
+  return tail - head - 1;
+     e1a:	01 97       	sbiw	r24, 0x01	; 1
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:188
+}
+     e1c:	08 95       	ret
+
+00000e1e <serialEventRun()>:
+_Z14serialEventRunv():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:66
+#endif
+
+void serialEventRun(void)
+{
+#if defined(HAVE_HWSERIAL0)
+  if (Serial0_available && serialEvent && Serial0_available()) serialEvent();
+     e1e:	89 e4       	ldi	r24, 0x49	; 73
+     e20:	98 e0       	ldi	r25, 0x08	; 8
+     e22:	89 2b       	or	r24, r25
+     e24:	39 f0       	breq	.+14     	; 0xe34 <serialEventRun()+0x16>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:66 (discriminator 1)
+     e26:	80 e0       	ldi	r24, 0x00	; 0
+     e28:	90 e0       	ldi	r25, 0x00	; 0
+     e2a:	89 2b       	or	r24, r25
+     e2c:	19 f0       	breq	.+6      	; 0xe34 <serialEventRun()+0x16>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:66 (discriminator 3)
+     e2e:	31 d1       	rcall	.+610    	; 0x1092 <Serial0_available()>
+     e30:	81 11       	cpse	r24, r1
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:66
+     e32:	e6 c8       	rjmp	.-3636   	; 0x0 <__vectors>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:77
+  if (Serial2_available && serialEvent2 && Serial2_available()) serialEvent2();
+#endif
+#if defined(HAVE_HWSERIAL3)
+  if (Serial3_available && serialEvent3 && Serial3_available()) serialEvent3();
+#endif
+}
+     e34:	08 95       	ret
+
+00000e36 <HardwareSerial::_tx_udr_empty_irq()>:
+_ZN14HardwareSerial17_tx_udr_empty_irqEv():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:82
+
+// Actual interrupt handlers //////////////////////////////////////////////////////////////
+
+void HardwareSerial::_tx_udr_empty_irq(void)
+{
+     e36:	fc 01       	movw	r30, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:85
+  // If interrupts are enabled, there must be more data in the output
+  // buffer. Send the next byte
+  unsigned char c = _tx_buffer[_tx_buffer_tail];
+     e38:	a4 8d       	ldd	r26, Z+28	; 0x1c
+     e3a:	a8 0f       	add	r26, r24
+     e3c:	b9 2f       	mov	r27, r25
+     e3e:	b1 1d       	adc	r27, r1
+     e40:	a3 5a       	subi	r26, 0xA3	; 163
+     e42:	bf 4f       	sbci	r27, 0xFF	; 255
+     e44:	2c 91       	ld	r18, X
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:86
+  _tx_buffer_tail = (_tx_buffer_tail + 1) % SERIAL_TX_BUFFER_SIZE;
+     e46:	84 8d       	ldd	r24, Z+28	; 0x1c
+     e48:	90 e0       	ldi	r25, 0x00	; 0
+     e4a:	01 96       	adiw	r24, 0x01	; 1
+     e4c:	8f 73       	andi	r24, 0x3F	; 63
+     e4e:	99 27       	eor	r25, r25
+     e50:	84 8f       	std	Z+28, r24	; 0x1c
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:88
+
+  *_udr = c;
+     e52:	a6 89       	ldd	r26, Z+22	; 0x16
+     e54:	b7 89       	ldd	r27, Z+23	; 0x17
+     e56:	2c 93       	st	X, r18
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:93
+
+  // clear the TXC bit -- "can be cleared by writing a one to its bit
+  // location". This makes sure flush() won't return until the bytes
+  // actually got written
+  *_ucsra |= _BV(TXC0);
+     e58:	a0 89       	ldd	r26, Z+16	; 0x10
+     e5a:	b1 89       	ldd	r27, Z+17	; 0x11
+     e5c:	8c 91       	ld	r24, X
+     e5e:	80 64       	ori	r24, 0x40	; 64
+     e60:	8c 93       	st	X, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:95
+
+  if (_tx_buffer_head == _tx_buffer_tail) {
+     e62:	93 8d       	ldd	r25, Z+27	; 0x1b
+     e64:	84 8d       	ldd	r24, Z+28	; 0x1c
+     e66:	98 13       	cpse	r25, r24
+     e68:	06 c0       	rjmp	.+12     	; 0xe76 <HardwareSerial::_tx_udr_empty_irq()+0x40>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:97
+    // Buffer empty, so disable interrupts
+    *_ucsrb &= ~_BV(UDRIE0);
+     e6a:	02 88       	ldd	r0, Z+18	; 0x12
+     e6c:	f3 89       	ldd	r31, Z+19	; 0x13
+     e6e:	e0 2d       	mov	r30, r0
+     e70:	80 81       	ld	r24, Z
+     e72:	8f 7d       	andi	r24, 0xDF	; 223
+     e74:	80 83       	st	Z, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:99
+  }
+}
+     e76:	08 95       	ret
+
+00000e78 <HardwareSerial::flush()>:
+_ZN14HardwareSerial5flushEv():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:191
+  if (head >= tail) return SERIAL_TX_BUFFER_SIZE - 1 - head + tail;
+  return tail - head - 1;
+}
+
+void HardwareSerial::flush()
+{
+     e78:	cf 93       	push	r28
+     e7a:	df 93       	push	r29
+     e7c:	ec 01       	movw	r28, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:195
+  // If we have never written a byte, no need to flush. This special
+  // case is needed since there is no way to force the TXC (transmit
+  // complete) bit to 1 during initialization
+  if (!_written)
+     e7e:	88 8d       	ldd	r24, Y+24	; 0x18
+     e80:	88 23       	and	r24, r24
+     e82:	b1 f0       	breq	.+44     	; 0xeb0 <HardwareSerial::flush()+0x38>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:198
+    return;
+
+  while (bit_is_set(*_ucsrb, UDRIE0) || bit_is_clear(*_ucsra, TXC0)) {
+     e84:	aa 89       	ldd	r26, Y+18	; 0x12
+     e86:	bb 89       	ldd	r27, Y+19	; 0x13
+     e88:	e8 89       	ldd	r30, Y+16	; 0x10
+     e8a:	f9 89       	ldd	r31, Y+17	; 0x11
+     e8c:	8c 91       	ld	r24, X
+     e8e:	85 fd       	sbrc	r24, 5
+     e90:	03 c0       	rjmp	.+6      	; 0xe98 <HardwareSerial::flush()+0x20>
+     e92:	80 81       	ld	r24, Z
+     e94:	86 fd       	sbrc	r24, 6
+     e96:	0c c0       	rjmp	.+24     	; 0xeb0 <HardwareSerial::flush()+0x38>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:199
+    if (bit_is_clear(SREG, SREG_I) && bit_is_set(*_ucsrb, UDRIE0))
+     e98:	0f b6       	in	r0, 0x3f	; 63
+     e9a:	07 fc       	sbrc	r0, 7
+     e9c:	f7 cf       	rjmp	.-18     	; 0xe8c <HardwareSerial::flush()+0x14>
+     e9e:	8c 91       	ld	r24, X
+     ea0:	85 ff       	sbrs	r24, 5
+     ea2:	f2 cf       	rjmp	.-28     	; 0xe88 <HardwareSerial::flush()+0x10>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:203
+      // Interrupts are globally disabled, but the DR empty
+      // interrupt should be enabled, so poll the DR empty flag to
+      // prevent deadlock
+      if (bit_is_set(*_ucsra, UDRE0))
+     ea4:	80 81       	ld	r24, Z
+     ea6:	85 ff       	sbrs	r24, 5
+     ea8:	ed cf       	rjmp	.-38     	; 0xe84 <HardwareSerial::flush()+0xc>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:204
+        _tx_udr_empty_irq();
+     eaa:	ce 01       	movw	r24, r28
+     eac:	c4 df       	rcall	.-120    	; 0xe36 <HardwareSerial::_tx_udr_empty_irq()>
+     eae:	ea cf       	rjmp	.-44     	; 0xe84 <HardwareSerial::flush()+0xc>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:208
+  }
+  // If we get here, nothing is queued anymore (DRIE is disabled) and
+  // the hardware finished tranmission (TXC is set).
+}
+     eb0:	df 91       	pop	r29
+     eb2:	cf 91       	pop	r28
+     eb4:	08 95       	ret
+
+00000eb6 <HardwareSerial::write(unsigned char)>:
+_ZN14HardwareSerial5writeEh():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:211
+
+size_t HardwareSerial::write(uint8_t c)
+{
+     eb6:	ef 92       	push	r14
+     eb8:	ff 92       	push	r15
+     eba:	0f 93       	push	r16
+     ebc:	1f 93       	push	r17
+     ebe:	cf 93       	push	r28
+     ec0:	df 93       	push	r29
+     ec2:	ec 01       	movw	r28, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:212
+  _written = true;
+     ec4:	81 e0       	ldi	r24, 0x01	; 1
+     ec6:	88 8f       	std	Y+24, r24	; 0x18
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:217
+  // If the buffer and the data register is empty, just write the byte
+  // to the data register and be done. This shortcut helps
+  // significantly improve the effective datarate at high (>
+  // 500kbit/s) bitrates, where interrupt overhead becomes a slowdown.
+  if (_tx_buffer_head == _tx_buffer_tail && bit_is_set(*_ucsra, UDRE0)) {
+     ec8:	9b 8d       	ldd	r25, Y+27	; 0x1b
+     eca:	8c 8d       	ldd	r24, Y+28	; 0x1c
+     ecc:	98 13       	cpse	r25, r24
+     ece:	16 c0       	rjmp	.+44     	; 0xefc <HardwareSerial::write(unsigned char)+0x46>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:217 (discriminator 1)
+     ed0:	e8 89       	ldd	r30, Y+16	; 0x10
+     ed2:	f9 89       	ldd	r31, Y+17	; 0x11
+     ed4:	80 81       	ld	r24, Z
+     ed6:	85 ff       	sbrs	r24, 5
+     ed8:	11 c0       	rjmp	.+34     	; 0xefc <HardwareSerial::write(unsigned char)+0x46>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:218
+    *_udr = c;
+     eda:	ee 89       	ldd	r30, Y+22	; 0x16
+     edc:	ff 89       	ldd	r31, Y+23	; 0x17
+     ede:	60 83       	st	Z, r22
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:219
+    *_ucsra |= _BV(TXC0);
+     ee0:	e8 89       	ldd	r30, Y+16	; 0x10
+     ee2:	f9 89       	ldd	r31, Y+17	; 0x11
+     ee4:	80 81       	ld	r24, Z
+     ee6:	80 64       	ori	r24, 0x40	; 64
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:242
+  }
+
+  _tx_buffer[_tx_buffer_head] = c;
+  _tx_buffer_head = i;
+
+  *_ucsrb |= _BV(UDRIE0);
+     ee8:	80 83       	st	Z, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:245
+  
+  return 1;
+}
+     eea:	81 e0       	ldi	r24, 0x01	; 1
+     eec:	90 e0       	ldi	r25, 0x00	; 0
+     eee:	df 91       	pop	r29
+     ef0:	cf 91       	pop	r28
+     ef2:	1f 91       	pop	r17
+     ef4:	0f 91       	pop	r16
+     ef6:	ff 90       	pop	r15
+     ef8:	ef 90       	pop	r14
+     efa:	08 95       	ret
+     efc:	f6 2e       	mov	r15, r22
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:222
+  if (_tx_buffer_head == _tx_buffer_tail && bit_is_set(*_ucsra, UDRE0)) {
+    *_udr = c;
+    *_ucsra |= _BV(TXC0);
+    return 1;
+  }
+  tx_buffer_index_t i = (_tx_buffer_head + 1) % SERIAL_TX_BUFFER_SIZE;
+     efe:	0b 8d       	ldd	r16, Y+27	; 0x1b
+     f00:	10 e0       	ldi	r17, 0x00	; 0
+     f02:	0f 5f       	subi	r16, 0xFF	; 255
+     f04:	1f 4f       	sbci	r17, 0xFF	; 255
+     f06:	0f 73       	andi	r16, 0x3F	; 63
+     f08:	11 27       	eor	r17, r17
+     f0a:	e0 2e       	mov	r14, r16
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:226
+
+  // If the output buffer is full, there's nothing for it other than to 
+  // wait for the interrupt handler to empty it a bit
+  while (i == _tx_buffer_tail) {
+     f0c:	8c 8d       	ldd	r24, Y+28	; 0x1c
+     f0e:	8e 11       	cpse	r24, r14
+     f10:	0b c0       	rjmp	.+22     	; 0xf28 <HardwareSerial::write(unsigned char)+0x72>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:227
+    if (bit_is_clear(SREG, SREG_I)) {
+     f12:	0f b6       	in	r0, 0x3f	; 63
+     f14:	07 fc       	sbrc	r0, 7
+     f16:	fa cf       	rjmp	.-12     	; 0xf0c <HardwareSerial::write(unsigned char)+0x56>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:232
+      // Interrupts are disabled, so we'll have to poll the data
+      // register empty flag ourselves. If it is set, pretend an
+      // interrupt has happened and call the handler to free up
+      // space for us.
+      if(bit_is_set(*_ucsra, UDRE0))
+     f18:	e8 89       	ldd	r30, Y+16	; 0x10
+     f1a:	f9 89       	ldd	r31, Y+17	; 0x11
+     f1c:	80 81       	ld	r24, Z
+     f1e:	85 ff       	sbrs	r24, 5
+     f20:	f5 cf       	rjmp	.-22     	; 0xf0c <HardwareSerial::write(unsigned char)+0x56>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:233
+        _tx_udr_empty_irq();
+     f22:	ce 01       	movw	r24, r28
+     f24:	88 df       	rcall	.-240    	; 0xe36 <HardwareSerial::_tx_udr_empty_irq()>
+     f26:	f2 cf       	rjmp	.-28     	; 0xf0c <HardwareSerial::write(unsigned char)+0x56>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:239
+    } else {
+      // nop, the interrupt handler will free up space for us
+    }
+  }
+
+  _tx_buffer[_tx_buffer_head] = c;
+     f28:	eb 8d       	ldd	r30, Y+27	; 0x1b
+     f2a:	ec 0f       	add	r30, r28
+     f2c:	fd 2f       	mov	r31, r29
+     f2e:	f1 1d       	adc	r31, r1
+     f30:	e3 5a       	subi	r30, 0xA3	; 163
+     f32:	ff 4f       	sbci	r31, 0xFF	; 255
+     f34:	f0 82       	st	Z, r15
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:240
+  _tx_buffer_head = i;
+     f36:	0b 8f       	std	Y+27, r16	; 0x1b
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:242
+
+  *_ucsrb |= _BV(UDRIE0);
+     f38:	ea 89       	ldd	r30, Y+18	; 0x12
+     f3a:	fb 89       	ldd	r31, Y+19	; 0x13
+     f3c:	80 81       	ld	r24, Z
+     f3e:	80 62       	ori	r24, 0x20	; 32
+     f40:	d3 cf       	rjmp	.-90     	; 0xee8 <HardwareSerial::write(unsigned char)+0x32>
+
+00000f42 <HardwareSerial::begin(unsigned long, unsigned char)>:
+_ZN14HardwareSerial5beginEmh():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:104
+}
+
+// Public Methods //////////////////////////////////////////////////////////////
+
+void HardwareSerial::begin(unsigned long baud, byte config)
+{
+     f42:	cf 92       	push	r12
+     f44:	df 92       	push	r13
+     f46:	ef 92       	push	r14
+     f48:	ff 92       	push	r15
+     f4a:	1f 93       	push	r17
+     f4c:	cf 93       	push	r28
+     f4e:	df 93       	push	r29
+     f50:	ec 01       	movw	r28, r24
+     f52:	6a 01       	movw	r12, r20
+     f54:	7b 01       	movw	r14, r22
+     f56:	12 2f       	mov	r17, r18
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:106
+  // Try u2x mode first
+  uint16_t baud_setting = (F_CPU / 4 / baud - 1) / 2;
+     f58:	60 e8       	ldi	r22, 0x80	; 128
+     f5a:	74 e8       	ldi	r23, 0x84	; 132
+     f5c:	8e e1       	ldi	r24, 0x1E	; 30
+     f5e:	90 e0       	ldi	r25, 0x00	; 0
+     f60:	a7 01       	movw	r20, r14
+     f62:	96 01       	movw	r18, r12
+     f64:	dd d1       	rcall	.+954    	; 0x1320 <__udivmodsi4>
+     f66:	21 50       	subi	r18, 0x01	; 1
+     f68:	31 09       	sbc	r19, r1
+     f6a:	41 09       	sbc	r20, r1
+     f6c:	51 09       	sbc	r21, r1
+     f6e:	56 95       	lsr	r21
+     f70:	47 95       	ror	r20
+     f72:	37 95       	ror	r19
+     f74:	27 95       	ror	r18
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:107
+  *_ucsra = 1 << U2X0;
+     f76:	e8 89       	ldd	r30, Y+16	; 0x10
+     f78:	f9 89       	ldd	r31, Y+17	; 0x11
+     f7a:	82 e0       	ldi	r24, 0x02	; 2
+     f7c:	80 83       	st	Z, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:114
+  // hardcoded exception for 57600 for compatibility with the bootloader
+  // shipped with the Duemilanove and previous boards and the firmware
+  // on the 8U2 on the Uno and Mega 2560. Also, The baud_setting cannot
+  // be > 4095, so switch back to non-u2x mode if the baud rate is too
+  // low.
+  if (((F_CPU == 16000000UL) && (baud == 57600)) || (baud_setting >4095))
+     f7e:	21 15       	cp	r18, r1
+     f80:	80 e1       	ldi	r24, 0x10	; 16
+     f82:	38 07       	cpc	r19, r24
+     f84:	90 f0       	brcs	.+36     	; 0xfaa <HardwareSerial::begin(unsigned long, unsigned char)+0x68>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:116
+  {
+    *_ucsra = 0;
+     f86:	e8 89       	ldd	r30, Y+16	; 0x10
+     f88:	f9 89       	ldd	r31, Y+17	; 0x11
+     f8a:	10 82       	st	Z, r1
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:117
+    baud_setting = (F_CPU / 8 / baud - 1) / 2;
+     f8c:	60 e4       	ldi	r22, 0x40	; 64
+     f8e:	72 e4       	ldi	r23, 0x42	; 66
+     f90:	8f e0       	ldi	r24, 0x0F	; 15
+     f92:	90 e0       	ldi	r25, 0x00	; 0
+     f94:	a7 01       	movw	r20, r14
+     f96:	96 01       	movw	r18, r12
+     f98:	c3 d1       	rcall	.+902    	; 0x1320 <__udivmodsi4>
+     f9a:	21 50       	subi	r18, 0x01	; 1
+     f9c:	31 09       	sbc	r19, r1
+     f9e:	41 09       	sbc	r20, r1
+     fa0:	51 09       	sbc	r21, r1
+     fa2:	56 95       	lsr	r21
+     fa4:	47 95       	ror	r20
+     fa6:	37 95       	ror	r19
+     fa8:	27 95       	ror	r18
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:121
+  }
+
+  // assign the baud_setting, a.k.a. ubrr (USART Baud Rate Register)
+  *_ubrrh = baud_setting >> 8;
+     faa:	ec 85       	ldd	r30, Y+12	; 0x0c
+     fac:	fd 85       	ldd	r31, Y+13	; 0x0d
+     fae:	30 83       	st	Z, r19
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:122
+  *_ubrrl = baud_setting;
+     fb0:	ee 85       	ldd	r30, Y+14	; 0x0e
+     fb2:	ff 85       	ldd	r31, Y+15	; 0x0f
+     fb4:	20 83       	st	Z, r18
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:124
+
+  _written = false;
+     fb6:	18 8e       	std	Y+24, r1	; 0x18
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:130
+
+  //set the data bits, parity, and stop bits
+#if defined(__AVR_ATmega8__) || defined(__AVR_ATmega8515__) || defined(__AVR_ATmega162__) \
+|| defined(__AVR_ATmega8535__) || defined(__AVR_ATmega16__)|| defined(__AVR_ATmega32__)   \
+|| defined(__AVR_ATmega162__)
+  config |= 0x80; // select UCSRC register (shared with UBRRH)
+     fb8:	10 68       	ori	r17, 0x80	; 128
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:132
+#endif
+  *_ucsrc = config;
+     fba:	ec 89       	ldd	r30, Y+20	; 0x14
+     fbc:	fd 89       	ldd	r31, Y+21	; 0x15
+     fbe:	10 83       	st	Z, r17
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:134
+  
+  *_ucsrb |= _BV(RXEN0) | _BV(TXEN0) | _BV(RXCIE0);
+     fc0:	ea 89       	ldd	r30, Y+18	; 0x12
+     fc2:	fb 89       	ldd	r31, Y+19	; 0x13
+     fc4:	80 81       	ld	r24, Z
+     fc6:	88 69       	ori	r24, 0x98	; 152
+     fc8:	80 83       	st	Z, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:135
+  *_ucsrb &= ~_BV(UDRIE0);
+     fca:	ea 89       	ldd	r30, Y+18	; 0x12
+     fcc:	fb 89       	ldd	r31, Y+19	; 0x13
+     fce:	80 81       	ld	r24, Z
+     fd0:	8f 7d       	andi	r24, 0xDF	; 223
+     fd2:	80 83       	st	Z, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial.cpp:136
+}
+     fd4:	df 91       	pop	r29
+     fd6:	cf 91       	pop	r28
+     fd8:	1f 91       	pop	r17
+     fda:	ff 90       	pop	r15
+     fdc:	ef 90       	pop	r14
+     fde:	df 90       	pop	r13
+     fe0:	cf 90       	pop	r12
+     fe2:	08 95       	ret
+
+00000fe4 <__vector_11>:
+__vector_11():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial0.cpp:50
+#elif defined(USART_RXC_vect)
+  ISR(USART_RXC_vect)
+#else
+  #error "Don't know what the Data Received vector is called for Serial"
+#endif
+  {
+     fe4:	1f 92       	push	r1
+     fe6:	0f 92       	push	r0
+     fe8:	0f b6       	in	r0, 0x3f	; 63
+     fea:	0f 92       	push	r0
+     fec:	11 24       	eor	r1, r1
+     fee:	2f 93       	push	r18
+     ff0:	8f 93       	push	r24
+     ff2:	9f 93       	push	r25
+     ff4:	ef 93       	push	r30
+     ff6:	ff 93       	push	r31
+_ZN14HardwareSerial16_rx_complete_irqEv():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial_private.h:103
+
+// Actual interrupt handlers //////////////////////////////////////////////////////////////
+
+void HardwareSerial::_rx_complete_irq(void)
+{
+  if (bit_is_clear(*_ucsra, UPE0)) {
+     ff8:	e0 91 41 02 	lds	r30, 0x0241	; 0x800241 <Serial+0x10>
+     ffc:	f0 91 42 02 	lds	r31, 0x0242	; 0x800242 <Serial+0x11>
+    1000:	80 81       	ld	r24, Z
+    1002:	e0 91 47 02 	lds	r30, 0x0247	; 0x800247 <Serial+0x16>
+    1006:	f0 91 48 02 	lds	r31, 0x0248	; 0x800248 <Serial+0x17>
+    100a:	82 fd       	sbrc	r24, 2
+    100c:	1b c0       	rjmp	.+54     	; 0x1044 <__vector_11+0x60>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial_private.h:106
+    // No Parity error, read byte and store it in the buffer if there is
+    // room
+    unsigned char c = *_udr;
+    100e:	90 81       	ld	r25, Z
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial_private.h:107
+    rx_buffer_index_t i = (unsigned int)(_rx_buffer_head + 1) % SERIAL_RX_BUFFER_SIZE;
+    1010:	80 91 4a 02 	lds	r24, 0x024A	; 0x80024a <Serial+0x19>
+    1014:	8f 5f       	subi	r24, 0xFF	; 255
+    1016:	8f 73       	andi	r24, 0x3F	; 63
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial_private.h:113
+
+    // if we should be storing the received character into the location
+    // just before the tail (meaning that the head would advance to the
+    // current location of the tail), we're about to overflow the buffer
+    // and so we don't write the character or advance the head.
+    if (i != _rx_buffer_tail) {
+    1018:	20 91 4b 02 	lds	r18, 0x024B	; 0x80024b <Serial+0x1a>
+    101c:	82 17       	cp	r24, r18
+    101e:	41 f0       	breq	.+16     	; 0x1030 <__vector_11+0x4c>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial_private.h:114
+      _rx_buffer[_rx_buffer_head] = c;
+    1020:	e0 91 4a 02 	lds	r30, 0x024A	; 0x80024a <Serial+0x19>
+    1024:	f0 e0       	ldi	r31, 0x00	; 0
+    1026:	ef 5c       	subi	r30, 0xCF	; 207
+    1028:	fd 4f       	sbci	r31, 0xFD	; 253
+    102a:	95 8f       	std	Z+29, r25	; 0x1d
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial_private.h:115
+      _rx_buffer_head = i;
+    102c:	80 93 4a 02 	sts	0x024A, r24	; 0x80024a <Serial+0x19>
+__vector_11():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial0.cpp:52
+    Serial._rx_complete_irq();
+  }
+    1030:	ff 91       	pop	r31
+    1032:	ef 91       	pop	r30
+    1034:	9f 91       	pop	r25
+    1036:	8f 91       	pop	r24
+    1038:	2f 91       	pop	r18
+    103a:	0f 90       	pop	r0
+    103c:	0f be       	out	0x3f, r0	; 63
+    103e:	0f 90       	pop	r0
+    1040:	1f 90       	pop	r1
+    1042:	18 95       	reti
+_ZN14HardwareSerial16_rx_complete_irqEv():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial_private.h:119
+    }
+  } else {
+    // Parity error, read byte but discard it
+    *_udr;
+    1044:	80 81       	ld	r24, Z
+__vector_11():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial0.cpp:52
+    1046:	f4 cf       	rjmp	.-24     	; 0x1030 <__vector_11+0x4c>
+
+00001048 <__vector_12>:
+__vector_12():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial0.cpp:63
+#elif defined(USART0_UDRE_vect)
+ISR(USART0_UDRE_vect)
+#else
+  #error "Don't know what the Data Register Empty vector is called for Serial"
+#endif
+{
+    1048:	1f 92       	push	r1
+    104a:	0f 92       	push	r0
+    104c:	0f b6       	in	r0, 0x3f	; 63
+    104e:	0f 92       	push	r0
+    1050:	11 24       	eor	r1, r1
+    1052:	2f 93       	push	r18
+    1054:	3f 93       	push	r19
+    1056:	4f 93       	push	r20
+    1058:	5f 93       	push	r21
+    105a:	6f 93       	push	r22
+    105c:	7f 93       	push	r23
+    105e:	8f 93       	push	r24
+    1060:	9f 93       	push	r25
+    1062:	af 93       	push	r26
+    1064:	bf 93       	push	r27
+    1066:	ef 93       	push	r30
+    1068:	ff 93       	push	r31
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial0.cpp:64
+  Serial._tx_udr_empty_irq();
+    106a:	81 e3       	ldi	r24, 0x31	; 49
+    106c:	92 e0       	ldi	r25, 0x02	; 2
+    106e:	e3 de       	rcall	.-570    	; 0xe36 <HardwareSerial::_tx_udr_empty_irq()>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial0.cpp:65
+}
+    1070:	ff 91       	pop	r31
+    1072:	ef 91       	pop	r30
+    1074:	bf 91       	pop	r27
+    1076:	af 91       	pop	r26
+    1078:	9f 91       	pop	r25
+    107a:	8f 91       	pop	r24
+    107c:	7f 91       	pop	r23
+    107e:	6f 91       	pop	r22
+    1080:	5f 91       	pop	r21
+    1082:	4f 91       	pop	r20
+    1084:	3f 91       	pop	r19
+    1086:	2f 91       	pop	r18
+    1088:	0f 90       	pop	r0
+    108a:	0f be       	out	0x3f, r0	; 63
+    108c:	0f 90       	pop	r0
+    108e:	1f 90       	pop	r1
+    1090:	18 95       	reti
+
+00001092 <Serial0_available()>:
+_Z17Serial0_availablev():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial0.cpp:76
+#endif
+
+// Function that can be weakly referenced by serialEventRun to prevent
+// pulling in this file if it's not otherwise used.
+bool Serial0_available() {
+  return Serial.available();
+    1092:	81 e3       	ldi	r24, 0x31	; 49
+    1094:	92 e0       	ldi	r25, 0x02	; 2
+    1096:	86 de       	rcall	.-756    	; 0xda4 <HardwareSerial::available()>
+    1098:	21 e0       	ldi	r18, 0x01	; 1
+    109a:	89 2b       	or	r24, r25
+    109c:	09 f4       	brne	.+2      	; 0x10a0 <Serial0_available()+0xe>
+    109e:	20 e0       	ldi	r18, 0x00	; 0
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial0.cpp:77
+}
+    10a0:	82 2f       	mov	r24, r18
+    10a2:	08 95       	ret
+
+000010a4 <_GLOBAL__sub_I___vector_11>:
+_ZN5PrintC4Ev():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.h:46
+    size_t printNumber(unsigned long, uint8_t);
+    size_t printFloat(double, uint8_t);
+  protected:
+    void setWriteError(int err = 1) { write_error = err; }
+  public:
+    Print() : write_error(0) {}
+    10a4:	e1 e3       	ldi	r30, 0x31	; 49
+    10a6:	f2 e0       	ldi	r31, 0x02	; 2
+    10a8:	13 82       	std	Z+3, r1	; 0x03
+    10aa:	12 82       	std	Z+2, r1	; 0x02
+_ZN6StreamC4Ev():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Stream.h:63
+  public:
+    virtual int available() = 0;
+    virtual int read() = 0;
+    virtual int peek() = 0;
+
+    Stream() {_timeout=1000;}
+    10ac:	88 ee       	ldi	r24, 0xE8	; 232
+    10ae:	93 e0       	ldi	r25, 0x03	; 3
+    10b0:	a0 e0       	ldi	r26, 0x00	; 0
+    10b2:	b0 e0       	ldi	r27, 0x00	; 0
+    10b4:	84 83       	std	Z+4, r24	; 0x04
+    10b6:	95 83       	std	Z+5, r25	; 0x05
+    10b8:	a6 83       	std	Z+6, r26	; 0x06
+    10ba:	b7 83       	std	Z+7, r27	; 0x07
+_ZN14HardwareSerialC4EPVhS1_S1_S1_S1_S1_():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial_private.h:95
+  volatile uint8_t *ucsrc, volatile uint8_t *udr) :
+    _ubrrh(ubrrh), _ubrrl(ubrrl),
+    _ucsra(ucsra), _ucsrb(ucsrb), _ucsrc(ucsrc),
+    _udr(udr),
+    _rx_buffer_head(0), _rx_buffer_tail(0),
+    _tx_buffer_head(0), _tx_buffer_tail(0)
+    10bc:	8a ef       	ldi	r24, 0xFA	; 250
+    10be:	90 e0       	ldi	r25, 0x00	; 0
+    10c0:	91 83       	std	Z+1, r25	; 0x01
+    10c2:	80 83       	st	Z, r24
+    10c4:	80 e4       	ldi	r24, 0x40	; 64
+    10c6:	90 e0       	ldi	r25, 0x00	; 0
+    10c8:	95 87       	std	Z+13, r25	; 0x0d
+    10ca:	84 87       	std	Z+12, r24	; 0x0c
+    10cc:	29 e2       	ldi	r18, 0x29	; 41
+    10ce:	30 e0       	ldi	r19, 0x00	; 0
+    10d0:	37 87       	std	Z+15, r19	; 0x0f
+    10d2:	26 87       	std	Z+14, r18	; 0x0e
+    10d4:	2b e2       	ldi	r18, 0x2B	; 43
+    10d6:	30 e0       	ldi	r19, 0x00	; 0
+    10d8:	31 8b       	std	Z+17, r19	; 0x11
+    10da:	20 8b       	std	Z+16, r18	; 0x10
+    10dc:	2a e2       	ldi	r18, 0x2A	; 42
+    10de:	30 e0       	ldi	r19, 0x00	; 0
+    10e0:	33 8b       	std	Z+19, r19	; 0x13
+    10e2:	22 8b       	std	Z+18, r18	; 0x12
+    10e4:	95 8b       	std	Z+21, r25	; 0x15
+    10e6:	84 8b       	std	Z+20, r24	; 0x14
+    10e8:	8c e2       	ldi	r24, 0x2C	; 44
+    10ea:	90 e0       	ldi	r25, 0x00	; 0
+    10ec:	97 8b       	std	Z+23, r25	; 0x17
+    10ee:	86 8b       	std	Z+22, r24	; 0x16
+    10f0:	11 8e       	std	Z+25, r1	; 0x19
+    10f2:	12 8e       	std	Z+26, r1	; 0x1a
+    10f4:	13 8e       	std	Z+27, r1	; 0x1b
+    10f6:	14 8e       	std	Z+28, r1	; 0x1c
+_GLOBAL__sub_I___vector_11():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/HardwareSerial0.cpp:77
+    10f8:	08 95       	ret
+
+000010fa <Print::write(unsigned char const*, unsigned int)>:
+_ZN5Print5writeEPKhj():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:228
+
+  fdev_setup_stream(&f, printf_putchar, NULL, _FDEV_SETUP_WRITE);
+  fdev_set_udata(&f, this);
+  va_start(ap, format);
+  return vfprintf_P(&f, (const char *)format, ap);
+}
+    10fa:	af 92       	push	r10
+    10fc:	bf 92       	push	r11
+    10fe:	cf 92       	push	r12
+    1100:	df 92       	push	r13
+    1102:	ef 92       	push	r14
+    1104:	ff 92       	push	r15
+    1106:	0f 93       	push	r16
+    1108:	1f 93       	push	r17
+    110a:	cf 93       	push	r28
+    110c:	df 93       	push	r29
+    110e:	6c 01       	movw	r12, r24
+    1110:	7b 01       	movw	r14, r22
+    1112:	8b 01       	movw	r16, r22
+    1114:	04 0f       	add	r16, r20
+    1116:	15 1f       	adc	r17, r21
+    1118:	eb 01       	movw	r28, r22
+    111a:	5e 01       	movw	r10, r28
+    111c:	ae 18       	sub	r10, r14
+    111e:	bf 08       	sbc	r11, r15
+    1120:	c0 17       	cp	r28, r16
+    1122:	d1 07       	cpc	r29, r17
+    1124:	59 f0       	breq	.+22     	; 0x113c <Print::write(unsigned char const*, unsigned int)+0x42>
+    1126:	69 91       	ld	r22, Y+
+    1128:	d6 01       	movw	r26, r12
+    112a:	ed 91       	ld	r30, X+
+    112c:	fc 91       	ld	r31, X
+    112e:	01 90       	ld	r0, Z+
+    1130:	f0 81       	ld	r31, Z
+    1132:	e0 2d       	mov	r30, r0
+    1134:	c6 01       	movw	r24, r12
+    1136:	09 95       	icall
+    1138:	89 2b       	or	r24, r25
+    113a:	79 f7       	brne	.-34     	; 0x111a <Print::write(unsigned char const*, unsigned int)+0x20>
+    113c:	c5 01       	movw	r24, r10
+    113e:	df 91       	pop	r29
+    1140:	cf 91       	pop	r28
+    1142:	1f 91       	pop	r17
+    1144:	0f 91       	pop	r16
+    1146:	ff 90       	pop	r15
+    1148:	ef 90       	pop	r14
+    114a:	df 90       	pop	r13
+    114c:	cf 90       	pop	r12
+    114e:	bf 90       	pop	r11
+    1150:	af 90       	pop	r10
+    1152:	08 95       	ret
+
+00001154 <Print::write(char const*) [clone .part.2]>:
+_ZN5Print5writeEPKc():
+    1154:	fb 01       	movw	r30, r22
+    1156:	01 90       	ld	r0, Z+
+    1158:	00 20       	and	r0, r0
+    115a:	e9 f7       	brne	.-6      	; 0x1156 <Print::write(char const*) [clone .part.2]+0x2>
+    115c:	31 97       	sbiw	r30, 0x01	; 1
+    115e:	af 01       	movw	r20, r30
+    1160:	46 1b       	sub	r20, r22
+    1162:	57 0b       	sbc	r21, r23
+    1164:	dc 01       	movw	r26, r24
+    1166:	ed 91       	ld	r30, X+
+    1168:	fc 91       	ld	r31, X
+    116a:	02 80       	ldd	r0, Z+2	; 0x02
+    116c:	f3 81       	ldd	r31, Z+3	; 0x03
+    116e:	e0 2d       	mov	r30, r0
+    1170:	09 94       	ijmp
+
+00001172 <Print::print(char const*)>:
+    1172:	61 15       	cp	r22, r1
+    1174:	71 05       	cpc	r23, r1
+    1176:	09 f0       	breq	.+2      	; 0x117a <Print::print(char const*)+0x8>
+    1178:	ed cf       	rjmp	.-38     	; 0x1154 <Print::write(char const*) [clone .part.2]>
+_ZN5Print5printEPKc():
+    117a:	90 e0       	ldi	r25, 0x00	; 0
+    117c:	80 e0       	ldi	r24, 0x00	; 0
+    117e:	08 95       	ret
+
+00001180 <Print::print(char)>:
+_ZN5Print5printEc():
+    1180:	dc 01       	movw	r26, r24
+    1182:	ed 91       	ld	r30, X+
+    1184:	fc 91       	ld	r31, X
+    1186:	01 90       	ld	r0, Z+
+    1188:	f0 81       	ld	r31, Z
+    118a:	e0 2d       	mov	r30, r0
+    118c:	09 94       	ijmp
+
+0000118e <Print::println()>:
+_ZN5Print5writeEPKc():
+    118e:	68 e0       	ldi	r22, 0x08	; 8
+    1190:	71 e0       	ldi	r23, 0x01	; 1
+    1192:	e0 cf       	rjmp	.-64     	; 0x1154 <Print::write(char const*) [clone .part.2]>
+
+00001194 <Print::println(char const*)>:
+_ZN5Print7printlnEPKc():
+    1194:	0f 93       	push	r16
+    1196:	1f 93       	push	r17
+    1198:	cf 93       	push	r28
+    119a:	df 93       	push	r29
+    119c:	8c 01       	movw	r16, r24
+_ZN5Print5writeEPKc():
+    119e:	d0 e0       	ldi	r29, 0x00	; 0
+    11a0:	c0 e0       	ldi	r28, 0x00	; 0
+    11a2:	61 15       	cp	r22, r1
+    11a4:	71 05       	cpc	r23, r1
+    11a6:	11 f0       	breq	.+4      	; 0x11ac <Print::println(char const*)+0x18>
+    11a8:	d5 df       	rcall	.-86     	; 0x1154 <Print::write(char const*) [clone .part.2]>
+    11aa:	ec 01       	movw	r28, r24
+_ZN5Print7printlnEPKc():
+    11ac:	c8 01       	movw	r24, r16
+    11ae:	ef df       	rcall	.-34     	; 0x118e <Print::println()>
+    11b0:	8c 0f       	add	r24, r28
+    11b2:	9d 1f       	adc	r25, r29
+    11b4:	df 91       	pop	r29
+    11b6:	cf 91       	pop	r28
+    11b8:	1f 91       	pop	r17
+    11ba:	0f 91       	pop	r16
+    11bc:	08 95       	ret
+
+000011be <Print::printNumber(unsigned long, unsigned char)>:
+_ZN5Print11printNumberEmh():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:233
+
+// Private Methods /////////////////////////////////////////////////////////////
+
+size_t Print::printNumber(unsigned long n, uint8_t base)
+{
+    11be:	8f 92       	push	r8
+    11c0:	9f 92       	push	r9
+    11c2:	af 92       	push	r10
+    11c4:	bf 92       	push	r11
+    11c6:	ef 92       	push	r14
+    11c8:	ff 92       	push	r15
+    11ca:	0f 93       	push	r16
+    11cc:	1f 93       	push	r17
+    11ce:	cf 93       	push	r28
+    11d0:	df 93       	push	r29
+    11d2:	cd b7       	in	r28, 0x3d	; 61
+    11d4:	de b7       	in	r29, 0x3e	; 62
+    11d6:	a1 97       	sbiw	r28, 0x21	; 33
+    11d8:	0f b6       	in	r0, 0x3f	; 63
+    11da:	f8 94       	cli
+    11dc:	de bf       	out	0x3e, r29	; 62
+    11de:	0f be       	out	0x3f, r0	; 63
+    11e0:	cd bf       	out	0x3d, r28	; 61
+    11e2:	7c 01       	movw	r14, r24
+    11e4:	fa 01       	movw	r30, r20
+    11e6:	cb 01       	movw	r24, r22
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:237
+  char buf[8 * sizeof(long) + 1]; // Assumes 8-bit chars plus zero byte.
+  char *str = &buf[sizeof(buf) - 1];
+
+  *str = '\0';
+    11e8:	19 a2       	std	Y+33, r1	; 0x21
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:240
+
+  // prevent crash if called with base == 1
+  if (base < 2) base = 10;
+    11ea:	22 30       	cpi	r18, 0x02	; 2
+    11ec:	08 f4       	brcc	.+2      	; 0x11f0 <Print::printNumber(unsigned long, unsigned char)+0x32>
+    11ee:	2a e0       	ldi	r18, 0x0A	; 10
+    11f0:	8e 01       	movw	r16, r28
+    11f2:	0f 5d       	subi	r16, 0xDF	; 223
+    11f4:	1f 4f       	sbci	r17, 0xFF	; 255
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:243
+
+  do {
+    char c = n % base;
+    11f6:	82 2e       	mov	r8, r18
+    11f8:	91 2c       	mov	r9, r1
+    11fa:	b1 2c       	mov	r11, r1
+    11fc:	a1 2c       	mov	r10, r1
+    11fe:	bf 01       	movw	r22, r30
+    1200:	a5 01       	movw	r20, r10
+    1202:	94 01       	movw	r18, r8
+    1204:	8d d0       	rcall	.+282    	; 0x1320 <__udivmodsi4>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:244
+    n /= base;
+    1206:	f9 01       	movw	r30, r18
+    1208:	ca 01       	movw	r24, r20
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:246
+
+    *--str = c < 10 ? c + '0' : c + 'A' - 10;
+    120a:	6a 30       	cpi	r22, 0x0A	; 10
+    120c:	04 f5       	brge	.+64     	; 0x124e <Print::printNumber(unsigned long, unsigned char)+0x90>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:246 (discriminator 1)
+    120e:	60 5d       	subi	r22, 0xD0	; 208
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:246 (discriminator 4)
+    1210:	d8 01       	movw	r26, r16
+    1212:	6e 93       	st	-X, r22
+    1214:	8d 01       	movw	r16, r26
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:247 (discriminator 4)
+  } while(n);
+    1216:	23 2b       	or	r18, r19
+    1218:	24 2b       	or	r18, r20
+    121a:	25 2b       	or	r18, r21
+    121c:	81 f7       	brne	.-32     	; 0x11fe <Print::printNumber(unsigned long, unsigned char)+0x40>
+_ZN5Print5writeEPKc():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.h:53
+    int getWriteError() { return write_error; }
+    void clearWriteError() { setWriteError(0); }
+  
+    virtual size_t write(uint8_t) = 0;
+    size_t write(const char *str) {
+      if (str == NULL) return 0;
+    121e:	90 e0       	ldi	r25, 0x00	; 0
+    1220:	80 e0       	ldi	r24, 0x00	; 0
+    1222:	10 97       	sbiw	r26, 0x00	; 0
+    1224:	19 f0       	breq	.+6      	; 0x122c <Print::printNumber(unsigned long, unsigned char)+0x6e>
+    1226:	bd 01       	movw	r22, r26
+    1228:	c7 01       	movw	r24, r14
+    122a:	94 df       	rcall	.-216    	; 0x1154 <Print::write(char const*) [clone .part.2]>
+_ZN5Print11printNumberEmh():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:250
+
+  return write(str);
+}
+    122c:	a1 96       	adiw	r28, 0x21	; 33
+    122e:	0f b6       	in	r0, 0x3f	; 63
+    1230:	f8 94       	cli
+    1232:	de bf       	out	0x3e, r29	; 62
+    1234:	0f be       	out	0x3f, r0	; 63
+    1236:	cd bf       	out	0x3d, r28	; 61
+    1238:	df 91       	pop	r29
+    123a:	cf 91       	pop	r28
+    123c:	1f 91       	pop	r17
+    123e:	0f 91       	pop	r16
+    1240:	ff 90       	pop	r15
+    1242:	ef 90       	pop	r14
+    1244:	bf 90       	pop	r11
+    1246:	af 90       	pop	r10
+    1248:	9f 90       	pop	r9
+    124a:	8f 90       	pop	r8
+    124c:	08 95       	ret
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:246 (discriminator 2)
+
+  do {
+    char c = n % base;
+    n /= base;
+
+    *--str = c < 10 ? c + '0' : c + 'A' - 10;
+    124e:	69 5c       	subi	r22, 0xC9	; 201
+    1250:	df cf       	rjmp	.-66     	; 0x1210 <Print::printNumber(unsigned long, unsigned char)+0x52>
+
+00001252 <Print::print(long, int)>:
+_ZN5Print5printEli():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:88
+{
+  return print((unsigned long) n, base);
+}
+
+size_t Print::print(long n, int base)
+{
+    1252:	cf 92       	push	r12
+    1254:	df 92       	push	r13
+    1256:	ef 92       	push	r14
+    1258:	ff 92       	push	r15
+    125a:	0f 93       	push	r16
+    125c:	1f 93       	push	r17
+    125e:	cf 93       	push	r28
+    1260:	df 93       	push	r29
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:89
+  if (base == 0) {
+    1262:	21 15       	cp	r18, r1
+    1264:	31 05       	cpc	r19, r1
+    1266:	81 f4       	brne	.+32     	; 0x1288 <Print::print(long, int)+0x36>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:90
+    return write(n);
+    1268:	dc 01       	movw	r26, r24
+    126a:	ed 91       	ld	r30, X+
+    126c:	fc 91       	ld	r31, X
+    126e:	01 90       	ld	r0, Z+
+    1270:	f0 81       	ld	r31, Z
+    1272:	e0 2d       	mov	r30, r0
+    1274:	64 2f       	mov	r22, r20
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:101
+    }
+    return printNumber(n, 10);
+  } else {
+    return printNumber(n, base);
+  }
+}
+    1276:	df 91       	pop	r29
+    1278:	cf 91       	pop	r28
+    127a:	1f 91       	pop	r17
+    127c:	0f 91       	pop	r16
+    127e:	ff 90       	pop	r15
+    1280:	ef 90       	pop	r14
+    1282:	df 90       	pop	r13
+    1284:	cf 90       	pop	r12
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:90
+}
+
+size_t Print::print(long n, int base)
+{
+  if (base == 0) {
+    return write(n);
+    1286:	09 94       	ijmp
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:91
+  } else if (base == 10) {
+    1288:	2a 30       	cpi	r18, 0x0A	; 10
+    128a:	31 05       	cpc	r19, r1
+    128c:	f1 f4       	brne	.+60     	; 0x12ca <Print::print(long, int)+0x78>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:97
+    if (n < 0) {
+      int t = print('-');
+      n = -n;
+      return printNumber(n, 10) + t;
+    }
+    return printNumber(n, 10);
+    128e:	2a e0       	ldi	r18, 0x0A	; 10
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:92
+size_t Print::print(long n, int base)
+{
+  if (base == 0) {
+    return write(n);
+  } else if (base == 10) {
+    if (n < 0) {
+    1290:	77 ff       	sbrs	r23, 7
+    1292:	1b c0       	rjmp	.+54     	; 0x12ca <Print::print(long, int)+0x78>
+    1294:	6a 01       	movw	r12, r20
+    1296:	7b 01       	movw	r14, r22
+    1298:	ec 01       	movw	r28, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:93
+      int t = print('-');
+    129a:	6d e2       	ldi	r22, 0x2D	; 45
+    129c:	71 df       	rcall	.-286    	; 0x1180 <Print::print(char)>
+    129e:	8c 01       	movw	r16, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:94
+      n = -n;
+    12a0:	44 27       	eor	r20, r20
+    12a2:	55 27       	eor	r21, r21
+    12a4:	ba 01       	movw	r22, r20
+    12a6:	4c 19       	sub	r20, r12
+    12a8:	5d 09       	sbc	r21, r13
+    12aa:	6e 09       	sbc	r22, r14
+    12ac:	7f 09       	sbc	r23, r15
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:95
+      return printNumber(n, 10) + t;
+    12ae:	2a e0       	ldi	r18, 0x0A	; 10
+    12b0:	ce 01       	movw	r24, r28
+    12b2:	85 df       	rcall	.-246    	; 0x11be <Print::printNumber(unsigned long, unsigned char)>
+    12b4:	80 0f       	add	r24, r16
+    12b6:	91 1f       	adc	r25, r17
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:101
+    }
+    return printNumber(n, 10);
+  } else {
+    return printNumber(n, base);
+  }
+}
+    12b8:	df 91       	pop	r29
+    12ba:	cf 91       	pop	r28
+    12bc:	1f 91       	pop	r17
+    12be:	0f 91       	pop	r16
+    12c0:	ff 90       	pop	r15
+    12c2:	ef 90       	pop	r14
+    12c4:	df 90       	pop	r13
+    12c6:	cf 90       	pop	r12
+    12c8:	08 95       	ret
+    12ca:	df 91       	pop	r29
+    12cc:	cf 91       	pop	r28
+    12ce:	1f 91       	pop	r17
+    12d0:	0f 91       	pop	r16
+    12d2:	ff 90       	pop	r15
+    12d4:	ef 90       	pop	r14
+    12d6:	df 90       	pop	r13
+    12d8:	cf 90       	pop	r12
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:99
+      n = -n;
+      return printNumber(n, 10) + t;
+    }
+    return printNumber(n, 10);
+  } else {
+    return printNumber(n, base);
+    12da:	71 cf       	rjmp	.-286    	; 0x11be <Print::printNumber(unsigned long, unsigned char)>
+
+000012dc <Print::print(int, int)>:
+_ZN5Print5printEii():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:78
+{
+  return print((unsigned long) b, base);
+}
+
+size_t Print::print(int n, int base)
+{
+    12dc:	9a 01       	movw	r18, r20
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:79
+  return print((long) n, base);
+    12de:	ab 01       	movw	r20, r22
+    12e0:	77 0f       	add	r23, r23
+    12e2:	66 0b       	sbc	r22, r22
+    12e4:	77 0b       	sbc	r23, r23
+    12e6:	b5 cf       	rjmp	.-150    	; 0x1252 <Print::print(long, int)>
+
+000012e8 <Print::println(int, int)>:
+_ZN5Print7printlnEii():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:160
+  n += println();
+  return n;
+}
+
+size_t Print::println(int num, int base)
+{
+    12e8:	0f 93       	push	r16
+    12ea:	1f 93       	push	r17
+    12ec:	cf 93       	push	r28
+    12ee:	df 93       	push	r29
+    12f0:	ec 01       	movw	r28, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:161
+  size_t n = print(num, base);
+    12f2:	f4 df       	rcall	.-24     	; 0x12dc <Print::print(int, int)>
+    12f4:	8c 01       	movw	r16, r24
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:162
+  n += println();
+    12f6:	ce 01       	movw	r24, r28
+    12f8:	4a df       	rcall	.-364    	; 0x118e <Print::println()>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/Print.cpp:164
+  return n;
+}
+    12fa:	80 0f       	add	r24, r16
+    12fc:	91 1f       	adc	r25, r17
+    12fe:	df 91       	pop	r29
+    1300:	cf 91       	pop	r28
+    1302:	1f 91       	pop	r17
+    1304:	0f 91       	pop	r16
+    1306:	08 95       	ret
+
+00001308 <initVariant>:
+initVariant():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/main.cpp:28
+int atexit(void (* /*func*/ )()) { return 0; }
+
+// Weak empty variant initialization function.
+// May be redefined by variant files.
+void initVariant() __attribute__((weak));
+void initVariant() { }
+    1308:	08 95       	ret
+
+0000130a <main>:
+main():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/main.cpp:35
+//void setupUSB() __attribute__((weak));
+//void setupUSB() { }
+
+int main(void)
+{
+  init();
+    130a:	83 dc       	rcall	.-1786   	; 0xc12 <init>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/main.cpp:37
+
+  initVariant();
+    130c:	fd df       	rcall	.-6      	; 0x1308 <initVariant>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/main.cpp:43
+
+#if defined(USBCON)
+  USBDevice.attach();
+#endif
+  
+  setup();
+    130e:	e8 d7       	rcall	.+4048   	; 0x22e0 <__TEXT_REGION_LENGTH__+0x2e0>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/main.cpp:47
+    
+  for (;;) {
+    loop();
+    if (serialEventRun) serialEventRun();
+    1310:	cf e0       	ldi	r28, 0x0F	; 15
+    1312:	d7 e0       	ldi	r29, 0x07	; 7
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/main.cpp:46
+#endif
+  
+  setup();
+    
+  for (;;) {
+    loop();
+    1314:	2e d9       	rcall	.-3492   	; 0x572 <loop>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/main.cpp:47
+    if (serialEventRun) serialEventRun();
+    1316:	20 97       	sbiw	r28, 0x00	; 0
+    1318:	e9 f3       	breq	.-6      	; 0x1314 <main+0xa>
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/main.cpp:47 (discriminator 1)
+    131a:	81 dd       	rcall	.-1278   	; 0xe1e <serialEventRun()>
+    131c:	fb cf       	rjmp	.-10     	; 0x1314 <main+0xa>
+
+0000131e <yield>:
+__empty():
+C:\Users\ppsil\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\2.1.3\cores\MCUdude_corefiles/hooks.c:30
+ * Its defined as a weak symbol and it can be redefined to implement a
+ * real cooperative scheduler.
+ */
+static void __empty() {
+  // Empty
+}
+    131e:	08 95       	ret
+
+00001320 <__udivmodsi4>:
+__udivmodsi4():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1638
+    1320:	a1 e2       	ldi	r26, 0x21	; 33
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1639
+    1322:	1a 2e       	mov	r1, r26
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1640
+    1324:	aa 1b       	sub	r26, r26
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1641
+    1326:	bb 1b       	sub	r27, r27
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1642
+    1328:	fd 01       	movw	r30, r26
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1644
+    132a:	0d c0       	rjmp	.+26     	; 0x1346 <__udivmodsi4_ep>
+
+0000132c <__udivmodsi4_loop>:
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1646
+    132c:	aa 1f       	adc	r26, r26
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1647
+    132e:	bb 1f       	adc	r27, r27
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1648
+    1330:	ee 1f       	adc	r30, r30
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1649
+    1332:	ff 1f       	adc	r31, r31
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1650
+    1334:	a2 17       	cp	r26, r18
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1651
+    1336:	b3 07       	cpc	r27, r19
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1652
+    1338:	e4 07       	cpc	r30, r20
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1653
+    133a:	f5 07       	cpc	r31, r21
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1654
+    133c:	20 f0       	brcs	.+8      	; 0x1346 <__udivmodsi4_ep>
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1655
+    133e:	a2 1b       	sub	r26, r18
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1656
+    1340:	b3 0b       	sbc	r27, r19
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1657
+    1342:	e4 0b       	sbc	r30, r20
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1658
+    1344:	f5 0b       	sbc	r31, r21
+
+00001346 <__udivmodsi4_ep>:
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1660
+    1346:	66 1f       	adc	r22, r22
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1661
+    1348:	77 1f       	adc	r23, r23
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1662
+    134a:	88 1f       	adc	r24, r24
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1663
+    134c:	99 1f       	adc	r25, r25
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1664
+    134e:	1a 94       	dec	r1
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1665
+    1350:	69 f7       	brne	.-38     	; 0x132c <__udivmodsi4_loop>
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1667
+    1352:	60 95       	com	r22
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1668
+    1354:	70 95       	com	r23
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1669
+    1356:	80 95       	com	r24
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1670
+    1358:	90 95       	com	r25
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1672
+    135a:	9b 01       	movw	r18, r22
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1674
+    135c:	ac 01       	movw	r20, r24
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1676
+    135e:	bd 01       	movw	r22, r26
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1678
+    1360:	cf 01       	movw	r24, r30
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:1680
+    1362:	08 95       	ret
+
+00001364 <__tablejump2__>:
+__tablejump2__():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2296
+    1364:	ee 0f       	add	r30, r30
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2297
+    1366:	ff 1f       	adc	r31, r31
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2328
+    1368:	05 90       	lpm	r0, Z+
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2329
+    136a:	f4 91       	lpm	r31, Z
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2330
+    136c:	e0 2d       	mov	r30, r0
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2331
+    136e:	09 94       	ijmp
+
+00001370 <_exit>:
+exit():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2278
+    1370:	f8 94       	cli
+
+00001372 <__stop_program>:
+__stop_program():
+/home/jenkins-mingw32/workspace/avr-gcc-staging/label/Ubuntu14.04x64-mingw32/gcc-build/avr/avr4/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2280
+    1372:	ff cf       	rjmp	.-2      	; 0x1372 <__stop_program>
