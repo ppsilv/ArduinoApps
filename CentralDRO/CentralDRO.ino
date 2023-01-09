@@ -11,6 +11,11 @@
 C_timer tLed    =  C_timer(100);
 C_timer tPrint  =  C_timer(250);
 
+uint32_t getFreq(void){
+  //return SystemCoreClock;
+  return HAL_RCC_GetHCLKFreq();
+} 
+
 void threatLed(){
   if( tLed.isTimeout() ){
     TOGGLE_LED;
@@ -33,10 +38,12 @@ void printValue(){
 
 void setup() {
   char str[32];
-  Serial1.begin(9600);
-
+  Serial1.begin(115200);
+  //Serial1.print("Frequencia..: ");
+  //Serial1.println(getFreq());
   pinMode(BUZZER_PIN, OUTPUT);
   beep(500);
+  
   //Setup for Y sensor
   pinMode(led, OUTPUT);
   
@@ -58,8 +65,14 @@ void setup() {
 }
 
 void loop(){
+  
   vDrox->xResetKey();  
   vDroy->yResetKey();   
   printValue();
   threatLed();
+  handleLeds();
+  handleButtons();
+  hadleOutputs();
+  
+  handleKeyboard();  
 }

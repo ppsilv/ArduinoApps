@@ -67,13 +67,7 @@ CTachometer::CTachometer()
 
 void CTachometer::loopTachometer()
 {
-  handleLedStart();
-  handleLedStop();
-  handleLedReverse();
-  handleButtons();
-  hadleOutputs();
 
- 
   LastTimeCycleMeasure = LastTimeWeMeasured;  // Store the LastTimeWeMeasured in a variable.
   CurrentMicros = micros();  // Store the micros() in a variable.
   if(CurrentMicros < LastTimeCycleMeasure)

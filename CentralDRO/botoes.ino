@@ -235,6 +235,11 @@ void readEmergencyButton()
     setEmergencyButtonFlag();
   }
 }
+void handleLeds(){
+  handleLedStart();
+  handleLedStop();
+  handleLedReverse();  
+}
 
 void handleButtons()
 {
