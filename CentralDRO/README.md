@@ -7,3 +7,10 @@ As a bonus
 
 * Emergency button
 * Big keys to control a frequency inverter. 
+
+20240708
+This project does not compile because it is the first try to join all the code together.
+The code was tested part by part: tachometer, read axi X and read of Y axi.
+The cpu used for this project is STM32-103C8 the blue pill.
+The error is about variables not found for axis. I must to reasearch how the axis work to fix the errors.
+
