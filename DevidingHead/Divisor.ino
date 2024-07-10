@@ -83,11 +83,11 @@
                     |Rotary Table Control|
                     |V2-Rev.4.67  2019   |
                     |Initial rotation?   |
-                    |#=EXIT   A=CW  B=CCW|
+                    |Esc=EXIT L=CW  R=CCW|
                     +--------------------+
 
-             Note: IF YOUR ARE USING THE PROGRAM (OR AN UPDATE) FOR THE FIRST TIME, then use the #=EXIT key
-             to move to the Main Menu and select D=Settings to enter your data. You can also use the #=EXIT key to
+             Note: IF YOUR ARE USING THE PROGRAM (OR AN UPDATE) FOR THE FIRST TIME, then use the Esc=EXIT key
+             to move to the Main Menu and select D=Settings to enter your data. You can also use the Esc=EXIT key to
              just skip this step.
 
      If you have previously entered the program settings for your stepper motor and rotary table, then it is still advised to
@@ -294,7 +294,7 @@
                |CONTINUOUS [stopkey]|   [stopkey] indicates the current stop mode setting
                |sp= 80%=1840 ac=1000|   sp is the % of maximum speed setting, and the resulting speed,
                |C=settings    D=STOP|          acis the current acceleration setting
-               |A=CW  B=CCW   #=EXIT|
+               |L=CW  R=CCW Esc=EXIT|
                +--+-----------------+
 
      In this mode you can set the motor speed as a percentage of the maximum speed setting. This % setting applies only to
@@ -455,7 +455,7 @@
                                                                                                                         +-----------------+
 
    ==============================================================================================================================================
-   ==============================================================================================================================================
+
 
 */
 
@@ -464,8 +464,34 @@
 #include <Keypad.h>
 #include <EEPROM.h>
 
+#define SETA_DIR  0x7E
+#define SETA_ESQ  0x7F
+#define ENTER     0x0F
+#define UP_ARROW  0x08
+#define DOWN_ARROW  0x09
+#define CLEAR_DATA '*'
+
+#if defined(ARDUINO) && ARDUINO >= 100
+#define printByte(args)  write(args);
+#else
+#define printByte(args)  print(args,BYTE);
+#endif
+
+
 String ProgramName = "Rotary Table Control";  // Name of this program
 String VersionNumber = "V2-Rev4.72d  2022";   // The version Number of this program
+
+//My special chars
+uint8_t bell[8]  = {0x4,0xe,0xe,0xe,0x1f,0x0,0x4};
+uint8_t note[8]  = {0x2,0x3,0x2,0xe,0x1e,0xc,0x0};
+uint8_t clock[8] = {0x0,0xe,0x15,0x17,0x11,0xe,0x0};
+uint8_t heart[8] = {0x0,0xa,0x1f,0x1f,0xe,0x4,0x0};
+uint8_t duck[8]  = {0x0,0xc,0x1d,0xf,0xf,0x6,0x0};
+uint8_t check[8] = {0x0,0x1,0x3,0x16,0x1c,0x8,0x0};
+uint8_t cross[8] = {0x0,0x1b,0xe,0x4,0xe,0x1b,0x0};
+uint8_t retarrow[8] = {	0x1,0x1,0x5,0x9,0x1f,0x8,0x4};
+
+
 
 // SET indicates a variable that will be stored in EEPROM if changed.
 //     The variable settings below will be used unless changed via the
@@ -474,7 +500,7 @@ String VersionNumber = "V2-Rev4.72d  2022";   // The version Number of this prog
 
 int stepsPerFullRotation = 200;           // SET Number of *full* steps per full 360 degree rotation for your motor
 int microStepping = 1;                    // SET microsteps per full step; 1,2,4,8,16,etc.
-float TableRatio = 1.0;                   // SET TableRatio for indexer = 26.851239669 for my hardware
+float TableRatio = 1.0;                   // SET TableRatio for indexer = 139.994430 para meu hardware...
 int backlash = 0;                         // SET Number of microsteps needed to cancel out backlash
 boolean backlashOn = false;               // SET backlash correction is switched on (true) or off (false)
 //                                               - set to 0 if no backlash correction is desired
@@ -496,7 +522,7 @@ float MicroStepsPerFullRotation = 0.0;     // actual value calculated when value
 float StepperMaximumSpeed = 500.0;        // SET maximum allowed stepper speed
 float StepperAcceleration = 100.0;        // SET acceleration rate for stepper motor
 int percentMaxSpeed = 100;                // SET percentage of maximum speed to use for reduced speed setting
-int continuousRunStopMode = 1;            // SET the method for stopping continuous running (see program comments above)
+int continuousRunStopMode = 0;            // SET the method for stopping continuous running (see program comments above)
 String stopMode[] = {"stopkey", "keypress", "reset" };  //Names of the stop modes
 String prompt = "";
 
@@ -505,7 +531,7 @@ int clockWise = 1;                        // clockwise direction
 int counterClockWise = -1;                // counter-clockwise direction
 int clockDir = clockWise;                         // Direction of rotation initially set to clockWise
 boolean stopFlag = false;                 // flag to show whether the stopKey was used to stop the motor
-
+/*
 // Set up key pad
 const byte ROWS = 4;
 const byte COLS = 4;
@@ -517,9 +543,27 @@ char keys[ROWS][COLS] = {
 };
 byte rowPINS[ROWS] = {11, 10, 9, 8};
 byte colPINS[COLS] = {7, 6, 5, 4};
+*/
+
+// Set up key pad
+const byte ROWS = 5;
+const byte COLS = 4;
+char keys[ROWS][COLS] = {
+  {'.', ',', '#', '*'},
+  {'1', '2', '3', 'A'},
+  {'4', '5', '6', 'B'},
+  {'7', '8', '9', 'S'},
+  {'L', '0', 'R', 'E'}
+
+};
+byte rowPINS[ROWS] = {8,9,10,11,12};
+byte colPINS[COLS] = {4,5,6,7};
+
 Keypad kpd = Keypad(makeKeymap(keys), rowPINS, colPINS, ROWS, COLS);
 
-LiquidCrystal_I2C lcd(0x3F, 20, 4);   // set the LCD address to 0x20 for a 16 chars and 4 line display
+
+
+LiquidCrystal_I2C lcd(0x27, 20, 4);   // set the LCD address to 0x20 for a 16 chars and 4 line display
 //                                       some displays may use 0x3F for the address.
 //                                       Connections: SCL->A5, SDA->A4, VCC->+5, Gnd->Gnd
 
@@ -544,7 +588,8 @@ long stepToMoveTo = 0;                     // Target step value for the next mov
 //                                            the clockDir is undefined.
 char key = kpd.getKey();
 
-
+uint8_t uparrow[8]   = {	0x4,0x0E,0x15,0x04,0x04,0x04,0x00};
+uint8_t downarrow[8] = {	0x0,0x04,0x04,0x04,0x15,0x0E,0x4};
 //=====================================================================================================
 //=====================================================================================================
 
@@ -569,11 +614,30 @@ void setup() {
   lcd.init();        // initialize the lcd
   lcd.backlight();   // turn on backlight
 
+  //Creating my special chars
+  lcd.createChar(0, bell);
+  lcd.createChar(1, note);
+  lcd.createChar(2, clock);
+  lcd.createChar(3, heart);
+  lcd.createChar(4, duck);
+  lcd.createChar(5, check);
+  lcd.createChar(6, cross);
+  lcd.createChar(7, retarrow);
+  lcd.createChar(8, uparrow);
+  lcd.createChar(9, downarrow);
+  /*
+  lcd.printByte(SETA_DIR);
+  lcd.printByte(SETA_ESQ);
+  lcd.printByte(ENTER);
+  lcd.printByte(UP_ARROW);
+  lcd.printByte(DOWN_ARROW);
+  */
   // Print welcome message and greeting menu to the LCD.
   lcd.setCursor(0, 0); lcd.print(ProgramName);
   lcd.setCursor(0, 1); lcd.print(VersionNumber);
   lcd.setCursor(0, 2); lcd.print("Initial rotation?");
-  lcd.setCursor(0, 3); lcd.print("#=EXIT   A=CW  B=CCW");
+  choice01();
+
   makeBeep(halt);
 
   stepperInitialize();     //reset stepper settings, steps and degrees to initial values
@@ -584,6 +648,35 @@ void setup() {
 
 //=====================================================================================================
 //=====================================================================================================
+void choice01()
+{     //                              01234567890123456789
+	lcd.setCursor(0, 3);
+  lcd.print("Esc=EXIT ");
+  lcd.printByte(SETA_ESQ);
+  lcd.print("=CW ");
+  lcd.printByte(SETA_DIR);
+  lcd.print("=CCW");
+}
+
+void choice02()
+{
+  lcd.setCursor(0, 3); lcd.print("Esc=EXIT  Ent=Toggle");
+}
+
+void choice03()
+{
+  lcd.setCursor(0, 3); lcd.print("Esc=EXIT");
+}
+
+void  choice04()
+{
+  lcd.setCursor(0, 3); lcd.print("Esc=EXIT     *=CLEAR");
+}
+
+void  choice05()
+{                        //        012934567890123456789
+  lcd.setCursor(0, 3); lcd.print ("Esc=EXIT      Ent=GO");
+}
 
 void loop() {
 
@@ -605,7 +698,7 @@ void loop() {
   */
 
   key = NO_KEY;        //clear exit from previous menu
-  while (key != '#')   //select choice from main menu
+  while (key != 'S')   //select choice from main menu
   {
     key = kpd.getKey();
     switch (key)
@@ -617,36 +710,36 @@ void loop() {
         Degrees = updateNumber("Degrees per move", 0, 0);
         StepsPerIncrementTheoretical = Degrees / 360.0 * MicroStepsPerFullRotation;
         indexMove();
-        key = '#';                //exit this loop
+        key = 'S';                //exit this loop
         break;
 
       case '3':                   //Move by sides
         Degrees = 360.0 / (float) updateNumber("Sides or Teeth", 0, 0);
         StepsPerIncrementTheoretical = Degrees / 360.0 * MicroStepsPerFullRotation;
         indexMove();
-        key = '#';               //exit this loop
+        key = 'S';               //exit this loop
         break;
 
       case '4':                  //Jog move
         getJog();
-        key = '#';               //exit this loop
+        key = 'S';               //exit this loop
         break;
 
       case '6':                 //Arc movement
         StepsPerIncrementTheoretical = 0.0;   //Initialize steps in arc move
         TotalStepsTheoretical = 0.0;          //Initialize steps in arc move
         choiceArc();
-        key = '#';              //exit this loop
+        key = 'S';              //exit this loop
         break;
 
       case '7':                 //Continuous movement
         choiceContinuous();     //choose options for continuous running
-        key = '#';              //exit this loop
+        key = 'S';              //exit this loop
         break;
 
       case '9':                 // Update Settings
         Settings();
-        key = '#';              //exit this loop
+        key = 'S';              //exit this loop
         break;
     }
   } //end switchcase
@@ -672,7 +765,7 @@ void loop() {
          | Provided prompt str|
          | Value =            |
          |                    |
-         | #=ENTER     D=CLEAR|
+         | SENTER     D=CLEAR|
          +--------------------+
 
 */
@@ -687,14 +780,13 @@ float updateNumber(String prompt, float FloatValue, int decPlaces)      //decPla
   lcd.setCursor(0, 1); lcd.print("Value = ");
 
   lcd.print(FloatValue, decPlaces);
-
-  lcd.setCursor(0, 3); lcd.print("#=EXIT       D=CLEAR");
+  choice04();
 
   lcd.setCursor(8, 1);
   boolean decOffset = false;
   char key = kpd.getKey();
 
-  while (key != '#')
+  while (key != 'S')
   {
     switch (key)
     {
@@ -709,7 +801,7 @@ float updateNumber(String prompt, float FloatValue, int decPlaces)      //decPla
         }
         break;
 
-      case 'D':                                   //Clear data entry and reset Decimal point flag
+      case CLEAR_DATA:                                   //Clear data entry and reset Decimal point flag
         Num = 0.0;
         lcd.setCursor(8, 1);
         lcd.print("            ");      //clear data field with spaces
@@ -743,7 +835,7 @@ float updateNumber(String prompt, float FloatValue, int decPlaces)      //decPla
     }    //end switchcase
     DecNum = Num / pow(10, counter);
     key = kpd.getKey();
-  }    //end while not #
+  }    //end while not S
 
   if (DecNum != 0) {
     return DecNum;        //return new number if one is entered
@@ -768,11 +860,12 @@ boolean getBoolean(String prompt, boolean flip)
   } else {
     lcd.print("OFF/NO");
   }
-  lcd.setCursor(0, 3); lcd.print("#=EXIT      D=Toggle");
+
+  choice02();
 
   char key = kpd.getKey();
 
-  while (key != '#')
+  while (key != 'S')
   {
 
     switch (key)
@@ -780,7 +873,7 @@ boolean getBoolean(String prompt, boolean flip)
       case NO_KEY:
         break;
 
-      case 'D':                                   // Toggle boolean value
+      case 'E':                                   // Toggle boolean value
         flip = !flip;
         lcd.setCursor(8, 1); if (flip) {
           lcd.print("ON/YES");
@@ -815,7 +908,7 @@ void choiceInitialize()   //select choice from greeting menu
 {
 
 
-  while (key != '#')
+  while (key != 'S')
   {
     key = kpd.getKey();
     switch (key)
@@ -823,16 +916,16 @@ void choiceInitialize()   //select choice from greeting menu
 
       case NO_KEY:
         break;
-      case 'A': //Move one full rotation CW
+      case 'R': //Move one full rotation CW
         {
           stepperInitialize();
           TotalStepsTheoretical = MicroStepsPerFullRotation;
           lcd.setCursor(0, 3);  lcd.print("  WAIT : Moving...  ");
           moveToTarget();
-          lcd.setCursor(0, 3);  lcd.print("#=EXIT  A=CW   B=CCW");
+          choice01();
           break;
         }
-      case 'B': //Move one full rotation CCW
+      case 'L': //Move one full rotation CCW
         {
           stepperInitialize();
           TotalStepsTheoretical = -MicroStepsPerFullRotation;
@@ -841,7 +934,7 @@ void choiceInitialize()   //select choice from greeting menu
         }
 
     }      // end case
-  }      // end while choice != #
+  }      // end while choice != S
 }  //end choiceInitialize
 
 
@@ -872,8 +965,7 @@ void jogMenu()         //Menu for jog entry - used for jog move and arc end sett
   {
     lcd.print((float)i, 0); lcd.print("=-"); lcd.print((float)pow(10, i - 4), 0); lcd.print(" ");
   }
-
-  lcd.setCursor(0, 3); lcd.print("#=EXIT");
+  choice03();
 
 }
 
@@ -885,7 +977,7 @@ void getJog()                                      //Calculate jog movements
   jogMenu();                                       //display the jog menu
 
   char key = kpd.getKey();
-  while (key != '#')
+  while (key != 'S')
   {
     key = kpd.getKey();
     switch (key)
@@ -919,7 +1011,7 @@ void getJog()                                      //Calculate jog movements
           break;
         }
 
-      case '#':
+      case 'S':
         break;
     }
   } //end while
@@ -940,7 +1032,7 @@ void continuousMenu()
   lcd.setCursor(16, 1); lcd.print(float (StepperAcceleration), 0);
 
   //LCD LINE 2
-  lcd.setCursor(0, 2); lcd.print("C=settings          ");
+  lcd.setCursor(0, 2); lcd.print("9=settings          ");
   if (continuousRunStopMode < 2)                //If stop mode != reset then print stop-key option
   {
     lcd.setCursor(14, 2); lcd.print("D=STOP");
@@ -951,13 +1043,14 @@ void continuousMenu()
   }
 
   //LCD LINE 3
-  lcd.setCursor(0, 3); lcd.print("A=CW  B=CCW         ");
   if (continuousRunStopMode < 2)                  //If stop mode != reset then print EXIT option
   {
-    lcd.setCursor(14, 3); lcd.print("#=EXIT");
+    lcd.setCursor(0, 3); lcd.print("          R=CW L=CCW");
+    choice03();
   }
   else
   {
+    lcd.setCursor(0, 3); lcd.print("R=CW    L=CCW       ");
     lcd.setCursor(13, 3); lcd.print(": STOP:");
   }
 }
@@ -966,7 +1059,7 @@ void choiceContinuous()
 {
   continuousMenu();
 
-  while (key != '#')    //select choice from continuousMenu
+  while (key != 'S')    //select choice from continuousMenu
   {
     key = kpd.getKey();
     switch (key)
@@ -974,44 +1067,44 @@ void choiceContinuous()
       case NO_KEY:
         break;
 
-      case 'A': //Move clockWise
+      case 'R': //Move clockWise
         {
           //Reset the maximum stepper speed as a percentage of the stored maximum
           //StepperContinuousSpeed = (percentMaxSpeed / 100.0) * StepperMaximumSpeed;
 
-          accelerateThenRun(StepperAcceleration, (percentMaxSpeed / 100.0) * StepperMaximumSpeed , clockWise, 'D');
+          accelerateThenRun(StepperAcceleration, (percentMaxSpeed / 100.0) * StepperMaximumSpeed , clockWise, '#');
           makeBeep(2);
           break;
 
         }
-      case 'B': //Move counterClockWise
+      case 'L': //Move counterClockWise
         {
 
           //Reset the maximum stepper speed as a percentage of the stored maximum
           //StepperContinuousSpeed = (percentMaxSpeed / 100.0) * StepperMaximumSpeed;
 
-          accelerateThenRun(StepperAcceleration, (percentMaxSpeed / 100.0) * StepperMaximumSpeed , counterClockWise, 'D');
+          accelerateThenRun(StepperAcceleration, (percentMaxSpeed / 100.0) * StepperMaximumSpeed , counterClockWise, '#');
           makeBeep(2);
           break;
         }
 
-      case 'C': //Set new percent of max speed
+      case '9': //Set new percent of max speed
         {
           choiceSettingsContinuous();
           continuousMenu();
-          key = NO_KEY;                       //clear # from settings menu
+          key = NO_KEY;                       //clear S from settings menu
           break;
         }  //end case C
 
 
-      case '#': //Exit
+      case 'S': //Exit
         {
           break;
         }
 
 
     }      // end case
-  }      // end while choice != #
+  }      // end while choice != S
 }  //end choiceContinuous()
 
 
@@ -1051,8 +1144,9 @@ void arcMenu()
 
   lcd.setCursor(2, 1); lcd.print (0.0, 2); lcd.print((char)223); //print 0.0 start position
   lcd.setCursor(14, 1); lcd.print (TotalStepsTheoretical / MicroStepsPerFullRotation * 360.0, 2); lcd.print((char)223);                                                 //print value
-  lcd.setCursor(0, 2); lcd.print ("end set: B=Deg C=Jog");
-  lcd.setCursor(0, 3); lcd.print ("#=EXIT         A=GO");
+                                 //12345678901234567890
+  lcd.setCursor(0, 2); lcd.print ("end: F1=Deg   F2=Jog");
+  choice05();
 
 }
 
@@ -1061,7 +1155,7 @@ void choiceArc()
 {
   arcMenu();
 
-  while (key != '#')    //select choice for arc move
+  while (key != 'S')    //select choice for arc move
   {
     key = kpd.getKey();
     switch (key)
@@ -1069,7 +1163,7 @@ void choiceArc()
       case NO_KEY:
         break;
 
-      case 'A': //Move back and forth in arc; current position is start position
+      case 'E': //Move back and forth in arc; current position is start position
         {
           if ( TotalStepsTheoretical != 0.0 )                          // If stepper is at start of arc
           {
@@ -1090,7 +1184,7 @@ void choiceArc()
           break;
 
         }
-      case 'B': //Set arc end position by number of degrees
+      case '.': //Set arc end position by number of degrees
         {
           TotalDegrees = updateNumber("Degrees in arc/move", TotalDegrees, 2);
 
@@ -1102,7 +1196,7 @@ void choiceArc()
           break;
         }
 
-      case 'C': //Set arc end position by jog moving rotary table to desired position
+      case ',': //Set arc end position by jog moving rotary table to desired position
         {
           getJog();
           StepsPerIncrementTheoretical = TotalStepsTheoretical;   // (debug - need this?) save the current value of TotalStepsTheoretical
@@ -1110,13 +1204,13 @@ void choiceArc()
           break;
         } //end case C
 
-      case '#': //Exit
+      case 'S': //Exit
         {
           break;
         }
 
     }      // end switchcase
-  }      // end while != #
+  }      // end while != S
 }  //end choiceArc()
 
 
@@ -1202,7 +1296,7 @@ void getStopMode()
   lcd.clear();
   lcd.print("Continuous-stop mode");
   lcd.setCursor(0, 1); lcd.print("Mode =");
-  lcd.setCursor(0, 3); lcd.print("#=EXIT      D=Toggle");
+  choice02();
 
 
   int i = continuousRunStopMode;
@@ -1214,14 +1308,14 @@ void getStopMode()
   lcd.setCursor(8, 1); lcd.print("            ");        //Print the current mode value
   lcd.setCursor(8, 1); lcd.print((String) stopMode[i]);
 
-  key = NO_KEY;                 //Clear previous # keypress
-  while (key != '#')
+  key = NO_KEY;                 //Clear previous S keypress
+  while (key != 'S')
   {
     key = kpd.getKey();
 
     switch (key)
     {
-      case 'D':
+      case 'E':
         {
           i = i + 1;              //Increment i, if > 2 start over at 0
           if (i > 2) {
@@ -1232,7 +1326,7 @@ void getStopMode()
           lcd.setCursor(8, 1); lcd.print((String) stopMode[i]);
         }
 
-      case '#':
+      case 'S':
         break;
     }
   }
@@ -1246,11 +1340,11 @@ void relaySwitchedOn(boolean relayMode)
   if (relayMode)
   {
     digitalWrite(relayPin, LOW);  //Set relay on
-  delay(RelayDelay);        //Waiting before continue program
+    delay(RelayDelay);        //Waiting before continue program
   }
   else
   {
-  delay(150);           //Small delay before set relay off
+    delay(150);           //Small delay before set relay off
     digitalWrite(relayPin, HIGH); //Set relay off
   }
 } // end relaySwitchedOn
@@ -1334,14 +1428,13 @@ void indexMove()
 
   lcd.setCursor(0, 1);   lcd.print("Position =");
   lcd.setCursor(11, 1); lcd.print(TotalDegrees, 2); lcd.print((char)223);   //print total degrees moved
+  choice01();
 
-  lcd.setCursor(0, 3); lcd.print("#=EXIT  A=CW   B=CCW");
-
-  while (key != '#')   // # will return to start menu
+  while (key != 'S')   // S will return to start menu
   {
     key = kpd.getKey();
 
-    if (key == 'A')           // MOVE CLOCKWISE
+    if (key == 'R')           // MOVE CLOCKWISE
     {
 
       TotalDegrees  = TotalDegrees + Degrees;
@@ -1363,7 +1456,7 @@ void indexMove()
 
     }
 
-    if (key == 'B')           // MOVE COUNTERCLOCKWISE
+    if (key == 'L')           // MOVE COUNTERCLOCKWISE
     {
 
       TotalDegrees  = TotalDegrees - Degrees;
@@ -1381,7 +1474,7 @@ void indexMove()
       lcd.setCursor(6, 2); lcd.print("      ");
 
     }
-  }      // end while not # loop
+  }      // end while not S loop
 }
 
 // Update display and move to the a target step number; apply backlash correction if
@@ -1473,7 +1566,7 @@ void accelerateThenRun(float acceleration, float StepperContinuousSpeed, int rot
   switch (continuousRunStopMode)
   {
     case 0:    //stop with stopkey
-	  relaySwitchedOn(true);
+	    relaySwitchedOn(true);
       stepper.setCurrentPosition(0);                            //Initialize position and speed to zero for next start
       stepper.move(long (rotateDirection * 2147483647));        //Set direction; set target position to number that will not be reached
 
@@ -1500,7 +1593,7 @@ void accelerateThenRun(float acceleration, float StepperContinuousSpeed, int rot
       //  stop button down for 1 - 3 seconds. There is no immediate stop option, but there is deceleration to a stop.
 
       {
-		relaySwitchedOn(true);
+		    relaySwitchedOn(true);
         stepper.setCurrentPosition(0);                            //Initialize position and speed to zero for next start
         stepper.move(long (rotateDirection * 2147483647));        //Set direction; set target position to number that will not be reached
 
@@ -1509,8 +1602,8 @@ void accelerateThenRun(float acceleration, float StepperContinuousSpeed, int rot
 
 
         //while ( digitalRead(4) == HIGH )             //Press stop key to stop acceleration phase
-        while ( PIND & 0b00010000)                     //Read pin 4 "directly" for fastest read
-
+        //while ( PIND & 0b00010000)                     //Read pin 4 "directly" for fastest read
+        while( 1 )
         {
           stepper.run();
         }
@@ -1538,3 +1631,21 @@ void accelerateThenRun(float acceleration, float StepperContinuousSpeed, int rot
   } //end switch case
 
 }
+/*
+Equipment details
+
+1 - Caixa 195 x 114 x 50
+2 - LCD - Serial 20 x 4
+3 - Teclado 5 x 4
+4 - Step motor driver DM556
+5 - Artuino pro mini
+6 - step down
+7 - buzzer
+8 - chave liga desliga
+9 - 3 parafusos
+10- Conector audio para step motor.
+11- placa circuito impresso
+12- Fios em geral.
+
+
+*/
